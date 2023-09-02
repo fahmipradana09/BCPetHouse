@@ -1,0 +1,29 @@
+CRITICAL - 2023-09-02 15:11:34 --> Invalid file: "dashoard/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashoard/index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashoard/index', [], true)
+ 3 APPPATH\Controllers\Dashboard.php(8): view('dashoard/index')
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-02 15:12:04 --> Invalid file: "dashoard/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashoard/index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashoard/index', [], true)
+ 3 APPPATH\Controllers\Dashboard.php(8): view('dashoard/index')
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\BCPetHouse\\public\\index.php')
+CRITICAL - 2023-09-02 15:30:19 --> Invalid file: "dashboard/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 3 APPPATH\Controllers\Dashboard.php(8): view('dashboard/index')
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\BCPetHouse\\public\\index.php')
