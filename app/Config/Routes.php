@@ -1,8 +1,17 @@
 <?php
 
-use CodeIgniter\Router\RouteCollection;
+namespace Config;
 
-/**
- * @var RouteCollection $routes
- */
-$routes->get('/', 'Dashboard::index');
+$routes = Services::routes();
+if (file_exists(SYSTEMPATH.'Config/Routes.php')) {
+    require SYSTEMPATH.'Config/Routes.php';
+}
+$routes->setDefaultNamespace('App\Controllers');
+$routes->setDefaultController('Dashboard');
+$routes->setDefaultMethod('index');
+$routes->setTranslateURIDashes(false);
+$routes->set404Override();
+$routes->setAutoRoute(true);
+
+$routes->get('/Dashboard', 'Dashboard::index');
+$routes->get('/Ambulatoir', 'Ambulatoir::index');
