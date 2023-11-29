@@ -8,4 +8,9 @@ class Ambulatoir extends BaseController
     {
         return view('admin/ambulatoir/index');
     }
+
+    public function detail_ambulatoir()
+    {
+        return view('admin/ambulatoir/detail');
+    }
 }
