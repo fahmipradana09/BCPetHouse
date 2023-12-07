@@ -102,9 +102,6 @@
                   <div class="input-group date" id="datePicker">
                     <input type="text" name='date[]'  placeholder='Enter Date' class="form-control"/>
                     <span class="input-group-append">
-                        <span class="input-group-text bg-white">
-
-                        </span>
                     </span>
                   </div>
                   </td>
@@ -115,7 +112,7 @@
                   <input type="number" name='mobile[]' placeholder='Enter Mobile' class="form-control"/>
                   </td>
                 </tr>
-                          <tr id='addr1'></tr>
+                    <tr id='addr1'></tr>
               </tbody>
             </table>
           </div>

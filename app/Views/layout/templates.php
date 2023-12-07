@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link id="pagestyle" href="../assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet">
   <link id="pagestyle" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
-  <link id="pagestyle" href="../assets/css/styles.css" rel="stylesheet">
+  <link id="pagestyle" href="../assets/css/custom.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
   
   <script defer src ="https://code.jquery.com/jquery-3.7.0.js"></script>
@@ -29,6 +29,7 @@
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
   <script defer src="../assets/js/jquery.min.js"></script>
   <script defer src="../assets/js/script.js"></script>
+  <script defer src="../assets/js/activeMenu.js"></script>
   <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
 </head>
 
