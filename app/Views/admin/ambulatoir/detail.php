@@ -73,54 +73,77 @@
               </label>
             </div>
           </div>
+          
+            <div class="col-md-6 align-items-start form-check form-switch my-4">
+              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckHospitalization">
+              <label class="form-check-label" for="flexSwitchCheckHospitalization">Tindak lanjut Rawat inap</label>
+            </div>
+
 
         </form>
         <div class="container">
           <div class="row clearfix">
-          <div class="col-md-12 column">
+          <div class="col-md-12 table-responsive column">
             <table class="table table-bordered table-hover" id="tab_logic">
               <thead>
                 <tr>
                   <th class="text-center">
-                    #
+                    No.
                   </th>
+
                   <th class="text-center">
                     Date Checkup
                   </th>
+
                   <th class="text-center">
-                    Mail
+                    Amnesa
                   </th>
+
                   <th class="text-center">
-                    Mobile
+                    Status Present
+                  </th>
+
+                  <th class="text-center">
+                    Temuan Klinis
+                  </th>
+
+                  <th class="text-center">
+                    Diagnosa
+                  </th>
+
+                  <th class="text-center">
+                    Pengobatan
                   </th>
                 </tr>
               </thead>
               <tbody>
                 <tr id='addr0'>
                   <td>1</td>
+
                   <td>
                   <div class="input-group date" id="datePicker">
-                    <input type="text" name='date[]'  placeholder='Enter Date' class="form-control"/>
-                    <span class="input-group-append">
-                    </span>
+                    <input type="text" name='date[]' placeholder='Enter Date' class="form-control" disabled/>
                   </div>
                   </td>
+
                   <td>
-                  <input type="email" name='mail[]' placeholder='Enter Mail' class="form-control"/>
+                  <input type="text" name='mail[]' placeholder='Type here...' class="form-control"/>
                   </td>
+
                   <td>
                   <input type="number" name='mobile[]' placeholder='Enter Mobile' class="form-control"/>
                   </td>
+
                 </tr>
                     <tr id='addr1'></tr>
               </tbody>
             </table>
           </div>
         </div>
-        <button id="add_row" class="btn btn-default pull-left">Add Row</button><button id='delete_row' class="pull-right btn btn-default">Delete Row</button>
-      </div>
-      </div>
-    </div>
+        <!-- <button id="add_row" class="btn btn-default pull-left">Add Row</button><button id='delete_row' class="pull-right btn btn-default">Delete Row</button> -->
+   </div>
+
+   <button id="saveAmbulatoir" class="btn bg-primary align-self-center text-white btn-default col-md-6 mx-3 mt-4">Save</button>
   </div>
 </div>
 <?= $this->endSection(); ?>

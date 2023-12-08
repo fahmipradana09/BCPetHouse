@@ -27,9 +27,7 @@
   <script defer src ="https://code.jquery.com/jquery-3.7.0.js"></script>
   <script defer src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-  <script defer src="../assets/js/jquery.min.js"></script>
   <script defer src="../assets/js/script.js"></script>
-  <script defer src="../assets/js/activeMenu.js"></script>
   <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
 </head>
 
