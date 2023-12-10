@@ -25,6 +25,16 @@
             <span class="nav-link-text ms-1">Ambulatoir</span>
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link <?= ($active == 'rawatinap' ? 'active':'');?>" href="<?= base_url('/RawatInap');?>">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+            <span class="material-symbols-outlined">
+              check_in_out
+              </span>
+            </div>
+            <span class="nav-link-text ms-1">Rawat Inap</span>
+          </a>
+        </li>
       </ul>
     </div>
   </aside>

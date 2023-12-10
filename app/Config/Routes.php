@@ -14,5 +14,8 @@ $routes->set404Override();
 $routes->setAutoRoute(true);
 
 $routes->get('/', 'Dashboard::index');
+
 $routes->get('/Ambulatoir', 'Ambulatoir::index');
 $routes->add('/Ambulatoir/detail','Ambulatoir::detail_ambulatoir');
+
+$routes->get('/RawatInap','RawatInap::index');

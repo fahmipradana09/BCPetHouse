@@ -1,0 +1,10 @@
+CRITICAL - 2023-12-10 13:42:11 --> Invalid file: "admin/rawat_inap/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/rawat_inap/index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/index', [], true)
+ 3 APPPATH\Controllers\RawatInap.php(12): view('admin/rawat_inap/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->index()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\BCPetHouse\\public\\index.php')

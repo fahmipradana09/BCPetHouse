@@ -79,7 +79,6 @@
               <label class="form-check-label" for="flexSwitchCheckHospitalization">Tindak lanjut Rawat inap</label>
             </div>
 
-
         </form>
         <div class="container">
           <div class="row clearfix">
@@ -127,12 +126,25 @@
                   </td>
 
                   <td>
-                  <input type="text" name='mail[]' placeholder='Type here...' class="form-control"/>
+                  <input type="text" name='amnesa[]' placeholder='Type here...' class="form-control"/>
                   </td>
 
                   <td>
-                  <input type="number" name='mobile[]' placeholder='Enter Mobile' class="form-control"/>
+                  <input type="text" name='StatusPresent[]' placeholder='Type here...' class="form-control"/>
                   </td>
+
+                  <td>
+                  <input type="text" name='Temuanklinis[]' placeholder='Type here...' class="form-control"/>
+                  </td>
+
+                  <td>
+                  <input type="text" name='diagnosa[]' placeholder='Type here...' class="form-control"/>
+                  </td>
+
+                  <td>
+                  <input type="text" name='Pengobatan[]' placeholder='Type here...' class="form-control"/>
+                  </td>
+                  
 
                 </tr>
                     <tr id='addr1'></tr>
@@ -140,7 +152,6 @@
             </table>
           </div>
         </div>
-        <!-- <button id="add_row" class="btn btn-default pull-left">Add Row</button><button id='delete_row' class="pull-right btn btn-default">Delete Row</button> -->
    </div>
 
    <button id="saveAmbulatoir" class="btn bg-primary align-self-center text-white btn-default col-md-6 mx-3 mt-4">Save</button>
