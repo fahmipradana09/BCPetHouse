@@ -1,4 +1,5 @@
 new DataTable('#ambulatoir');
+new DataTable('#rawatinap');
 
 new DataTable('#detailAmbulatoir', {
     info: false,

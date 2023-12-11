@@ -7,20 +7,15 @@
         <div class="card-header pb-0">
           <h4>Pasien Rawat Inap</h4>
         </div>
-        <a class="btn bg-primary mb-0 text-white m-5"  href='<?= base_url('/RawatInap');?>'>
-          New Ambulatoir
-        </a>
-        
         <div class="card-body px-0 pt-0 pb-2">
           <div class="table-responsive p-0 m-5">
-            <table id="ambulatoir" class="table row-border hover" style="width:100%">
+            <table id="rawatinap" class="table row-border hover" style="width:100%">
               <thead>
                   <tr>
-                      <th>ID</th>
+                      <th>Pet Name</th>
                       <th>Owner Name</th>
                       <th>Address</th>
                       <th>Phone Number</th>
-                      <th>Pet Name</th>
                       <th>Pet Gender</th>
                       <th>Fur Color</th>
                       <th>Race</th>
@@ -36,16 +31,10 @@
                       <td>2011-04-25</td>
                       <td>$320,800</td>
                       <td>$320,800</td>
-                      <td>$320,800</td>
                       <td class="align-middle text-center">
-                      <div class="d-grid gap-2 d-md-block">
-                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalEdit">
-                        Edit
-                        </button>
                         <button type="button" class="btn btn-danger text-white btn-sm" href="#">
                         Delete
                         </button>
-                      </div>
                     </td>
                   </tr>
 
@@ -57,16 +46,10 @@
                       <td>2011-07-25</td>
                       <td>$170,750</td>
                       <td>$320,800</td>
-                      <td>$320,800</td>
                       <td class="align-middle text-center">
-                      <div class="d-grid gap-2 d-md-block">
-                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalEdit">
-                        Edit
-                        </button>
                         <button type="button" class="btn btn-danger text-white btn-sm" href="#">
                         Delete
                         </button>
-                      </div>
                     </td>
                   </tr>
 
@@ -78,16 +61,10 @@
                       <td>2009-01-12</td>
                       <td>$86,000</td>
                       <td>$320,800</td>
-                      <td>$320,800</td>
                       <td class="align-middle text-center">
-                      <div class="d-grid gap-2 d-md-block">
-                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalEdit">
-                        Edit
-                        </button>
                         <button type="button" class="btn btn-danger text-white btn-sm" href="#">
                         Delete
                         </button>
-                      </div>
                     </td>
 
                   </tr>
@@ -100,16 +77,10 @@
                       <td>2012-03-29</td>
                       <td>$433,060</td>
                       <td>$320,800</td>
-                      <td>$320,800</td>
                       <td class="align-middle text-center">
-                      <div class="d-grid gap-2 d-md-block">
-                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalEdit">
-                        Edit
-                        </button>
                         <button type="button" class="btn btn-danger text-white btn-sm" href="#">
                         Delete
                         </button>
-                      </div>
                     </td>
                   </tr>
 
@@ -121,16 +92,10 @@
                       <td>2008-11-28</td>
                       <td>$162,700</td>
                       <td>$320,800</td>
-                      <td>$320,800</td>
                       <td class="align-middle text-center">
-                      <div class="d-grid gap-2 d-md-block">
-                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalEdit">
-                        Edit
-                        </button>
                         <button type="button" class="btn btn-danger text-white btn-sm" href="#">
                         Delete
                         </button>
-                      </div>
                     </td>
                   </tr>
 
@@ -142,16 +107,10 @@
                       <td>2012-12-02</td>
                       <td>$372,000</td>
                       <td>$320,800</td>
-                      <td>$320,800</td>
                       <td class="align-middle text-center">
-                      <div class="d-grid gap-2 d-md-block">
-                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalEdit">
-                        Edit
-                        </button>
                         <button type="button" class="btn btn-danger text-white btn-sm" href="#">
                         Delete
                         </button>
-                      </div>
                     </td>
                   </tr>
 
@@ -163,16 +122,10 @@
                       <td>2012-08-06</td>
                       <td>$137,500</td>
                       <td>$320,800</td>
-                      <td>$320,800</td>
                       <td class="align-middle text-center">
-                      <div class="d-grid gap-2 d-md-block">
-                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalEdit">
-                        Edit
-                        </button>
                         <button type="button" class="btn btn-danger text-white btn-sm" href="#">
                         Delete
                         </button>
-                      </div>
                     </td>
                   </tr>
 
@@ -184,16 +137,10 @@
                       <td>2010-10-14</td>
                       <td>$327,900</td>
                       <td>$320,800</td>
-                      <td>$320,800</td>
                       <td class="align-middle text-center">
-                      <div class="d-grid gap-2 d-md-block">
-                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalEdit">
-                        Edit
-                        </button>
                         <button type="button" class="btn btn-danger text-white btn-sm" href="#">
                         Delete
                         </button>
-                      </div>
                     </td>
                   </tr>
 
@@ -205,12 +152,8 @@
                       <td>2009-09-15</td>
                       <td>$205,500</td>
                       <td>$320,800</td>
-                      <td>$320,800</td>
                       <td class="align-middle text-center">
                       <div class="d-grid gap-2 d-md-block">
-                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalEdit">
-                        Edit
-                        </button>
                         <button type="button" class="btn btn-danger text-white btn-sm" href="#">
                         Delete
                         </button>
@@ -220,11 +163,10 @@
               </tbody>
               <tfoot>
                   <tr>
-                      <th>ID</th>
+                      <th>Pet Name</th>
                       <th>Owner Name</th>
                       <th>Address</th>
                       <th>Phone Number</th>
-                      <th>Pet Name</th>
                       <th>Pet Gender</th>
                       <th>Fur Color</th>
                       <th>Race</th>

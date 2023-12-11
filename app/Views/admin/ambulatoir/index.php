@@ -15,14 +15,14 @@
             <table id="ambulatoir" class="table row-border hover" style="width:100%">
               <thead>
                   <tr>
-                      <th>ID</th>
+                      <th>Pet Name</th>
                       <th>Owner Name</th>
                       <th>Address</th>
                       <th>Phone Number</th>
-                      <th>Pet Name</th>
                       <th>Pet Gender</th>
                       <th>Fur Color</th>
                       <th>Race</th>
+                      <th>Action</th>
                   </tr>
               </thead>
               <tbody>
@@ -34,7 +34,11 @@
                       <td>2011-04-25</td>
                       <td>$320,800</td>
                       <td>$320,800</td>
-                      <td>$320,800</td>
+                      <td class="align-middle text-center">
+                        <button type="button" class="btn btn-danger text-white btn-sm" href="#">
+                        Delete
+                        </button>
+                    </td>
                   </tr>
                   <tr>
                       <td>Garrett Winters</td>
@@ -44,7 +48,12 @@
                       <td>2011-07-25</td>
                       <td>$170,750</td>
                       <td>$320,800</td>
-                      <td>$320,800</td>
+                      <td class="align-middle text-center">
+                        <button type="button" class="btn btn-danger text-white btn-sm" href="#">
+                        Delete
+                        </button>
+                    </td>
+                      
                   </tr>
                   <tr>
                       <td>Ashton Cox</td>
@@ -54,7 +63,11 @@
                       <td>2009-01-12</td>
                       <td>$86,000</td>
                       <td>$320,800</td>
-                      <td>$320,800</td>
+                      <td class="align-middle text-center">
+                        <button type="button" class="btn btn-danger text-white btn-sm" href="#">
+                        Delete
+                        </button>
+                    </td>
 
                   </tr>
                   <tr>
@@ -65,7 +78,11 @@
                       <td>2012-03-29</td>
                       <td>$433,060</td>
                       <td>$320,800</td>
-                      <td>$320,800</td>
+                      <td class="align-middle text-center">
+                        <button type="button" class="btn btn-danger text-white btn-sm" href="#">
+                        Delete
+                        </button>
+                    </td>
                   </tr>
                   <tr>
                       <td>Airi Satou</td>
@@ -75,7 +92,11 @@
                       <td>2008-11-28</td>
                       <td>$162,700</td>
                       <td>$320,800</td>
-                      <td>$320,800</td>
+                      <td class="align-middle text-center">
+                        <button type="button" class="btn btn-danger text-white btn-sm" href="#">
+                        Delete
+                        </button>
+                    </td>
                   </tr>
                   <tr>
                       <td>Brielle Williamson</td>
@@ -85,7 +106,11 @@
                       <td>2012-12-02</td>
                       <td>$372,000</td>
                       <td>$320,800</td>
-                      <td>$320,800</td>
+                      <td class="align-middle text-center">
+                        <button type="button" class="btn btn-danger text-white btn-sm" href="#">
+                        Delete
+                        </button>
+                    </td>
                   </tr>
                   <tr>
                       <td>Herrod Chandler</td>
@@ -95,7 +120,11 @@
                       <td>2012-08-06</td>
                       <td>$137,500</td>
                       <td>$320,800</td>
-                      <td>$320,800</td>
+                      <td class="align-middle text-center">
+                        <button type="button" class="btn btn-danger text-white btn-sm" href="#">
+                        Delete
+                        </button>
+                    </td>
                   </tr>
                   <tr>
                       <td>Rhona Davidson</td>
@@ -105,29 +134,23 @@
                       <td>2010-10-14</td>
                       <td>$327,900</td>
                       <td>$320,800</td>
-                      <td>$320,800</td>
-                  </tr>
-                  <tr>
-                      <td>Colleen Hurst</td>
-                      <td>Javascript Developer</td>
-                      <td>San Francisco</td>
-                      <td>39</td>
-                      <td>2009-09-15</td>
-                      <td>$205,500</td>
-                      <td>$320,800</td>
-                      <td>$320,800</td>
+                      <td class="align-middle text-center">
+                        <button type="button" class="btn btn-danger text-white btn-sm" href="#">
+                        Delete
+                        </button>
+                    </td>
                   </tr>
               </tbody>
               <tfoot>
                   <tr>
-                      <th>ID</th>
+                      <th>Pet Name</th>
                       <th>Owner Name</th>
                       <th>Address</th>
                       <th>Phone Number</th>
-                      <th>Pet Name</th>
                       <th>Pet Gender</th>
                       <th>Fur Color</th>
                       <th>Race</th>
+                      <th>Action</th>
                   </tr>
               </tfoot>
           </table>
