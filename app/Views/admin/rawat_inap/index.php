@@ -7,10 +7,6 @@
         <div class="card-header pb-0">
           <h4>Pasien Rawat Inap</h4>
         </div>
-        <a class="btn bg-primary mb-0 text-white m-5"  href='<?= base_url('/RawatInap');?>'>
-          New Ambulatoir
-        </a>
-        
         <div class="card-body px-0 pt-0 pb-2">
           <div class="table-responsive p-0 m-5">
             <table id="ambulatoir" class="table row-border hover" style="width:100%">
