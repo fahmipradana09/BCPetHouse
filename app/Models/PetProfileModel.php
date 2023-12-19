@@ -28,4 +28,13 @@ class PetProfileModel extends Model
 //     protected $validationMessages   = [];
 //     protected $skipValidation       = false;
 //     protected $cleanValidationRules = true;
+
+    public function getPetProfile($id = false)
+    {
+        if ($id == false)
+        {
+            return $this->findAll();
+        }
+        return $this->where(['id' => $id])->first();
+    }
 }

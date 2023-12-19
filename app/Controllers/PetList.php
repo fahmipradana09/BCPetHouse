@@ -7,18 +7,29 @@ use App\Models\PetProfileModel;
 class PetList extends BaseController
 {
     protected $petModel;
+    public function __construct()
+    {
+        $this->petModel = new PetProfileModel();
+    }
 
     public function index()
     {   
-        $pet = $this->petModel->findAll();
  
         $data = [
             'active' => 'petlist',
-            'pet' => $pet
+            'pet' => $this->petModel->getPetProfile()
         ];
 
-        dd($pet);
+        // dd($pet);
 
         return view('admin/pet_list/index',$data);
+    }
+
+    public function detail($slug)
+    {
+       $data = [
+        'active' => 'detailpet',
+        
+       ]
     }
 }

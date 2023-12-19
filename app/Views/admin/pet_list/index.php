@@ -12,6 +12,7 @@
             <table id="rawatinap" class="table row-border hover" style="width:100%">
               <thead>
                   <tr>
+                      <th>No</th>
                       <th>Pet Name</th>
                       <th>Owner Name</th>
                       <th>Address</th>
@@ -22,17 +23,17 @@
                       <th>Action</th>
                   </tr>
               </thead>
+              
               <tbody>
-
+                <?php $i = 1; ?>
                 <?php foreach ($pet as $p): ?>
                   <tr>
-                    <th scope="row">1</th>
+                      <td><?= $i++; ?></td>
                       <td><?= $p['name']?></td>
                       <td><?= $p['owner_name']?></td>
                       <td><?= $p['address']?></td>
                       <td><?= $p['phone']?></td>
                       <td><?= $p['gender']?></td>
-                      <td><?= $p['name']?></td>
                       <td><?= $p['fur_color']?></td>
                       <td><?= $p['race']?></td>
                       <td class="align-middle text-center">
@@ -44,8 +45,10 @@
                   <?php endforeach ;?>
 
               </tbody>
+
               <tfoot>
                   <tr>
+                      <th>No  </th>
                       <th>Pet Name</th>
                       <th>Owner Name</th>
                       <th>Address</th>
