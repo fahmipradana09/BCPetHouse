@@ -1,0 +1,29 @@
+CRITICAL - 2023-12-18 12:50:05 --> Undefined variable $data
+in APPPATH\Controllers\PetList.php on line 13.
+ 1 APPPATH\Controllers\PetList.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\BCPetHouse\\app\\Controllers\\PetList.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\PetList->index()
+ 3 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetList))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\BCPetHouse\\public\\index.php')
+CRITICAL - 2023-12-18 13:47:10 --> Class "App\Models\PetProfile" not found
+in APPPATH\Controllers\PetList.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\PetList->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(483): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\BCPetHouse\\public\\index.php')
+CRITICAL - 2023-12-18 13:47:52 --> Class "App\Models\PetProfile" not found
+in APPPATH\Controllers\PetList.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\PetList->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(483): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\BCPetHouse\\public\\index.php')
+CRITICAL - 2023-12-18 14:38:26 --> Class "App\Models\PetProfileModal" not found
+in APPPATH\Controllers\BaseController.php on line 55.
+ 1 SYSTEMPATH\CodeIgniter.php(888): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(483): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\BCPetHouse\\public\\index.php')
