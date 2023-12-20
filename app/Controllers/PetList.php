@@ -20,16 +20,17 @@ class PetList extends BaseController
             'pet' => $this->petModel->getPetProfile()
         ];
 
-        // dd($pet);
-
         return view('admin/pet_list/index',$data);
     }
 
-    public function detail($slug)
+    public function detail($id)
     {
        $data = [
         'active' => 'detailpet',
-        
-       ]
+        'pet' => $this->petModel->getPetProfile($id)
+       ];
+
+       dd($data);
+       return view('admin/pet_list/index',$data);
     }
 }

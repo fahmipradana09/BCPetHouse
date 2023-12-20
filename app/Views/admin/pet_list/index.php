@@ -37,9 +37,14 @@
                       <td><?= $p['fur_color']?></td>
                       <td><?= $p['race']?></td>
                       <td class="align-middle text-center">
+                      <div class="d-grid gap-2 d-md-block">
+                        <button type="button" class="btn btn-primary btn-sm" href="/Ambulatoir/detail/<?php $p['id'];?>">
+                        Edit
+                        </button>
                         <button type="button" class="btn btn-danger text-white btn-sm" href="#">
                         Delete
                         </button>
+                      </div>
                     </td>
                   </tr>
                   <?php endforeach ;?>
