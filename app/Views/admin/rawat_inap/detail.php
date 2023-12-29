@@ -5,7 +5,7 @@
     <div class="col-12">
       <div class="card mb-4">
         <div class="card-header pb-0">
-          <h4>Ambulatoir</h4>
+          <h4>Detail Rawat</h4>
         </div>
         <form class="row m-3">
 

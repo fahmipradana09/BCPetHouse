@@ -15,10 +15,10 @@ $routes->setAutoRoute(true);
 
 $routes->get('/', 'Dashboard::index');
 
-$routes->get('/Ambulatoir', 'Ambulatoir::index');
-$routes->add('/Ambulatoir/detail','Ambulatoir::detail_ambulatoir');
+// $routes->get('/Ambulatoir', 'Ambulatoir::index');
+// $routes->add('/Ambulatoir/detail','Ambulatoir::detail_ambulatoir');
 
-$routes->get('/RawatInap','RawatInap::index');
+// $routes->get('/RawatInap','RawatInap::index');
 
-$routes->get('/PetList','PetList::index');
-$routes->add('/PetList/detail/(:segment)','PetList::detail/$1');
+// $routes->get('/PetList','PetList::index');
+

@@ -9,7 +9,7 @@ class PetProfileModel extends Model
 	protected $table      = 'pet_profile';
     protected $primaryKey = 'id';
 
-    // protected $useAutoIncrement = true;
+    protected $useAutoIncrement = true;
 
     protected $returnType     = 'array';
     // protected $useSoftDeletes = true;

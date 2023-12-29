@@ -12,7 +12,7 @@ class Ambulatoir extends BaseController
         return view('admin/ambulatoir/index',$data);
     }
 
-    public function detail_ambulatoir()
+    public function detail()
     {
         $data = [
             'active' => 'ambulatoir'

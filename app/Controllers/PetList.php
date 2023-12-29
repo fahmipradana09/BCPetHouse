@@ -30,7 +30,7 @@ class PetList extends BaseController
         'pet' => $this->petModel->getPetProfile($id)
        ];
 
-       dd($data);
-       return view('admin/pet_list/index',$data);
+        //dd($data);
+       return view('admin/pet_list/detail',$data);
     }
 }

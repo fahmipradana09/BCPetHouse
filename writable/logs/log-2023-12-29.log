@@ -1,0 +1,253 @@
+ERROR - 2023-12-29 01:47:55 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'bcpet_db', 3306, '', 0)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Project (external)\BCPetHouse\app\Models\PetProfileModel.php(36): CodeIgniter\BaseModel->findAll()
+#7 D:\Project (external)\BCPetHouse\app\Controllers\PetList.php(20): App\Models\PetProfileModel->getPetProfile()
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\PetList->index()
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetList))
+#10 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\Project (external)\BCPetHouse\app\Models\PetProfileModel.php(36): CodeIgniter\BaseModel->findAll()
+#6 D:\Project (external)\BCPetHouse\app\Controllers\PetList.php(20): App\Models\PetProfileModel->getPetProfile()
+#7 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\PetList->index()
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetList))
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#12 {main}
+CRITICAL - 2023-12-29 01:47:55 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pet_profile`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\PetProfileModel.php(36): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\PetList.php(20): App\Models\PetProfileModel->getPetProfile()
+ 7 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\PetList->index()
+ 8 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetList))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+ERROR - 2023-12-29 01:48:01 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'bcpet_db', 3306, '', 0)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Project (external)\BCPetHouse\app\Models\PetProfileModel.php(36): CodeIgniter\BaseModel->findAll()
+#7 D:\Project (external)\BCPetHouse\app\Controllers\PetList.php(20): App\Models\PetProfileModel->getPetProfile()
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\PetList->index()
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetList))
+#10 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\Project (external)\BCPetHouse\app\Models\PetProfileModel.php(36): CodeIgniter\BaseModel->findAll()
+#6 D:\Project (external)\BCPetHouse\app\Controllers\PetList.php(20): App\Models\PetProfileModel->getPetProfile()
+#7 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\PetList->index()
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetList))
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#12 {main}
+CRITICAL - 2023-12-29 01:48:01 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pet_profile`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\PetProfileModel.php(36): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\PetList.php(20): App\Models\PetProfileModel->getPetProfile()
+ 7 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\PetList->index()
+ 8 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetList))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+ERROR - 2023-12-29 02:50:04 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:
+ LIMIT 1' at line 3 in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Project (external)\BCPetHouse\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Project (external)\BCPetHouse\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 D:\Project (external)\BCPetHouse\app\Models\PetProfileModel.php(38): CodeIgniter\BaseModel->first()
+#7 D:\Project (external)\BCPetHouse\app\Controllers\PetList.php(30): App\Models\PetProfileModel->getPetProfile('1')
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\PetList->detail('1')
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetList))
+#10 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#13 {main}
+CRITICAL - 2023-12-29 02:50:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:
+ LIMIT 1' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pet_profile`
+WHERE 0 = :0:
+AND 1 = :1:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\PetProfileModel.php(38): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\PetList.php(30): App\Models\PetProfileModel->getPetProfile('1')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\PetList->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetList))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+CRITICAL - 2023-12-29 03:34:54 --> Too few arguments to function App\Controllers\PetList::detail(), 0 passed in D:\Project (external)\BCPetHouse\system\CodeIgniter.php on line 915 and exactly 1 expected
+in APPPATH\Controllers\PetList.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\PetList->detail()
+ 2 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetList))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+CRITICAL - 2023-12-29 03:34:58 --> Too few arguments to function App\Controllers\PetList::detail(), 0 passed in D:\Project (external)\BCPetHouse\system\CodeIgniter.php on line 915 and exactly 1 expected
+in APPPATH\Controllers\PetList.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\PetList->detail()
+ 2 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetList))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+CRITICAL - 2023-12-29 06:45:32 --> Too few arguments to function App\Controllers\PetList::detail(), 0 passed in D:\Project (external)\BCPetHouse\system\CodeIgniter.php on line 915 and exactly 1 expected
+in APPPATH\Controllers\PetList.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\PetList->detail()
+ 2 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetList))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+CRITICAL - 2023-12-29 06:48:57 --> Too few arguments to function App\Controllers\PetList::detail(), 0 passed in D:\Project (external)\BCPetHouse\system\CodeIgniter.php on line 915 and exactly 1 expected
+in APPPATH\Controllers\PetList.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\PetList->detail()
+ 2 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetList))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+CRITICAL - 2023-12-29 06:49:00 --> Too few arguments to function App\Controllers\PetList::detail(), 0 passed in D:\Project (external)\BCPetHouse\system\CodeIgniter.php on line 915 and exactly 1 expected
+in APPPATH\Controllers\PetList.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\PetList->detail()
+ 2 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetList))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+CRITICAL - 2023-12-29 06:49:01 --> Too few arguments to function App\Controllers\PetList::detail(), 0 passed in D:\Project (external)\BCPetHouse\system\CodeIgniter.php on line 915 and exactly 1 expected
+in APPPATH\Controllers\PetList.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\PetList->detail()
+ 2 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetList))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+CRITICAL - 2023-12-29 06:49:11 --> Too few arguments to function App\Controllers\PetList::detail(), 0 passed in D:\Project (external)\BCPetHouse\system\CodeIgniter.php on line 915 and exactly 1 expected
+in APPPATH\Controllers\PetList.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\PetList->detail()
+ 2 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetList))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+ERROR - 2023-12-29 07:05:40 --> mysqli_sql_exception: Unknown column 'pet_profile.deleted_at' in 'where clause' in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Project (external)\BCPetHouse\app\Models\PetProfileModel.php(36): CodeIgniter\BaseModel->findAll()
+#7 D:\Project (external)\BCPetHouse\app\Controllers\PetList.php(20): App\Models\PetProfileModel->getPetProfile()
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\PetList->index()
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetList))
+#10 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#13 {main}
+CRITICAL - 2023-12-29 07:05:40 --> Unknown column 'pet_profile.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pet_profile`
+WHERE `pet_profile`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\PetProfileModel.php(36): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\PetList.php(20): App\Models\PetProfileModel->getPetProfile()
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\PetList->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetList))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+ERROR - 2023-12-29 07:05:40 --> mysqli_sql_exception: Unknown column 'pet_profile.deleted_at' in 'where clause' in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Project (external)\BCPetHouse\app\Models\PetProfileModel.php(36): CodeIgniter\BaseModel->findAll()
+#7 D:\Project (external)\BCPetHouse\app\Controllers\PetList.php(20): App\Models\PetProfileModel->getPetProfile()
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\PetList->index()
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetList))
+#10 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#13 {main}
+CRITICAL - 2023-12-29 07:05:40 --> Unknown column 'pet_profile.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pet_profile`
+WHERE `pet_profile`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\PetProfileModel.php(36): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\PetList.php(20): App\Models\PetProfileModel->getPetProfile()
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\PetList->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetList))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+CRITICAL - 2023-12-29 07:07:46 --> Too few arguments to function App\Controllers\PetList::detail(), 0 passed in D:\Project (external)\BCPetHouse\system\CodeIgniter.php on line 915 and exactly 1 expected
+in APPPATH\Controllers\PetList.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\PetList->detail()
+ 2 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetList))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+CRITICAL - 2023-12-29 07:20:24 --> Too few arguments to function App\Controllers\PetList::detail(), 0 passed in D:\Project (external)\BCPetHouse\system\CodeIgniter.php on line 915 and exactly 1 expected
+in APPPATH\Controllers\PetList.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\PetList->detail()
+ 2 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetList))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')

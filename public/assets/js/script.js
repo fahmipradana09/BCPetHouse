@@ -22,6 +22,7 @@ $(document).ready(function(){
 
 });
 
+
 $(function(){
     var today = new Date(); // Get current date
     var formattedDate = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear(); // Format it as YYYY-MM-DD
