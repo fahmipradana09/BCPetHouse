@@ -38,7 +38,7 @@
                       <td><?= $p['race']?></td>
                       <td class="align-middle text-center">
                       <div class="d-grid gap-2 d-md-block">
-                        <a class="btn btn-primary btn-sm" href="/PetList/detail/<?= $p['id'];?>">
+                        <a class="btn btn-primary btn-sm" href='<?= base_url('/PetList/detail/'). $p['id']?>'>
                         Edit
                         </a>
                         <a type="button" class="btn btn-danger text-white btn-sm" href="#">
