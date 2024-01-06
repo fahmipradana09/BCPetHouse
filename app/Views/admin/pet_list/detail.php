@@ -146,7 +146,6 @@
                   <input type="text" name='Pengobatan[]' placeholder='Type here...' class="form-control"/>
                   </td>
                   
-
                 </tr>
                     <tr id='addr1'></tr>
               </tbody>

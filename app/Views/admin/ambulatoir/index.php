@@ -7,9 +7,15 @@
         <div class="card-header pb-0">
           <h4>List Ambulatoir</h4>
         </div>
-        <a class="btn bg-primary mb-0 text-white m-5"  href='<?= base_url('/Ambulatoir/detail');?>'>
+        <a class="btn bg-primary mb-0 text-white m-5"  href='<?= base_url('/Ambulatoir/create');?>'>
           New Ambulatoir
         </a>
+        <?php if (session()->getFlashdata('message')):?>
+            <div class="alert alert-success alert-dismissible text-white fade show mx-5 mt-3" role="alert">
+            <?= session()->getFlashdata('message'); ?>
+            <button type="button" class="btn-close text-white" data-dismiss="alert" aria-label="Close"></button>
+            </div>
+          <?php endif;?>
         <div class="card-body px-0 pt-0 pb-2">
           <div class="table-responsive p-0 m-5">
             <table id="ambulatoir" class="table row-border hover" style="width:100%">

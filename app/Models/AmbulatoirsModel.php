@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class PetProfileModel extends Model
+class AmbulatoirsModel extends Model
 {
 	protected $table      = 'pet_profile';
     protected $primaryKey = 'id';

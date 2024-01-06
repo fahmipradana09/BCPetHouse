@@ -32,5 +32,11 @@ class PetList extends BaseController
 
         //dd($data);
        return view('admin/pet_list/detail',$data);
+
+       //jika page tidak ditemukan
+       if(empty($data['pet']))
+       {
+        throw new \CodeIgniter\Exceptions\PageNotFoundException('Data '.$id.'tidak terdaftar');
+       }
     }
 }
