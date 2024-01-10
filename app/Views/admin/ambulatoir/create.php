@@ -5,22 +5,31 @@
     <div class="col-12">
       <div class="card mb-4">
         <div class="card-header pb-0">
+      
+          
+          <!-- Data nya kosong -->
           <h4>Create NEW Am1bulatoir</h4>
         </div>
-        <form class="row m-3" action="/Ambulatoir/save" method="post">
+        <form class="row m-3" action="<?= base_url(); ?>Ambulatoir/save" method="post">
           <?= csrf_field(); ?>
           <div class="col-md-5 mt-3">
               <label for="inputOwnerName" class="form-label">Owner Name</label>
               <div class="input-group input-group-outline">
-                  <input type="text" name="ownerName" class="form-control <?=($validation->hasError('ownerName')) ? 'is-invalid' : ''; ?>" id="inputOwnerName" placeholder="Type Here...." autofocus>
-              </div>
+                  <input type="text" name="ownerName" class="form-control <?=($ownerName) ? 'is-invalid' : ''; ?>" id="inputOwnerName" placeholder="Type Here...." autofocus>
+                  <div class="invalid-feedback">
+                    <?= $ownerName ?>
+                  </div>
+                </div>
           </div>
 
           <div class="col-md-5 mt-3">
             <label for="inputPetName" class="form-label text-truncate">Pet Name</label>
             <div class="input-group input-group-outline">
-                <input type="text" name="petName" class="form-control <?=($validation->hasError('petName')) ? 'is-invalid' : ''; ?>" id="inputPetName" placeholder="Type Here....">
-            </div>
+                <input type="text" name="petName" class="form-control <?=($petName) ? 'is-invalid' : ''; ?>" id="inputPetName" placeholder="Type Here....">
+                  <div class="invalid-feedback">
+                  <?= $petName ?>
+                </div>
+              </div>
           </div>
 
           <div class="col-md-2 mt-3">

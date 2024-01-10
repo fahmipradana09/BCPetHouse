@@ -1,0 +1,9 @@
+__ci_last_regenerate|i:1704812420;_ci_previous_url|s:39:"http://localhost:8080/ambulatoir/create";errorValidasi|s:233:"<!-- DEBUG-VIEW START 1 SYSTEMPATH\Validation\Views\list.php -->
+	<div class="errors" role="alert">
+		<ul>
+					<li>petName Wajib diisi</li>
+				</ul>
+	</div>
+
+<!-- DEBUG-VIEW ENDED 1 SYSTEMPATH\Validation\Views\list.php -->
+";__ci_vars|a:2:{s:13:"errorValidasi";s:3:"old";s:9:"ownerName";s:3:"old";}ownerName|s:19:"petName Wajib diisi";

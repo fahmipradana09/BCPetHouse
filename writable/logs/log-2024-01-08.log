@@ -1,0 +1,425 @@
+INFO - 2024-01-08 14:10:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 14:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 14:11:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 14:14:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 14:33:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 14:33:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 14:34:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 14:34:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 14:34:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 14:43:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 14:43:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 14:43:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 14:43:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 14:47:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 14:47:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 14:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 14:48:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 14:49:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-08 14:49:04 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\BCPetHouse\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\BCPetHouse\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'bcpet_db', 3306, '', 0)
+#1 C:\xampp\htdocs\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\BCPetHouse\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\BCPetHouse\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\BCPetHouse\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\BCPetHouse\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\BCPetHouse\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\BCPetHouse\app\Controllers\Ambulatoir.php(75): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+#10 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#11 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\BCPetHouse\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\BCPetHouse\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#3 C:\xampp\htdocs\BCPetHouse\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#4 C:\xampp\htdocs\BCPetHouse\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#5 C:\xampp\htdocs\BCPetHouse\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#6 C:\xampp\htdocs\BCPetHouse\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#7 C:\xampp\htdocs\BCPetHouse\app\Controllers\Ambulatoir.php(75): CodeIgniter\BaseModel->save(Array)
+#8 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+#9 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#10 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-01-08 14:49:04 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pet_profile` (`owner_name`, `name`, `age`, `address`, `phone`, `animal_type`, `race`, `fur_color`, `gender`, `created_at`, `updated_at`) VALUES (:owner_name:, :name:, :age:, :address:, :phone:, :animal_type:, :race:, :fur_color:, :gender:, :created_at:, :updated_at:)', [...], false)
+ 3 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 6 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 7 APPPATH\Controllers\Ambulatoir.php(75): CodeIgniter\BaseModel->save([...])
+ 8 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+ 9 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\BCPetHouse\\public\\index.php')
+INFO - 2024-01-08 14:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 14:49:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 14:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 14:51:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-08 14:51:08 --> Call to undefined function validation_list_errors()
+in APPPATH\Views\admin\ambulatoir\create.php on line 8.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/ambulatoir/create', [], true)
+ 4 APPPATH\Controllers\Ambulatoir.php(30): view('admin/ambulatoir/create', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Ambulatoir->create()
+ 6 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\BCPetHouse\\public\\index.php')
+INFO - 2024-01-08 14:51:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-08 14:51:37 --> Call to undefined method CodeIgniter\Validation\Validation::validation_list_errors()
+in APPPATH\Views\admin\ambulatoir\create.php on line 8.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/ambulatoir/create', [], true)
+ 4 APPPATH\Controllers\Ambulatoir.php(30): view('admin/ambulatoir/create', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Ambulatoir->create()
+ 6 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\BCPetHouse\\public\\index.php')
+INFO - 2024-01-08 14:51:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-08 14:51:38 --> Call to undefined method CodeIgniter\Validation\Validation::validation_list_errors()
+in APPPATH\Views\admin\ambulatoir\create.php on line 8.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/ambulatoir/create', [], true)
+ 4 APPPATH\Controllers\Ambulatoir.php(30): view('admin/ambulatoir/create', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Ambulatoir->create()
+ 6 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\BCPetHouse\\public\\index.php')
+INFO - 2024-01-08 14:54:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 15:11:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 15:11:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 15:11:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 15:21:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 15:21:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 15:21:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 15:21:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 15:21:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 15:23:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 15:23:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-08 15:23:50 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\BCPetHouse\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\BCPetHouse\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'bcpet_db', 3306, '', 0)
+#1 C:\xampp\htdocs\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\BCPetHouse\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\BCPetHouse\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\BCPetHouse\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\BCPetHouse\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\BCPetHouse\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\BCPetHouse\app\Controllers\Ambulatoir.php(75): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+#10 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#11 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\BCPetHouse\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\BCPetHouse\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#3 C:\xampp\htdocs\BCPetHouse\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#4 C:\xampp\htdocs\BCPetHouse\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#5 C:\xampp\htdocs\BCPetHouse\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#6 C:\xampp\htdocs\BCPetHouse\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#7 C:\xampp\htdocs\BCPetHouse\app\Controllers\Ambulatoir.php(75): CodeIgniter\BaseModel->save(Array)
+#8 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+#9 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#10 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-01-08 15:23:50 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pet_profile` (`owner_name`, `name`, `age`, `address`, `phone`, `animal_type`, `race`, `fur_color`, `gender`, `created_at`, `updated_at`) VALUES (:owner_name:, :name:, :age:, :address:, :phone:, :animal_type:, :race:, :fur_color:, :gender:, :created_at:, :updated_at:)', [...], false)
+ 3 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 6 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 7 APPPATH\Controllers\Ambulatoir.php(75): CodeIgniter\BaseModel->save([...])
+ 8 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+ 9 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\BCPetHouse\\public\\index.php')
+INFO - 2024-01-08 15:24:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 15:24:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-08 15:24:23 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\BCPetHouse\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\BCPetHouse\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'bcpet_db', 3306, '', 0)
+#1 C:\xampp\htdocs\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\BCPetHouse\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\BCPetHouse\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\BCPetHouse\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\BCPetHouse\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\BCPetHouse\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\BCPetHouse\app\Controllers\Ambulatoir.php(75): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+#10 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#11 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\BCPetHouse\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\BCPetHouse\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#3 C:\xampp\htdocs\BCPetHouse\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#4 C:\xampp\htdocs\BCPetHouse\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#5 C:\xampp\htdocs\BCPetHouse\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#6 C:\xampp\htdocs\BCPetHouse\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#7 C:\xampp\htdocs\BCPetHouse\app\Controllers\Ambulatoir.php(75): CodeIgniter\BaseModel->save(Array)
+#8 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+#9 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#10 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-01-08 15:24:23 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pet_profile` (`owner_name`, `name`, `age`, `address`, `phone`, `animal_type`, `race`, `fur_color`, `gender`, `created_at`, `updated_at`) VALUES (:owner_name:, :name:, :age:, :address:, :phone:, :animal_type:, :race:, :fur_color:, :gender:, :created_at:, :updated_at:)', [...], false)
+ 3 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 6 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 7 APPPATH\Controllers\Ambulatoir.php(75): CodeIgniter\BaseModel->save([...])
+ 8 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+ 9 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\BCPetHouse\\public\\index.php')
+INFO - 2024-01-08 15:24:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 15:24:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 15:24:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 15:24:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-08 15:25:02 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\BCPetHouse\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\BCPetHouse\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'bcpet_db', 3306, '', 0)
+#1 C:\xampp\htdocs\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\BCPetHouse\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\BCPetHouse\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\BCPetHouse\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\BCPetHouse\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\BCPetHouse\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\BCPetHouse\app\Controllers\Ambulatoir.php(75): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+#10 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#11 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\BCPetHouse\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\BCPetHouse\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#3 C:\xampp\htdocs\BCPetHouse\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#4 C:\xampp\htdocs\BCPetHouse\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#5 C:\xampp\htdocs\BCPetHouse\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#6 C:\xampp\htdocs\BCPetHouse\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#7 C:\xampp\htdocs\BCPetHouse\app\Controllers\Ambulatoir.php(75): CodeIgniter\BaseModel->save(Array)
+#8 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+#9 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#10 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-01-08 15:25:02 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pet_profile` (`owner_name`, `name`, `age`, `address`, `phone`, `animal_type`, `race`, `fur_color`, `gender`, `created_at`, `updated_at`) VALUES (:owner_name:, :name:, :age:, :address:, :phone:, :animal_type:, :race:, :fur_color:, :gender:, :created_at:, :updated_at:)', [...], false)
+ 3 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 6 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 7 APPPATH\Controllers\Ambulatoir.php(75): CodeIgniter\BaseModel->save([...])
+ 8 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+ 9 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\BCPetHouse\\public\\index.php')
+INFO - 2024-01-08 15:25:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 15:27:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 15:27:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-08 15:27:15 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\BCPetHouse\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\BCPetHouse\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'bcpet_db', 3306, '', 0)
+#1 C:\xampp\htdocs\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\BCPetHouse\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\BCPetHouse\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\BCPetHouse\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\BCPetHouse\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\BCPetHouse\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\BCPetHouse\app\Controllers\Ambulatoir.php(90): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+#10 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#11 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\BCPetHouse\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\BCPetHouse\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#3 C:\xampp\htdocs\BCPetHouse\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#4 C:\xampp\htdocs\BCPetHouse\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#5 C:\xampp\htdocs\BCPetHouse\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#6 C:\xampp\htdocs\BCPetHouse\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#7 C:\xampp\htdocs\BCPetHouse\app\Controllers\Ambulatoir.php(90): CodeIgniter\BaseModel->save(Array)
+#8 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+#9 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#10 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-01-08 15:27:15 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pet_profile` (`owner_name`, `name`, `age`, `address`, `phone`, `animal_type`, `race`, `fur_color`, `gender`, `created_at`, `updated_at`) VALUES (:owner_name:, :name:, :age:, :address:, :phone:, :animal_type:, :race:, :fur_color:, :gender:, :created_at:, :updated_at:)', [...], false)
+ 3 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 6 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 7 APPPATH\Controllers\Ambulatoir.php(90): CodeIgniter\BaseModel->save([...])
+ 8 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+ 9 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\BCPetHouse\\public\\index.php')
+INFO - 2024-01-08 15:27:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 15:28:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 15:31:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 15:36:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 15:36:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 15:40:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 15:40:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 15:40:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 15:41:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 15:41:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 23:28:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 23:28:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 23:28:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 23:28:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 23:28:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 23:28:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 23:28:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 23:31:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 23:31:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 23:31:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 23:31:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-08 23:31:56 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\BCPetHouse\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\BCPetHouse\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'bcpet_db', 3306, '', 0)
+#1 C:\xampp\htdocs\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\BCPetHouse\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\BCPetHouse\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\BCPetHouse\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\BCPetHouse\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\BCPetHouse\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\BCPetHouse\app\Controllers\Ambulatoir.php(92): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+#10 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#11 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\BCPetHouse\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\BCPetHouse\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#3 C:\xampp\htdocs\BCPetHouse\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#4 C:\xampp\htdocs\BCPetHouse\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#5 C:\xampp\htdocs\BCPetHouse\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#6 C:\xampp\htdocs\BCPetHouse\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#7 C:\xampp\htdocs\BCPetHouse\app\Controllers\Ambulatoir.php(92): CodeIgniter\BaseModel->save(Array)
+#8 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+#9 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#10 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-01-08 23:31:56 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pet_profile` (`owner_name`, `name`, `age`, `address`, `phone`, `animal_type`, `race`, `fur_color`, `gender`, `created_at`, `updated_at`) VALUES (:owner_name:, :name:, :age:, :address:, :phone:, :animal_type:, :race:, :fur_color:, :gender:, :created_at:, :updated_at:)', [...], false)
+ 3 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 6 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 7 APPPATH\Controllers\Ambulatoir.php(92): CodeIgniter\BaseModel->save([...])
+ 8 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+ 9 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\BCPetHouse\\public\\index.php')
+INFO - 2024-01-08 23:32:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-08 23:32:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-08 23:32:21 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\BCPetHouse\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\BCPetHouse\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\BCPetHouse\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\BCPetHouse\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\BCPetHouse\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\BCPetHouse\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\BCPetHouse\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\BCPetHouse\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\BCPetHouse\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\BCPetHouse\app\Controllers\Ambulatoir.php(92): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+#10 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#11 C:\xampp\htdocs\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2024-01-08 23:32:21 --> Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pet_profile` (`owner_name`, `name`, `age`, `address`, `phone`, `animal_type`, `race`, `fur_color`, `gender`, `created_at`, `updated_at`) VALUES (:owner_name:, :name:, :age:, :address:, :phone:, :animal_type:, :race:, :fur_color:, :gender:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Ambulatoir.php(92): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+ 8 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\BCPetHouse\\public\\index.php')
+INFO - 2024-01-08 23:32:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

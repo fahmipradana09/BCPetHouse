@@ -21,34 +21,142 @@ class Ambulatoir extends BaseController
 
     public function create()
     {
-        session();
+        // session();
         $data = [
             'active' => 'ambulatoir',
-            'validation' => \Config\Services::validation()
+            'validation' => \Config\Services::validation(),
+            'errorValidasi' => Session()->getFlashdata("errorValidasi"), //ini alternatif nya pake flash data 
+            'ownerName' => Session()->getFlashdata("ownerName"),
+            'petName' => Session()->getFlashdata("petName"),
+            'age' => Session()->getFlashdata("age"),    
+            'address' => Session()->getFlashdata("address"),
+            'phoneNumber' => Session()->getFlashdata("phoneNumber"),
+            'animalType' => Session()->getFlashdata("animalType"),
+            'race' => Session()->getFlashdata("race"),
+            'furColor' => Session()->getFlashdata("furColor"),
+            'gender' => Session()->getFlashdata("gender"),
+
         ];
+        // ngeleg
 
         return view('admin/ambulatoir/create', $data);
     }
 
     public function save()
     {
+        $validation = \Config\Services::validation(); //Nah ini harusnya gaperlu di set di contoller save , cukup didefinisikan di create
+        // karna aku baca2 versi lama ci4 nya ngebug di bagian withInput jadi gabisa redirect sambil bawa datanya
+        // Alternatifnya pake ajax jquery jadi gaperlu redirect , main di json nya return nya langsung 
+        // Tapi karna ini gapake ajax jquery jadi alternatif kedua data validationnya di lempar ke flashdata , kekurangannya jadinya yang kelempar semua list error nya
+        // klo memang mau dipaksa , bisa diakalin lempar data per kolom nya ditambahin flash data nya masing masing
+        // INI SEMUA GARA GARA CI4 NGEBUG BANGSAT YANG VERSI LAWAS NYA
+
+        // $validasi = $this->validate([
+        //     'ownerName' => [
+        //         'rules' => 'required',
+        //         'errors' => [
+        //             'required' => '{field} Wajib diisi'
+        //         ],
+        //         ],
+        // ]);
+
+        // if($validasi){
+        //     echo 'tervalidasi';
+        // }else{
+            
+        // }
+        // die();
+
+        if(!$this->validate([
+            'ownerName' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Owner Name Wajib diisi'
+                ],
+            ],
+            'petName' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Pet Name Wajib diisi'
+                ],
+            ],
+            'age' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Age Wajib diisi'
+                ],
+            ],
+            'address' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Address Wajib diisi'
+                ],
+            ],
+            'phoneNumber' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Phone Number Wajib diisi'
+                ],
+            ],
+            'animalType' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Animal Type Wajib diisi'
+                ],
+            ],
+            'race' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Race Wajib diisi'
+                ],
+            ],
+            'furColor' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Fur Color Wajib diisi'
+                ],
+            ],
+            'gender' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Gender Wajib diisi'
+                ],
+            ],
+
+        ])){
+            return redirect()->to(base_url('ambulatoir/create'))
+            ->with('errorValidasi',$validation->listErrors())
+            ->with('ownerName',$validation->getError('ownerName')) // Ini cara ngakalin biar data perkolomnya bisa dilempar ke create
+            ->with('petName',$validation->getError('petName'))
+            ->with('age',$validation->getError('age'))
+            ->with('address',$validation->getError('address'))
+            ->with('phoneNumber',$validation->getError('phoneNumber'))
+            ->with('animalType',$validation->getError('animalType'))
+            ->with('race',$validation->getError('race'))
+            ->with('furColor',$validation->getError('furColor'))
+            ->with('gender',$validation->getError('gender'));
+            // intinya ini redirect ngambil data list error nya,ditangkap di create
+
+            // return redirect()->to(base_url('ambulatoir/create'))->withInput(); - bug nya ada di withInput, klo withInputnya bisa harusnya aman 
+                        // dd($validation->getError('ownerName'));
+        }
 
         //validation
-        if(!$this->validate([
-            'ownerName' => 'required|max_length[50]',
-            'petName' => 'required|max_length[50]',
-            'age' => 'required|max_length[5]',
-            'address' => 'required|max_length[500]',
-            'phoneNumber' => 'required|max_length[30]',
-            'animalType' => 'required|max_length[30]',
-            'race' => 'required|max_length[30]',
-            'furColor' => 'required|max_length[30]',
-            'gender' => 'required|max_length[10]',
-        ])){
-            $validation = \Config\Services::validation();
-             var_dump($validation);
-            return redirect()->to('/Ambulatoir/create')->withInput()->with('validation',$validation);
-        }
+        // if(!$this->validate([
+        //     'ownerName' => 'required|max_length[50]',
+        //     'petName' => 'required|max_length[50]',
+        //     'age' => 'required|max_length[5]',
+        //     'address' => 'required|max_length[500]',
+        //     'phoneNumber' => 'required|max_length[30]',
+        //     'animalType' => 'required|max_length[30]',
+        //     'race' => 'required|max_length[30]',
+        //     'furColor' => 'required|max_length[30]',
+        //     'gender' => 'required|max_length[10]',
+        // ])){
+        //     $validation = \Config\Services::validation();
+        //      var_dump($validation);
+        //     return redirect()->to('/Ambulatoir/create')->withInput()->with('validation',$validation);
+        // }
 
         // dd($this->request->getVar());
         $this->petModel->save([
