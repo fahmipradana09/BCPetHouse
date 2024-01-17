@@ -26,72 +26,72 @@
             <label for="inputPetName" class="form-label text-truncate">Pet Name</label>
             <div class="input-group input-group-outline">
                 <input type="text" name="petName" class="form-control <?=($petName) ? 'is-invalid' : ''; ?>" id="inputPetName" placeholder="Type Here....">
-                  <div class="invalid-feedback">
-                  <?= $petName ?>
-                </div>
+              <div class="invalid-feedback">
+              <?= $petName ?>
+            </div>
               </div>
           </div>
 
           <div class="col-md-2 mt-3">
           <label for="inputAge" class="form-label text-truncate">Age</label>
             <div class="input-group input-group-outline">
-                <input type="text" name="age" class="form-control" id="inputAge" placeholder="Type Here....">
+                <input type="text" name="age" class="form-control <?=($age) ? 'is-invalid' : ''; ?>" id="inputAge" placeholder="Type Here....">
             </div>
           </div>
 
           <div class="col-md-12 mt-3">
             <label for="inputAddress" class="form-label text-truncate">Address</label>
             <div class="input-group input-group-outline">
-              <textarea class="form-control" name="address" id="inputAddress" rows="3"></textarea>
+              <textarea class="form-control <?=($address) ? 'is-invalid' : ''; ?>" name="address" id="inputAddress" rows="3"></textarea>
             </div>
           </div>
 
           <div class="col-md-3 mt-3">
             <label for="inputFurColor" class="form-label text-truncate">Phone Number</label>
             <div class="input-group input-group-outline">
-              <input type="text" name="phoneNumber" class="form-control" id="inputPhoneNumber" placeholder="Type Here....">
+              <input type="text" name="phoneNumber" class="form-control <?=($phoneNumber) ? 'is-invalid' : ''; ?>" id="inputPhoneNumber" placeholder="Type Here....">
             </div>
           </div>
 
           <div class="col-md-3 mt-3">
             <label for="inputAnimalType" class="form-label text-truncate">Animal Type</label>
             <div class="input-group input-group-outline">
-              <input type="text" name="animalType" class="form-control" id="inputAnimalType" placeholder="Type Here....">
+              <input type="text" name="animalType" class="form-control <?=($animalType) ? 'is-invalid' : ''; ?>" id="inputAnimalType" placeholder="Type Here....">
             </div>
           </div>
 
           <div class="col-md-3 mt-3">
             <label for="inputFurColor" class="form-label text-truncate">Race</label>
             <div class="input-group input-group-outline">
-              <input type="text" name="race" class="form-control" id="inputRace" placeholder="Type Here....">
+              <input type="text" name="race" class="form-control <?=($race) ? 'is-invalid' : ''; ?>" id="inputRace" placeholder="Type Here....">
             </div>
           </div>
 
           <div class="col-md-3 mt-3">
             <label for="inputFurColor" class="form-label text-truncate">Fur Color</label>
             <div class="input-group input-group-outline">
-              <input type="text" name="furColor" class="form-control" id="inputFurColor" placeholder="Type Here....">
+              <input type="text" name="furColor" class="form-control <?=($furColor) ? 'is-invalid' : ''; ?>" id="inputFurColor" placeholder="Type Here....">
             </div>
           </div>
 
           <div class="col-md-6 mt-3">
             <label for="inputGender" class="form-label text-truncate">Gender</label>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gender" id="radioMele" value="Male">
+              <input class="form-check-input" type="radio" name="gender" id="radioMele" value="Male" <?= ($gender === 'male') ? 'checked' : '' ?>>
               <label class="form-check-label" for="radioMale">
                 Male
               </label>
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gender" id="radioFemale" value="Female">
+              <input class="form-check-input" type="radio" name="gender" id="radioFemale" value="Female"  <?= ($gender === 'female') ? 'checked' : '' ?>>
               <label class="form-check-label" for="radioFemale">
                 Female
               </label>
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gender" id="radioUndefined" value="Undefined" checked>
+              <input class="form-check-input" type="radio" name="gender" id="radioUndefined" value="Undefined" <?= ($gender !== 'male' && $gender !== 'female') ? 'checked' : '' ?> checked>
               <label class="form-check-label" for="radioUndefined">
                 Undefined
               </label>

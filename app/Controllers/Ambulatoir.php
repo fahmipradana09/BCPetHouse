@@ -89,7 +89,8 @@ class Ambulatoir extends BaseController
             'address' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Address Wajib diisi'
+                    'required' => 'Address Wajib diisi',
+
                 ],
             ],
             'phoneNumber' => [
@@ -120,6 +121,36 @@ class Ambulatoir extends BaseController
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Gender Wajib diisi'
+                ],
+            ],
+            'Amnesa' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Amnesa Wajib diisi'
+                ],
+            ],
+            'statusPresent' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Status Present Wajib diisi'
+                ],
+            ],
+            'temuanKlinis' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Temuan Klinis Wajib diisi'
+                ],
+            ],
+            'diagnosa' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Diagnosa Wajib diisi'
+                ],
+            ],
+            'diagnosa' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Diagnosa Wajib diisi'
                 ],
             ],
 
