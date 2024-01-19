@@ -5,72 +5,88 @@
     <div class="col-12">
       <div class="card mb-4">
         <div class="card-header pb-0">
-      
-          
           <!-- Data nya kosong -->
-          <h4>Create NEW Am1bulatoir</h4>
+          <h4>Create NEW Ambulatoir</h4>
         </div>
         <form class="row m-3" action="<?= base_url(); ?>Ambulatoir/save" method="post">
           <?= csrf_field(); ?>
           <div class="col-md-5 mt-3">
-              <label for="inputOwnerName" class="form-label">Owner Name</label>
-              <div class="input-group input-group-outline">
-                  <input type="text" name="ownerName" class="form-control <?=($ownerName) ? 'is-invalid' : ''; ?>" id="inputOwnerName" placeholder="Type Here...." autofocus>
-                  <div class="invalid-feedback">
-                    <?= $ownerName ?>
-                  </div>
-                </div>
+            <label for="inputOwnerName" class="form-label">Owner Name</label>
+            <div>
+                <input type="text" name="ownerName" class="form-control <?=($ownerName) ? 'is-invalid' : ''; ?>" id="inputOwnerName" placeholder="Type Here...." autofocus>
+                <div class="invalid-feedback">
+                <?= $ownerName ?>
+              </div>
+            </div>
           </div>
 
           <div class="col-md-5 mt-3">
             <label for="inputPetName" class="form-label text-truncate">Pet Name</label>
-            <div class="input-group input-group-outline">
+            <div>
                 <input type="text" name="petName" class="form-control <?=($petName) ? 'is-invalid' : ''; ?>" id="inputPetName" placeholder="Type Here....">
-              <div class="invalid-feedback">
-              <?= $petName ?>
-            </div>
+                <div class="invalid-feedback">
+                  <?= $petName ?>
+                </div>
               </div>
           </div>
 
           <div class="col-md-2 mt-3">
           <label for="inputAge" class="form-label text-truncate">Age</label>
-            <div class="input-group input-group-outline">
+            <div>
                 <input type="text" name="age" class="form-control <?=($age) ? 'is-invalid' : ''; ?>" id="inputAge" placeholder="Type Here....">
-            </div>
+                <div class="invalid-feedback">
+                  <?= $age ?>
+                </div>
+             </div>
           </div>
 
           <div class="col-md-12 mt-3">
             <label for="inputAddress" class="form-label text-truncate">Address</label>
-            <div class="input-group input-group-outline">
+            <div>
               <textarea class="form-control <?=($address) ? 'is-invalid' : ''; ?>" name="address" id="inputAddress" rows="3"></textarea>
+              <div class="invalid-feedback">
+                <?= $address ?>
+              </div>
             </div>
           </div>
 
           <div class="col-md-3 mt-3">
             <label for="inputFurColor" class="form-label text-truncate">Phone Number</label>
-            <div class="input-group input-group-outline">
+            <div>
               <input type="text" name="phoneNumber" class="form-control <?=($phoneNumber) ? 'is-invalid' : ''; ?>" id="inputPhoneNumber" placeholder="Type Here....">
+              <div class="invalid-feedback">
+                <?= $phoneNumber ?>
+              </div>
             </div>
           </div>
 
           <div class="col-md-3 mt-3">
             <label for="inputAnimalType" class="form-label text-truncate">Animal Type</label>
-            <div class="input-group input-group-outline">
+            <div>
               <input type="text" name="animalType" class="form-control <?=($animalType) ? 'is-invalid' : ''; ?>" id="inputAnimalType" placeholder="Type Here....">
+              <div class="invalid-feedback">
+                <?= $animalType ?>
+              </div>
             </div>
           </div>
 
           <div class="col-md-3 mt-3">
             <label for="inputFurColor" class="form-label text-truncate">Race</label>
-            <div class="input-group input-group-outline">
+            <div>
               <input type="text" name="race" class="form-control <?=($race) ? 'is-invalid' : ''; ?>" id="inputRace" placeholder="Type Here....">
+              <div class="invalid-feedback">
+                <?= $race ?>
+              </div>
             </div>
           </div>
 
           <div class="col-md-3 mt-3">
             <label for="inputFurColor" class="form-label text-truncate">Fur Color</label>
-            <div class="input-group input-group-outline">
+            <div>
               <input type="text" name="furColor" class="form-control <?=($furColor) ? 'is-invalid' : ''; ?>" id="inputFurColor" placeholder="Type Here....">
+              <div class="invalid-feedback">
+                <?= $furColor ?>
+              </div>
             </div>
           </div>
 
@@ -144,29 +160,29 @@
                     <td>1</td>
 
                     <td>
-                    <div class="input-group date" id="datePicker">
+                    <div class="date" id="datePicker">
                       <input type="text" name='date[]' placeholder='Enter Date' class="form-control" disabled/>
                     </div>
                     </td>
 
                     <td>
-                    <input type="text" name='amnesa[]' placeholder='Type here...' class="form-control"/>
+                    <input type="text" name='amnesa' placeholder='Type here...' class="form-control <?=($amnesa) ? 'is-invalid' : ''; ?>"/>
                     </td>
 
                     <td>
-                    <input type="text" name='StatusPresent[]' placeholder='Type here...' class="form-control"/>
+                    <input type="text" name='statusPresent' placeholder='Type here...' class="form-control <?=($statusPresent) ? 'is-invalid' : ''; ?>"/>
                     </td>
 
                     <td>
-                    <input type="text" name='Temuanklinis[]' placeholder='Type here...' class="form-control"/>
+                    <input type="text" name='temuanKlinis' placeholder='Type here...' class="form-control <?=($temuanKlinis) ? 'is-invalid' : ''; ?>"/>
                     </td>
 
                     <td>
-                    <input type="text" name='diagnosa[]' placeholder='Type here...' class="form-control"/>
+                    <input type="text" name='diagnosa' placeholder='Type here...' class="form-control <?=($diagnosa) ? 'is-invalid' : ''; ?>"/>
                     </td>
 
                     <td>
-                    <input type="text" name='Pengobatan[]' placeholder='Type here...' class="form-control"/>
+                    <input type="text" name='treatment' placeholder='Type here...' class="form-control <?=($treatment) ? 'is-invalid' : ''; ?>"/>
                     </td>
                     
 

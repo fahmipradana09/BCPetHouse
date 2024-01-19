@@ -35,6 +35,11 @@ class Ambulatoir extends BaseController
             'race' => Session()->getFlashdata("race"),
             'furColor' => Session()->getFlashdata("furColor"),
             'gender' => Session()->getFlashdata("gender"),
+            'amnesa' => Session()->getFlashdata("amnesa"),
+            'statusPresent' => Session()->getFlashdata("statusPresent"),
+            'temuanKlinis' => Session()->getFlashdata("temuanKlinis"),
+            'diagnosa' => Session()->getFlashdata("diagnosa"),
+            'treatment' => Session()->getFlashdata("treatment"),
 
         ];
         // ngeleg
@@ -71,7 +76,8 @@ class Ambulatoir extends BaseController
             'ownerName' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Owner Name Wajib diisi'
+                    'required' => 'Owner Name Wajib diisi',
+                    'max_length[2]'
                 ],
             ],
             'petName' => [
@@ -123,7 +129,7 @@ class Ambulatoir extends BaseController
                     'required' => 'Gender Wajib diisi'
                 ],
             ],
-            'Amnesa' => [
+            'amnesa' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Amnesa Wajib diisi'
@@ -147,7 +153,7 @@ class Ambulatoir extends BaseController
                     'required' => 'Diagnosa Wajib diisi'
                 ],
             ],
-            'diagnosa' => [
+            'treatment' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Diagnosa Wajib diisi'
@@ -165,29 +171,13 @@ class Ambulatoir extends BaseController
             ->with('animalType',$validation->getError('animalType'))
             ->with('race',$validation->getError('race'))
             ->with('furColor',$validation->getError('furColor'))
-            ->with('gender',$validation->getError('gender'));
-            // intinya ini redirect ngambil data list error nya,ditangkap di create
-
-            // return redirect()->to(base_url('ambulatoir/create'))->withInput(); - bug nya ada di withInput, klo withInputnya bisa harusnya aman 
-                        // dd($validation->getError('ownerName'));
+            ->with('gender',$validation->getError('gender'))
+            ->with('amnesa',$validation->getError('amnesa'))
+            ->with('statusPresent',$validation->getError('statusPresent'))
+            ->with('temuanKlinis',$validation->getError('temuanKlinis'))
+            ->with('diagnosa',$validation->getError('diagnosa'))
+            ->with('treatment',$validation->getError('treatment'));
         }
-
-        //validation
-        // if(!$this->validate([
-        //     'ownerName' => 'required|max_length[50]',
-        //     'petName' => 'required|max_length[50]',
-        //     'age' => 'required|max_length[5]',
-        //     'address' => 'required|max_length[500]',
-        //     'phoneNumber' => 'required|max_length[30]',
-        //     'animalType' => 'required|max_length[30]',
-        //     'race' => 'required|max_length[30]',
-        //     'furColor' => 'required|max_length[30]',
-        //     'gender' => 'required|max_length[10]',
-        // ])){
-        //     $validation = \Config\Services::validation();
-        //      var_dump($validation);
-        //     return redirect()->to('/Ambulatoir/create')->withInput()->with('validation',$validation);
-        // }
 
         // dd($this->request->getVar());
         $this->petModel->save([

@@ -1,0 +1,20 @@
+__ci_last_regenerate|i:1705657858;_ci_previous_url|s:39:"http://localhost:8080/ambulatoir/create";errorValidasi|s:639:"<!-- DEBUG-VIEW START 1 SYSTEMPATH\Validation\Views\list.php -->
+	<div class="errors" role="alert">
+		<ul>
+					<li>Owner Name Wajib diisi</li>
+					<li>Pet Name Wajib diisi</li>
+					<li>Age Wajib diisi</li>
+					<li>Address Wajib diisi</li>
+					<li>Phone Number Wajib diisi</li>
+					<li>Animal Type Wajib diisi</li>
+					<li>Race Wajib diisi</li>
+					<li>Fur Color Wajib diisi</li>
+					<li>Amnesa Wajib diisi</li>
+					<li>Status Present Wajib diisi</li>
+					<li>Temuan Klinis Wajib diisi</li>
+					<li>Diagnosa Wajib diisi</li>
+				</ul>
+	</div>
+
+<!-- DEBUG-VIEW ENDED 1 SYSTEMPATH\Validation\Views\list.php -->
+";__ci_vars|a:12:{s:13:"errorValidasi";s:3:"old";s:9:"ownerName";s:3:"old";s:7:"petName";s:3:"old";s:3:"age";s:3:"old";s:7:"address";s:3:"old";s:11:"phoneNumber";s:3:"old";s:10:"animalType";s:3:"old";s:4:"race";s:3:"old";s:8:"furColor";s:3:"old";s:6:"gender";s:3:"old";s:6:"amnesa";s:3:"old";s:13:"statusPresent";s:3:"old";}ownerName|s:22:"Owner Name Wajib diisi";petName|s:20:"Pet Name Wajib diisi";age|s:15:"Age Wajib diisi";address|s:19:"Address Wajib diisi";phoneNumber|s:24:"Phone Number Wajib diisi";animalType|s:23:"Animal Type Wajib diisi";race|s:16:"Race Wajib diisi";furColor|s:21:"Fur Color Wajib diisi";gender|s:0:"";amnesa|s:18:"Amnesa Wajib diisi";statusPresent|s:26:"Status Present Wajib diisi";
