@@ -7,8 +7,8 @@
         <div class="card-header pb-0">
           <h4>Ambulatoir</h4>
         </div>
-        <form class="row m-3">
-
+        <form class="row m-3" action="<?= base_url(); ?>PetList/save" method="post">
+          <?= csrf_field(); ?>
           <div class="col-md-5 mt-3">
             <label for="inputPetName" class="form-label text-truncate">Pet Name</label>
             <div class="input-group input-group-outline">
@@ -84,77 +84,80 @@
         <div class="container">
           <div class="row clearfix">
           <div class="col-md-12 table-responsive column">
-            <table class="table table-bordered table-hover" id="tab_logic">
-              <thead>
-                <tr>
-                  <th class="text-center">
-                    No.
-                  </th>
+          <table class="table table-bordered table-hover" id="tab_logic">
+                <thead>
+                  <tr>
+                    <th class="text-center">
+                      No.
+                    </th>
 
-                  <th class="text-center">
-                    Date Checkup
-                  </th>
+                    <th class="text-center">
+                      Date Checkup
+                    </th>
 
-                  <th class="text-center">
-                    Amnesa
-                  </th>
+                    <th class="text-center">
+                      Amnesa
+                    </th>
 
-                  <th class="text-center">
-                    Status Present
-                  </th>
+                    <th class="text-center">
+                      Status Present
+                    </th>
 
-                  <th class="text-center">
-                    Temuan Klinis
-                  </th>
+                    <th class="text-center">
+                      Temuan Klinis
+                    </th>
 
-                  <th class="text-center">
-                    Diagnosa
-                  </th>
+                    <th class="text-center">
+                      Diagnosa
+                    </th>
 
-                  <th class="text-center">
-                    Pengobatan
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr id='addr0'>
-                  <td>1</td>
+                    <th class="text-center">
+                      Pengobatan
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr id='addr0'>
+                    <td>1</td>
 
-                  <td>
-                  <div class="input-group date" id="datePicker">
-                    <input type="text" name='date[]' placeholder='Enter Date' class="form-control" disabled/>
-                  </div>
-                  </td>
+                    <td>
+                    <div class="date" id="datePicker">
+                      <input type="text" name='date[]' placeholder='Enter Date' class="form-control" disabled/>
+                    </div>
+                    </td>
 
-                  <td>
-                  <input type="text" name='amnesa[]' placeholder='Type here...' class="form-control"/>
-                  </td>
+                    <td>
+                    <input type="text" name='amnesa' placeholder='Type here...' class="form-control" value="<?=($amnesa) ? 'is-invalid' : ''; ?>" />
+                    </td>
 
-                  <td>
-                  <input type="text" name='StatusPresent[]' placeholder='Type here...' class="form-control"/>
-                  </td>
+                    <td>
+                    <input type="text" name='statusPresent' placeholder='Type here...' class="form-control" value=" <?=($statusPresent) ? 'is-invalid' : ''; ?>"/>
+                    </td>
 
-                  <td>
-                  <input type="text" name='Temuanklinis[]' placeholder='Type here...' class="form-control"/>
-                  </td>
+                    <td>
+                    <input type="text" name='temuanKlinis' placeholder='Type here...' class="form-control" value="<?=($temuanKlinis) ? 'is-invalid' : ''; ?>"/>
+                    </td>
 
-                  <td>
-                  <input type="text" name='diagnosa[]' placeholder='Type here...' class="form-control"/>
-                  </td>
+                    <td>
+                    <input type="text" name='diagnosa' placeholder='Type here...' class="form-control" value="<?=($diagnosa) ? 'is-invalid' : ''; ?>"/>
+                    </td>
 
-                  <td>
-                  <input type="text" name='Pengobatan[]' placeholder='Type here...' class="form-control"/>
-                  </td>
-                  
-                </tr>
-                    <tr id='addr1'></tr>
-              </tbody>
-            </table>
+                    <td>
+                    <input type="text" name='treatment' placeholder='Type here...' class="form-control" value=" <?=($treatment) ? 'is-invalid' : ''; ?>"/>
+                    </td>
+                    
+
+                  </tr>
+                      <tr id='addr1'></tr>
+                </tbody>
+              </table>
           </div>
         </div>
    </div>
 
-   <button id="saveAmbulatoir" class="btn bg-primary align-self-center text-white btn-default col-md-6 mx-3 mt-4">Save</button>
+   <div class="d-flex justify-content-center">
+      <button type="submit" id="savePet" class="btn bg-primary justify-content-center text-white btn-default col-md-6 mx-3 mt-4">Save</button>
+    </div>
   </div>
 </div>
-<?= $this->endSection(); ?>
+<?= $this->endSection(); ?>   

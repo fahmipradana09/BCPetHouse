@@ -191,9 +191,9 @@ class Ambulatoir extends BaseController
             'fur_color' => $this->request->getVar('furColor'),
             'gender'=>$this->request->getVar('gender'),
         ]);
+        
 
         session()->setFlashdata('message','Data Success');
-
         return redirect()->to('ambulatoir');
     }
 }

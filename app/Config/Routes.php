@@ -6,6 +6,7 @@ $routes = Services::routes();
 if (file_exists(SYSTEMPATH.'Config/Routes.php')) {
     require SYSTEMPATH.'Config/Routes.php';
 }
+
 $routes->setDefaultNamespace('App\Controllers');
 $routes->setDefaultController('Dashboard');
 $routes->setDefaultMethod('index');

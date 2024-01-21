@@ -161,7 +161,7 @@
 
                     <td>
                     <div class="date" id="datePicker">
-                      <input type="text" name='date[]' placeholder='Enter Date' class="form-control" disabled/>
+                      <input type="text" name='date' placeholder='Enter Date' class="form-control " disabled/>
                     </div>
                     </td>
 

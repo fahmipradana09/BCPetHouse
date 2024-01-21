@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class AmbulatoirsModel extends Model
 {
-	protected $table      = 'pet_profile';
+	protected $table      = 'ambulatoir';
     protected $primaryKey = 'id';
 
     protected $useAutoIncrement = true;
@@ -14,7 +14,7 @@ class AmbulatoirsModel extends Model
     protected $returnType     = 'array';
     // protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['owner_name', 'name', 'age', 'address', 'animal_type', 'fur_color', 'phone', 'radioGender','race','gender'];
+    protected $allowedFields = ['date_checkup', 'amnesa', 'status_present', 'clinical_finding', 'medication'];
 
     // Dates
     protected $useTimestamps = true;

@@ -7,6 +7,12 @@
         <div class="card-header pb-0">
           <h4>Pet List</h4>
         </div>
+        <?php if (session()->getFlashdata('message')):?>
+            <div class="alert alert-success alert-dismissible text-white fade show mx-5 mt-3" role="alert">
+            <?= session()->getFlashdata('message'); ?>
+            <button type="button" class="btn-close text-white" data-dismiss="alert" aria-label="Close"></button>
+            </div>
+          <?php endif;?>
         <div class="card-body px-0 pt-0 pb-2">
           <div class="table-responsive p-0 m-5">
             <table id="rawatinap" class="table row-border hover" style="width:100%">
@@ -41,9 +47,14 @@
                         <a class="btn btn-primary btn-sm" href='<?= base_url('/PetList/detail/'). $p['id']?>'>
                         Edit
                         </a>
-                        <a type="button" class="btn btn-danger text-white btn-sm" href="#">
-                        Delete
-                        </a>
+                        <form action="<?= base_url('/PetList/delete/'). $p['id']?>" method="post" class="d-inline">
+                          <?= csrf_field();?>
+                          <input type="hidden" name="_method" value="DELETE">
+                          <button type="submit" class="btn btn-danger text-white btn-sm" onclick="return confirm('Apakah anda yakin menghapus <?=$p['name']?>?');">
+                            Delete
+                          </button>
+                        </form>
+                        
                       </div>
                     </td>
                   </tr>
