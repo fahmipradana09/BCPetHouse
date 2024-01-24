@@ -79,7 +79,7 @@
               <label class="form-check-label" for="flexSwitchCheckHospitalization">Tindak lanjut Rawat inap</label>
             </div>
 
-        </form>
+       
         <div class="container">
           <div class="row clearfix">
           <div class="col-md-12 table-responsive column">
@@ -156,5 +156,6 @@
 
    <button id="saveAmbulatoir" class="btn bg-primary align-self-center text-white btn-default col-md-6 mx-3 mt-4">Save</button>
   </div>
+  </form>
 </div>
 <?= $this->endSection(); ?>

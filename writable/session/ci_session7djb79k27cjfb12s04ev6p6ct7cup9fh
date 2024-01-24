@@ -1,0 +1,9 @@
+__ci_last_regenerate|i:1705911662;_ci_previous_url|s:39:"http://localhost:8080/PetList/detail/17";errorValidasi|s:232:"<!-- DEBUG-VIEW START 1 SYSTEMPATH\Validation\Views\list.php -->
+	<div class="errors" role="alert">
+		<ul>
+					<li>Gender Wajib diisi</li>
+				</ul>
+	</div>
+
+<!-- DEBUG-VIEW ENDED 1 SYSTEMPATH\Validation\Views\list.php -->
+";__ci_vars|a:15:{s:13:"errorValidasi";s:3:"old";s:9:"ownerName";s:3:"old";s:7:"petName";s:3:"old";s:3:"age";s:3:"old";s:7:"address";s:3:"old";s:11:"phoneNumber";s:3:"old";s:10:"animalType";s:3:"old";s:4:"race";s:3:"old";s:8:"furColor";s:3:"old";s:6:"gender";s:3:"old";s:6:"amnesa";s:3:"old";s:13:"statusPresent";s:3:"old";s:12:"temuanKlinis";s:3:"old";s:8:"diagnosa";s:3:"old";s:9:"treatment";s:3:"old";}ownerName|s:0:"";petName|s:0:"";age|s:0:"";address|s:0:"";phoneNumber|s:0:"";animalType|s:0:"";race|s:0:"";furColor|s:0:"";gender|s:18:"Gender Wajib diisi";amnesa|s:0:"";statusPresent|s:0:"";temuanKlinis|s:0:"";diagnosa|s:0:"";treatment|s:0:"";

@@ -11,16 +11,6 @@
         <form class="row m-3" action="<?= base_url(); ?>Ambulatoir/save" method="post">
           <?= csrf_field(); ?>
           <div class="col-md-5 mt-3">
-            <label for="inputOwnerName" class="form-label">Owner Name</label>
-            <div>
-                <input type="text" name="ownerName" class="form-control <?=($ownerName) ? 'is-invalid' : ''; ?>" id="inputOwnerName" placeholder="Type Here...." autofocus>
-                <div class="invalid-feedback">
-                <?= $ownerName ?>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-5 mt-3">
             <label for="inputPetName" class="form-label text-truncate">Pet Name</label>
             <div>
                 <input type="text" name="petName" class="form-control <?=($petName) ? 'is-invalid' : ''; ?>" id="inputPetName" placeholder="Type Here....">
@@ -28,6 +18,16 @@
                   <?= $petName ?>
                 </div>
               </div>
+          </div>
+
+          <div class="col-md-5 mt-3">
+            <label for="inputOwnerName" class="form-label">Owner Name</label>
+            <div>
+                <input type="text" name="ownerName" class="form-control <?=($ownerName) ? 'is-invalid' : ''; ?>" id="inputOwnerName" placeholder="Type Here...." autofocus>
+                <div class="invalid-feedback">
+                <?= $ownerName ?>
+              </div>
+            </div>
           </div>
 
           <div class="col-md-2 mt-3">
@@ -93,21 +93,21 @@
           <div class="col-md-6 mt-3">
             <label for="inputGender" class="form-label text-truncate">Gender</label>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gender" id="radioMele" value="Male" <?= ($gender === 'male') ? 'checked' : '' ?>>
+              <input class="form-check-input" type="radio" name="gender" id="radioMele" value="male" <?= ($gender === 'male') ? 'checked' : '' ?>>
               <label class="form-check-label" for="radioMale">
                 Male
               </label>
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gender" id="radioFemale" value="Female"  <?= ($gender === 'female') ? 'checked' : '' ?>>
+              <input class="form-check-input" type="radio" name="gender" id="radioFemale" value="female"  <?= ($gender === 'female') ? 'checked' : '' ?>>
               <label class="form-check-label" for="radioFemale">
                 Female
               </label>
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gender" id="radioUndefined" value="Undefined" <?= ($gender !== 'male' && $gender !== 'female') ? 'checked' : '' ?> checked>
+              <input class="form-check-input" type="radio" name="gender" id="radioUndefined" value="undefined" <?= ($gender !== 'male' && $gender !== 'female') ? 'checked' : '' ?> checked>
               <label class="form-check-label" for="radioUndefined">
                 Undefined
               </label>

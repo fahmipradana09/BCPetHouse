@@ -29,7 +29,7 @@ class AmbulatoirsModel extends Model
 //     protected $skipValidation       = false;
 //     protected $cleanValidationRules = true;
 
-    public function getPetProfile($id = false)
+    public function getAmbulatoir($id = false)
     {
         if ($id == false)
         {

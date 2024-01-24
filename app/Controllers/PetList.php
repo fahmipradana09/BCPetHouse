@@ -25,6 +25,8 @@ class PetList extends BaseController
 
     public function detail($id)
     {
+        //dd($this->petModel->getPetProfile($id));
+        //dd($id);
        $data = [
         'active' => 'detailpet',
         'pet' => $this->petModel->getPetProfile($id),
@@ -46,6 +48,7 @@ class PetList extends BaseController
         'treatment' => Session()->getFlashdata("treatment"),
         
        ];
+    
 
         //dd($data);
        return view('admin/pet_list/detail',$data);
@@ -64,16 +67,16 @@ class PetList extends BaseController
         return redirect()->to('petList');
     }
 
-    public function save()
+    public function save($id)
     {
         $validation = \Config\Services::validation();
-
+        //dd($this->request->getVar());
+        
         if(!$this->validate([
             'ownerName' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Owner Name Wajib diisi',
-                    'max_length[2]'
                 ],
             ],
             'petName' => [
@@ -157,7 +160,9 @@ class PetList extends BaseController
             ],
 
         ])){
-            return redirect()->to(base_url('pet_list/detail'))
+            //dd(\Config\Services::validation());
+            //dd($this->request->getVar());
+            return redirect()->to(base_url('petlist/detail/'.$id))
             ->with('errorValidasi',$validation->listErrors())
             ->with('ownerName',$validation->getError('ownerName')) // Ini cara ngakalin biar data perkolomnya bisa dilempar ke create
             ->with('petName',$validation->getError('petName'))
@@ -175,8 +180,11 @@ class PetList extends BaseController
             ->with('treatment',$validation->getError('treatment'));
         }
 
-        // dd($this->request->getVar());
+        
+        //
+        //dd($id);
         $this->petModel->save([
+            'id' => $id,
             'owner_name' => $this->request->getVar('ownerName'),
             'name' => $this->request->getVar('petName'),
             'age' => $this->request->getVar('age'),
@@ -188,7 +196,7 @@ class PetList extends BaseController
             'gender'=>$this->request->getVar('gender'),
         ]);
 
-        session()->setFlashdata('message','Data Success');
-        return redirect()->to('pet_list');
+        session()->setFlashdata('message','Data Success Updated');
+        return redirect()->to('PetList');
     }
 }

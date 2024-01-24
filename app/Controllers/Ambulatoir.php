@@ -1,20 +1,25 @@
 <?php
 
 namespace App\Controllers;
+
+use App\Models\AmbulatoirsModel;
 use App\Models\PetProfileModel;
 
 class Ambulatoir extends BaseController
 {
     protected $petModel;
+    protected $ambulatoirModel;
     public function __construct()
     {
         $this->petModel = new PetProfileModel();
+        $this->ambulatoirModel = new AmbulatoirsModel();
     }
 
     public function index()
     {
         $data = [
-            'active' => 'ambulatoir'
+            'active' => 'ambulatoir',
+            'ambulatoir' => $this->ambulatoirModel->getAmbulatoir()
         ];
         return view('admin/ambulatoir/index',$data);
     }
@@ -49,6 +54,7 @@ class Ambulatoir extends BaseController
 
     public function save()
     {
+        //dd($this->request->getVar());
         $validation = \Config\Services::validation(); //Nah ini harusnya gaperlu di set di contoller save , cukup didefinisikan di create
         // karna aku baca2 versi lama ci4 nya ngebug di bagian withInput jadi gabisa redirect sambil bawa datanya
         // Alternatifnya pake ajax jquery jadi gaperlu redirect , main di json nya return nya langsung 
@@ -77,7 +83,6 @@ class Ambulatoir extends BaseController
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Owner Name Wajib diisi',
-                    'max_length[2]'
                 ],
             ],
             'petName' => [
@@ -180,7 +185,7 @@ class Ambulatoir extends BaseController
         }
 
         // dd($this->request->getVar());
-        $this->petModel->save([
+        $this-> petModel->save([
             'owner_name' => $this->request->getVar('ownerName'),
             'name' => $this->request->getVar('petName'),
             'age' => $this->request->getVar('age'),
@@ -194,6 +199,6 @@ class Ambulatoir extends BaseController
         
 
         session()->setFlashdata('message','Data Success');
-        return redirect()->to('ambulatoir');
+        return redirect()->to('Ambulatoir');
     }
 }
