@@ -1,5 +1,4 @@
 new DataTable('#ambulatoir');
-new DataTable('#rawatinap');
 
 new DataTable('#detailAmbulatoir', {
     info: false,
@@ -28,4 +27,13 @@ $(function(){
     var formattedDate = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear(); // Format it as YYYY-MM-DD
 
     $('#datePicker input').val(formattedDate); // Set input value to today's date
+});
+
+$(document).ready(function () {
+    var table = $('#rawatinap').DataTable();
+
+    $('#rawatinap tbody').on('click', 'tr.clickable-row', function () {
+        var href = $(this).data('href');
+        window.location.href = href;
+    });
 });

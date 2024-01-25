@@ -33,30 +33,54 @@
               <tbody>
                 <?php $i = 1; ?>
                 <?php foreach ($pet as $p): ?>
-                  <tr>
-                      <td><?= $i++; ?></td>
-                      <td><?= $p['name']?></td>
-                      <td><?= $p['owner_name']?></td>
-                      <td><?= $p['address']?></td>
-                      <td><?= $p['phone']?></td>
-                      <td><?= $p['gender']?></td>
-                      <td><?= $p['fur_color']?></td>
-                      <td><?= $p['race']?></td>
+                  <tr class="clickable-row" data-href="<?= base_url('/PetList/detail/') . $p['id'] ?>">
+                      <td class="align-middle justify-content-center">
+                        <?= $i++; ?>
+                      </td>
+
+                      <td class="align-middle ustify-content-center">
+                        <?= $p['name']?>
+                      </td>
+
+                      <td class="align-middle justify-content-center">
+                        <?= $p['owner_name']?>
+                      </td>
+
+                      <td class="align-middle justify-content-center">
+                        <?= $p['address']?>
+                      </td>
+
+                      <td class="align-middle justify-content-center">
+                        <?= $p['phone']?>
+                      </td>
+
+                      <td class="align-middle justify-content-center">
+                        <?= $p['gender']?>
+                      </td>
+
+                      <td class="align-middle justify-content-center">
+                        <?= $p['fur_color']?>
+                      </td>
+                      
+                      <td class="align-middle justify-content-center">
+                        <?= $p['race']?>
+                      </td>
+                      
                       <td class="align-middle text-center">
-                      <div class="d-grid gap-2 d-md-block">
-                        <a class="btn btn-primary btn-sm" href='<?= base_url('/PetList/detail/'). $p['id']?>'>
-                        Edit
-                        </a>
-                        <form action="<?= base_url('/PetList/delete/'). $p['id']?>" method="post" class="d-inline">
-                          <?= csrf_field();?>
-                          <input type="hidden" name="_method" value="DELETE">
-                          <button type="submit" class="btn btn-danger text-white btn-sm" onclick="return confirm('Apakah anda yakin menghapus <?=$p['name']?>?');">
-                            Delete
-                          </button>
-                        </form>
-                        
-                      </div>
-                    </td>
+                        <div class="gap-2 d-md-block">
+                          <a class="btn btn-primary btn-sm" href='<?= base_url('/PetList/detail/'). $p['id']?>'>
+                          Edit
+                          </a>
+                          <form action="<?= base_url('/PetList/delete/'). $p['id']?>" method="post" class="d-inline">
+                            <?= csrf_field();?>
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="btn btn-danger text-white btn-sm" onclick="return confirm('Apakah anda yakin menghapus <?=$p['name']?>?');">
+                              Delete
+                            </button>
+                          </form>
+                          
+                        </div>
+                      </td>
                   </tr>
                   <?php endforeach ;?>
 

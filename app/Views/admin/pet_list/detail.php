@@ -190,6 +190,7 @@
               </table>
           </div>
         </div>
+        <button id="add_row" class="btn btn-default pull-left">Add Row</button><button id='delete_row' class="pull-right btn btn-default">Delete Row</button>
    </div>
 
    <div class="d-flex justify-content-center">
