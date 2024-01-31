@@ -24,7 +24,7 @@
                       <th>Address</th>
                       <th>Phone Number</th>
                       <th>Pet Gender</th>
-                      <th>Fur Color</th>
+                      <th>Color</th>
                       <th>Race</th>
                       <th>Action</th>
                   </tr>
@@ -46,7 +46,7 @@
                         <?= $p['owner_name']?>
                       </td>
 
-                      <td class="align-middle justify-content-center">
+                      <td class="align-middle justify-content-center ">
                         <?= $p['address']?>
                       </td>
 
@@ -59,7 +59,7 @@
                       </td>
 
                       <td class="align-middle justify-content-center">
-                        <?= $p['fur_color']?>
+                        <?= $p['color']?>
                       </td>
                       
                       <td class="align-middle justify-content-center">

@@ -80,11 +80,11 @@
           </div>
 
           <div class="col-md-3 mt-3">
-            <label for="inputFurColor" class="form-label text-truncate">Fur Color</label>
+            <label for="inputFurColor" class="form-label text-truncate">Color</label>
             <div>
-              <input type="text" name="furColor" class="form-control <?=($furColor) ? 'is-invalid' : ''; ?>" id="inputFurColor" placeholder="Type Here...." value="<?= $pet['fur_color'] ? $pet['fur_color'] : '' ?>">
+              <input type="text" name="color" class="form-control <?=($color) ? 'is-invalid' : ''; ?>" id="inputFurColor" placeholder="Type Here...." value="<?= $pet['color'] ? $pet['color'] : '' ?>">
               <div class="invalid-feedback">
-                <?= $furColor ?>
+                <?= $color ?>
               </div>
             </div>
           </div>

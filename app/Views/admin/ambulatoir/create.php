@@ -13,7 +13,7 @@
           <div class="col-md-5 mt-3">
             <label for="inputPetName" class="form-label text-truncate">Pet Name</label>
             <div>
-                <input type="text" name="petName" class="form-control <?=($petName) ? 'is-invalid' : ''; ?>" id="inputPetName" placeholder="Type Here....">
+                <input type="text" name="petName" class="form-control <?=($petName) ? 'is-invalid' : ''; ?>" id="inputPetName" placeholder="Type Here...." value="<?= old('petname') ?>">
                 <div class="invalid-feedback">
                   <?= $petName ?>
                 </div>
@@ -23,7 +23,7 @@
           <div class="col-md-5 mt-3">
             <label for="inputOwnerName" class="form-label">Owner Name</label>
             <div>
-                <input type="text" name="ownerName" class="form-control <?=($ownerName) ? 'is-invalid' : ''; ?>" id="inputOwnerName" placeholder="Type Here...." autofocus>
+                <input type="text" name="ownerName" class="form-control <?=($ownerName) ? 'is-invalid' : ''; ?>" id="inputOwnerName" placeholder="Type Here...." value="<?= old('ownerName') ?>" autofocus>
                 <div class="invalid-feedback">
                 <?= $ownerName ?>
               </div>
@@ -33,7 +33,7 @@
           <div class="col-md-2 mt-3">
           <label for="inputAge" class="form-label text-truncate">Age</label>
             <div>
-                <input type="text" name="age" class="form-control <?=($age) ? 'is-invalid' : ''; ?>" id="inputAge" placeholder="Type Here....">
+                <input type="text" name="age" class="form-control <?=($age) ? 'is-invalid' : ''; ?>" id="inputAge"  placeholder="Type Here...." value="<?= old('age') ?>">
                 <div class="invalid-feedback">
                   <?= $age ?>
                 </div>
@@ -43,7 +43,7 @@
           <div class="col-md-12 mt-3">
             <label for="inputAddress" class="form-label text-truncate">Address</label>
             <div>
-              <textarea class="form-control <?=($address) ? 'is-invalid' : ''; ?>" name="address" id="inputAddress" rows="3"></textarea>
+              <textarea class="form-control <?=($address) ? 'is-invalid' : ''; ?>" name="address" id="inputAddress" rows="3"><?= old('address') ?></textarea>
               <div class="invalid-feedback">
                 <?= $address ?>
               </div>
@@ -53,7 +53,7 @@
           <div class="col-md-3 mt-3">
             <label for="inputFurColor" class="form-label text-truncate">Phone Number</label>
             <div>
-              <input type="text" name="phoneNumber" class="form-control <?=($phoneNumber) ? 'is-invalid' : ''; ?>" id="inputPhoneNumber" placeholder="Type Here....">
+              <input type="text" name="phoneNumber" class="form-control <?=($phoneNumber) ? 'is-invalid' : ''; ?>" id="inputPhoneNumber" placeholder="Type Here...."  value="<?= old('phoneNumber') ?>">
               <div class="invalid-feedback">
                 <?= $phoneNumber ?>
               </div>
@@ -63,7 +63,7 @@
           <div class="col-md-3 mt-3">
             <label for="inputAnimalType" class="form-label text-truncate">Animal Type</label>
             <div>
-              <input type="text" name="animalType" class="form-control <?=($animalType) ? 'is-invalid' : ''; ?>" id="inputAnimalType" placeholder="Type Here....">
+              <input type="text" name="animalType" class="form-control <?=($animalType) ? 'is-invalid' : ''; ?>" id="inputAnimalType" placeholder="Type Here...."  value="<?= old('animalType') ?>">
               <div class="invalid-feedback">
                 <?= $animalType ?>
               </div>
@@ -73,7 +73,7 @@
           <div class="col-md-3 mt-3">
             <label for="inputFurColor" class="form-label text-truncate">Race</label>
             <div>
-              <input type="text" name="race" class="form-control <?=($race) ? 'is-invalid' : ''; ?>" id="inputRace" placeholder="Type Here....">
+              <input type="text" name="race" class="form-control <?=($race) ? 'is-invalid' : ''; ?>" id="inputRace" placeholder="Type Here...."  value="<?= old('race') ?>">
               <div class="invalid-feedback">
                 <?= $race ?>
               </div>
@@ -81,38 +81,33 @@
           </div>
 
           <div class="col-md-3 mt-3">
-            <label for="inputFurColor" class="form-label text-truncate">Fur Color</label>
+            <label for="inputFurColor" class="form-label text-truncate">Color</label>
             <div>
-              <input type="text" name="furColor" class="form-control <?=($furColor) ? 'is-invalid' : ''; ?>" id="inputFurColor" placeholder="Type Here....">
+              <input type="text" name="color" class="form-control <?=($color) ? 'is-invalid' : ''; ?>" id="inputFurColor" placeholder="Type Here...."  value="<?= old('color') ?>">
               <div class="invalid-feedback">
-                <?= $furColor ?>
+                <?= $color ?>
               </div>
             </div>
           </div>
 
           <div class="col-md-6 mt-3">
-            <label for="inputGender" class="form-label text-truncate">Gender</label>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="gender" id="radioMele" value="male" <?= ($gender === 'male') ? 'checked' : '' ?>>
-              <label class="form-check-label" for="radioMale">
-                Male
-              </label>
-            </div>
+              <label for="inputGender" class="form-label text-truncate">Gender</label>
 
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="gender" id="radioFemale" value="female"  <?= ($gender === 'female') ? 'checked' : '' ?>>
-              <label class="form-check-label" for="radioFemale">
-                Female
-              </label>
-            </div>
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gender" id="radioMale" value="male" <?= (old('gender') === 'male') ? 'checked' : '' ?>>
+                  <label class="form-check-label" for="radioMale">Male</label>
+              </div>
 
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="gender" id="radioUndefined" value="undefined" <?= ($gender !== 'male' && $gender !== 'female') ? 'checked' : '' ?> checked>
-              <label class="form-check-label" for="radioUndefined">
-                Undefined
-              </label>
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gender" id="radioFemale" value="female" <?= (old('gender') === 'female') ? 'checked' : '' ?>>
+                  <label class="form-check-label" for="radioFemale">Female</label>
+              </div>
+
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gender" id="radioUndefined" value="undefined" <?= (old('gender') !== 'male' && old('gender') !== 'female') ? 'checked' : '' ?> checked>
+                  <label class="form-check-label" for="radioUndefined">Undefined</label>
+              </div>
             </div>
-          </div>
           
             <div class="col-md-6 align-items-start form-check form-switch my-4">
               <input class="form-check-input" type="checkbox" role="switch" name="rawatInap" id="flexSwitchCheckHospitalization">
@@ -161,28 +156,28 @@
 
                     <td>
                     <div class="date" id="datePicker">
-                      <input type="text" name='date' placeholder='Enter Date' class="form-control " disabled/>
+                      <input type="text" name='date' placeholder='Enter Date' class="form-control " readonly/>
                     </div>
                     </td>
 
                     <td>
-                    <input type="text" name='amnesa' placeholder='Type here...' class="form-control <?=($amnesa) ? 'is-invalid' : ''; ?>"/>
+                    <input type="text" name='amnesa' placeholder='Type here...' class="form-control <?=($amnesa) ? 'is-invalid' : ''; ?>"  value="<?= old('amnesa') ?>"/>
                     </td>
 
                     <td>
-                    <input type="text" name='statusPresent' placeholder='Type here...' class="form-control <?=($statusPresent) ? 'is-invalid' : ''; ?>"/>
+                    <input type="text" name='statusPresent' placeholder='Type here...' class="form-control <?=($statusPresent) ? 'is-invalid' : ''; ?>"  value="<?= old('statusPresent') ?>"/>
                     </td>
 
                     <td>
-                    <input type="text" name='temuanKlinis' placeholder='Type here...' class="form-control <?=($temuanKlinis) ? 'is-invalid' : ''; ?>"/>
+                    <input type="text" name='temuanKlinis' placeholder='Type here...' class="form-control <?=($temuanKlinis) ? 'is-invalid' : ''; ?>"  value="<?= old('temuanKlinis') ?>"/>
                     </td>
 
                     <td>
-                    <input type="text" name='diagnosa' placeholder='Type here...' class="form-control <?=($diagnosa) ? 'is-invalid' : ''; ?>"/>
+                    <input type="text" name='diagnosa' placeholder='Type here...' class="form-control <?=($diagnosa) ? 'is-invalid' : ''; ?>"  value="<?= old('diagnosa') ?>"/>
                     </td>
 
                     <td>
-                    <input type="text" name='treatment' placeholder='Type here...' class="form-control <?=($treatment) ? 'is-invalid' : ''; ?>"/>
+                    <input type="text" name='treatment' placeholder='Type here...' class="form-control <?=($treatment) ? 'is-invalid' : ''; ?>"  value="<?= old('treatmen') ?>"/>
                     </td>
                     
 

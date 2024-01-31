@@ -39,7 +39,7 @@ class PetList extends BaseController
         'phoneNumber' => Session()->getFlashdata("phoneNumber"),
         'animalType' => Session()->getFlashdata("animalType"),
         'race' => Session()->getFlashdata("race"),
-        'furColor' => Session()->getFlashdata("furColor"),
+        'color' => Session()->getFlashdata("color"),
         'gender' => Session()->getFlashdata("gender"),
         'amnesa' => Session()->getFlashdata("amnesa"),
         'statusPresent' => Session()->getFlashdata("statusPresent"),
@@ -116,10 +116,10 @@ class PetList extends BaseController
                     'required' => 'Race Wajib diisi'
                 ],
             ],
-            'furColor' => [
+            'color' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Fur Color Wajib diisi'
+                    'required' => 'Color Wajib diisi'
                 ],
             ],
             'gender' => [
@@ -171,7 +171,7 @@ class PetList extends BaseController
             ->with('phoneNumber',$validation->getError('phoneNumber'))
             ->with('animalType',$validation->getError('animalType'))
             ->with('race',$validation->getError('race'))
-            ->with('furColor',$validation->getError('furColor'))
+            ->with('color',$validation->getError('color'))
             ->with('gender',$validation->getError('gender'))
             ->with('amnesa',$validation->getError('amnesa'))
             ->with('statusPresent',$validation->getError('statusPresent'))
@@ -181,7 +181,6 @@ class PetList extends BaseController
         }
 
         
-        //
         //dd($id);
         $this->petModel->save([
             'id' => $id,
@@ -192,7 +191,7 @@ class PetList extends BaseController
             'phone' => $this->request->getVar('phoneNumber'),
             'animal_type' => $this->request->getVar('animalType'),
             'race' => $this->request->getVar('race'),
-            'fur_color' => $this->request->getVar('furColor'),
+            'color' => $this->request->getVar('color'),
             'gender'=>$this->request->getVar('gender'),
         ]);
 

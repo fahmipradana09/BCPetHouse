@@ -1,0 +1,13 @@
+__ci_last_regenerate|i:1706674574;_ci_previous_url|s:39:"http://localhost:8080/ambulatoir/create";_ci_old_input|a:2:{s:3:"get";a:0:{}s:4:"post";a:16:{s:14:"csrf_test_name";s:32:"7d33baf988c886600560262c6f5e4133";s:7:"petName";s:4:"asdf";s:9:"ownerName";s:5:"asfas";s:3:"age";s:6:"fasdfd";s:7:"address";s:0:"";s:11:"phoneNumber";s:4:"asdf";s:10:"animalType";s:4:"asdf";s:4:"race";s:4:"asdf";s:5:"color";s:0:"";s:6:"gender";s:9:"undefined";s:4:"date";s:18:"2024-1-31 10:19:49";s:6:"amnesa";s:4:"sdfs";s:13:"statusPresent";s:3:"asd";s:12:"temuanKlinis";s:0:"";s:8:"diagnosa";s:0:"";s:9:"treatment";s:0:"";}}__ci_vars|a:17:{s:13:"_ci_old_input";s:3:"old";s:21:"_ci_validation_errors";s:3:"old";s:13:"errorValidasi";s:3:"old";s:9:"ownerName";s:3:"old";s:7:"petName";s:3:"old";s:3:"age";s:3:"old";s:7:"address";s:3:"old";s:11:"phoneNumber";s:3:"old";s:10:"animalType";s:3:"old";s:4:"race";s:3:"old";s:5:"color";s:3:"old";s:6:"gender";s:3:"old";s:6:"amnesa";s:3:"old";s:13:"statusPresent";s:3:"old";s:12:"temuanKlinis";s:3:"old";s:8:"diagnosa";s:3:"old";s:9:"treatment";s:3:"old";}_ci_validation_errors|a:5:{s:7:"address";s:19:"Address Wajib diisi";s:5:"color";s:17:"Color Wajib diisi";s:12:"temuanKlinis";s:25:"Temuan Klinis Wajib diisi";s:8:"diagnosa";s:20:"Diagnosa Wajib diisi";s:9:"treatment";s:20:"Diagnosa Wajib diisi";}errorValidasi|s:379:"<!-- DEBUG-VIEW START 1 SYSTEMPATH\Validation\Views\list.php -->
+	<div class="errors" role="alert">
+		<ul>
+					<li>Address Wajib diisi</li>
+					<li>Color Wajib diisi</li>
+					<li>Temuan Klinis Wajib diisi</li>
+					<li>Diagnosa Wajib diisi</li>
+					<li>Diagnosa Wajib diisi</li>
+				</ul>
+	</div>
+
+<!-- DEBUG-VIEW ENDED 1 SYSTEMPATH\Validation\Views\list.php -->
+";ownerName|s:0:"";petName|s:0:"";age|s:0:"";address|s:19:"Address Wajib diisi";phoneNumber|s:0:"";animalType|s:0:"";race|s:0:"";color|s:17:"Color Wajib diisi";gender|s:0:"";amnesa|s:0:"";statusPresent|s:0:"";temuanKlinis|s:25:"Temuan Klinis Wajib diisi";diagnosa|s:20:"Diagnosa Wajib diisi";treatment|s:20:"Diagnosa Wajib diisi";

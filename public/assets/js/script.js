@@ -24,9 +24,10 @@ $(document).ready(function(){
 
 $(function(){
     var today = new Date(); // Get current date
-    var formattedDate = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear(); // Format it as YYYY-MM-DD
+    var formattedDateTime = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate() +
+        ' ' + today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds(); // Format as YYYY-MM-DD HH:MM:SS
 
-    $('#datePicker input').val(formattedDate); // Set input value to today's date
+    $('#datePicker input').val(formattedDateTime); // Set input value to today's date
 });
 
 $(document).ready(function () {
@@ -37,3 +38,10 @@ $(document).ready(function () {
         window.location.href = href;
     });
 });
+
+function confirmDelete(id) {
+    if (confirm('Are you sure you want to delete this item?')) {
+      // Submit the form
+      document.getElementById('deleteForm' + id).submit();
+    }
+  }

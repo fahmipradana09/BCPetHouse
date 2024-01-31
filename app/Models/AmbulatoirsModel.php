@@ -14,7 +14,7 @@ class AmbulatoirsModel extends Model
     protected $returnType     = 'array';
     // protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['date_checkup', 'amnesa', 'status_present', 'clinical_finding', 'medication'];
+    protected $allowedFields = ['pet_id','diagnosis','date_checkup', 'amnesa', 'status_present', 'clinical_finding', 'medication'];
 
     // Dates
     protected $useTimestamps = true;
@@ -37,4 +37,5 @@ class AmbulatoirsModel extends Model
         }
         return $this->where(['id' => $id])->first();
     }
+
 }

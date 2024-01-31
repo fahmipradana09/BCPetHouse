@@ -1,0 +1,9 @@
+__ci_last_regenerate|i:1706669368;_ci_previous_url|s:39:"http://localhost:8080/ambulatoir/create";errorValidasi|s:238:"<!-- DEBUG-VIEW START 1 SYSTEMPATH\Validation\Views\list.php -->
+	<div class="errors" role="alert">
+		<ul>
+					<li>Phone Number Wajib diisi</li>
+				</ul>
+	</div>
+
+<!-- DEBUG-VIEW ENDED 1 SYSTEMPATH\Validation\Views\list.php -->
+";__ci_vars|a:17:{s:13:"errorValidasi";s:3:"old";s:9:"ownerName";s:3:"old";s:7:"petName";s:3:"old";s:3:"age";s:3:"old";s:7:"address";s:3:"old";s:11:"phoneNumber";s:3:"old";s:10:"animalType";s:3:"old";s:4:"race";s:3:"old";s:5:"color";s:3:"old";s:6:"gender";s:3:"old";s:6:"amnesa";s:3:"old";s:13:"statusPresent";s:3:"old";s:12:"temuanKlinis";s:3:"old";s:8:"diagnosa";s:3:"old";s:9:"treatment";s:3:"old";s:13:"_ci_old_input";s:3:"old";s:21:"_ci_validation_errors";s:3:"old";}ownerName|s:0:"";petName|s:0:"";age|s:0:"";address|s:0:"";phoneNumber|s:24:"Phone Number Wajib diisi";animalType|s:0:"";race|s:0:"";color|s:0:"";gender|s:0:"";amnesa|s:0:"";statusPresent|s:0:"";temuanKlinis|s:0:"";diagnosa|s:0:"";treatment|s:0:"";_ci_old_input|a:2:{s:3:"get";a:0:{}s:4:"post";a:16:{s:14:"csrf_test_name";s:32:"7d33baf988c886600560262c6f5e4133";s:7:"petName";s:4:"asdf";s:9:"ownerName";s:4:"asdf";s:3:"age";s:1:"a";s:7:"address";s:9:"asdfasdfa";s:11:"phoneNumber";s:0:"";s:10:"animalType";s:4:"asdf";s:4:"race";s:4:"asdf";s:5:"color";s:6:"asdfas";s:6:"gender";s:9:"undefined";s:4:"date";s:17:"2024-1-31 9:48:15";s:6:"amnesa";s:3:"asd";s:13:"statusPresent";s:3:"fas";s:12:"temuanKlinis";s:3:"dfa";s:8:"diagnosa";s:4:"asdf";s:9:"treatment";s:6:"asasdf";}}_ci_validation_errors|a:1:{s:11:"phoneNumber";s:24:"Phone Number Wajib diisi";}

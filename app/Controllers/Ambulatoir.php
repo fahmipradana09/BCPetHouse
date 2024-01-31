@@ -5,14 +5,18 @@ namespace App\Controllers;
 use App\Models\AmbulatoirsModel;
 use App\Models\PetProfileModel;
 
+
 class Ambulatoir extends BaseController
 {
     protected $petModel;
     protected $ambulatoirModel;
+
+
     public function __construct()
     {
         $this->petModel = new PetProfileModel();
         $this->ambulatoirModel = new AmbulatoirsModel();
+
     }
 
     public function index()
@@ -26,7 +30,6 @@ class Ambulatoir extends BaseController
 
     public function create()
     {
-        // session();
         $data = [
             'active' => 'ambulatoir',
             'validation' => \Config\Services::validation(),
@@ -38,7 +41,7 @@ class Ambulatoir extends BaseController
             'phoneNumber' => Session()->getFlashdata("phoneNumber"),
             'animalType' => Session()->getFlashdata("animalType"),
             'race' => Session()->getFlashdata("race"),
-            'furColor' => Session()->getFlashdata("furColor"),
+            'color' => Session()->getFlashdata("color"),
             'gender' => Session()->getFlashdata("gender"),
             'amnesa' => Session()->getFlashdata("amnesa"),
             'statusPresent' => Session()->getFlashdata("statusPresent"),
@@ -47,36 +50,13 @@ class Ambulatoir extends BaseController
             'treatment' => Session()->getFlashdata("treatment"),
 
         ];
-        // ngeleg
-
         return view('admin/ambulatoir/create', $data);
     }
 
     public function save()
     {
-        //dd($this->request->getVar());
-        $validation = \Config\Services::validation(); //Nah ini harusnya gaperlu di set di contoller save , cukup didefinisikan di create
-        // karna aku baca2 versi lama ci4 nya ngebug di bagian withInput jadi gabisa redirect sambil bawa datanya
-        // Alternatifnya pake ajax jquery jadi gaperlu redirect , main di json nya return nya langsung 
-        // Tapi karna ini gapake ajax jquery jadi alternatif kedua data validationnya di lempar ke flashdata , kekurangannya jadinya yang kelempar semua list error nya
-        // klo memang mau dipaksa , bisa diakalin lempar data per kolom nya ditambahin flash data nya masing masing
-        // INI SEMUA GARA GARA CI4 NGEBUG BANGSAT YANG VERSI LAWAS NYA
 
-        // $validasi = $this->validate([
-        //     'ownerName' => [
-        //         'rules' => 'required',
-        //         'errors' => [
-        //             'required' => '{field} Wajib diisi'
-        //         ],
-        //         ],
-        // ]);
-
-        // if($validasi){
-        //     echo 'tervalidasi';
-        // }else{
-            
-        // }
-        // die();
+        $validation = \Config\Services::validation(); 
 
         if(!$this->validate([
             'ownerName' => [
@@ -122,10 +102,10 @@ class Ambulatoir extends BaseController
                     'required' => 'Race Wajib diisi'
                 ],
             ],
-            'furColor' => [
+            'color' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Fur Color Wajib diisi'
+                    'required' => 'Color Wajib diisi'
                 ],
             ],
             'gender' => [
@@ -166,7 +146,7 @@ class Ambulatoir extends BaseController
             ],
 
         ])){
-            return redirect()->to(base_url('ambulatoir/create'))
+            return redirect()->to(base_url('ambulatoir/create'))->withInput()
             ->with('errorValidasi',$validation->listErrors())
             ->with('ownerName',$validation->getError('ownerName')) // Ini cara ngakalin biar data perkolomnya bisa dilempar ke create
             ->with('petName',$validation->getError('petName'))
@@ -175,7 +155,7 @@ class Ambulatoir extends BaseController
             ->with('phoneNumber',$validation->getError('phoneNumber'))
             ->with('animalType',$validation->getError('animalType'))
             ->with('race',$validation->getError('race'))
-            ->with('furColor',$validation->getError('furColor'))
+            ->with('color',$validation->getError('color'))
             ->with('gender',$validation->getError('gender'))
             ->with('amnesa',$validation->getError('amnesa'))
             ->with('statusPresent',$validation->getError('statusPresent'))
@@ -184,7 +164,7 @@ class Ambulatoir extends BaseController
             ->with('treatment',$validation->getError('treatment'));
         }
 
-        // dd($this->request->getVar());
+         //dd($this->request->getVar());
         $this-> petModel->save([
             'owner_name' => $this->request->getVar('ownerName'),
             'name' => $this->request->getVar('petName'),
@@ -193,8 +173,21 @@ class Ambulatoir extends BaseController
             'phone' => $this->request->getVar('phoneNumber'),
             'animal_type' => $this->request->getVar('animalType'),
             'race' => $this->request->getVar('race'),
-            'fur_color' => $this->request->getVar('furColor'),
+            'color' => $this->request->getVar('color'),
             'gender'=>$this->request->getVar('gender'),
+        ]);
+
+        $petId = $this->petModel->getInsertID();
+        //dd($petId);
+
+        $this->ambulatoirModel->save([
+            'pet_id'=> $petId,
+            'date_checkup' => $this->request->getVar('date'),
+            'amnesa' => $this->request->getVar('amnesa'),
+            'status_present' => $this->request->getVar('statusPresent'),
+            'clinical_finding' => $this->request->getVar('temuanKlinis'),
+            'diagnosis' => $this->request->getVar('diagnosa'),
+            'medication' => $this->request->getVar('treatment')                                                                                   
         ]);
         
 

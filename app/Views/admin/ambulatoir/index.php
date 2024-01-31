@@ -39,7 +39,7 @@
                       <td><?= $i++; ?></td>
                       <td><?= $p['date_checkup']?></td>
                       <td><?= $p['pet_id']?></td>
-                      <td><?= $p['anemsa']?></td>
+                      <td><?= $p['amnesa']?></td>
                       <td><?= $p['status_present']?></td>
                       <td><?= $p['clinical_finding']?></td>
                       <td><?= $p['medication']?></td>
@@ -131,4 +131,5 @@
     </div>
   </div>
 </div>
+
 <?= $this->endSection(); ?>
