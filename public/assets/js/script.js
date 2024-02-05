@@ -1,9 +1,19 @@
-new DataTable('#ambulatoir');
+$(document).ready(function () {
+    var table = $('#ambulatoir').DataTable({
+        "scrollX": true
+    });
 
-new DataTable('#detailAmbulatoir', {
-    info: false,
-    paging: false
+    $('#ambulatoir tbody').on('click', 'tr.clickable-row', function () {
+        var href = $(this).data('href');
+        window.location.href = href;
+    });
+    
 });
+
+// new DataTable('#detailAmbulatoir', {
+//     info: false,
+//     paging: false
+// });
 
 $(document).ready(function(){
     var i=1;
@@ -24,24 +34,29 @@ $(document).ready(function(){
 
 $(function(){
     var today = new Date(); // Get current date
-    var formattedDateTime = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate() +
-        ' ' + today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds(); // Format as YYYY-MM-DD HH:MM:SS
+    var formattedDateTime =
+        ('0' + today.getDate()).slice(-2) + '-' + // Get the day and pad with leading zero if necessary
+        ('0' + (today.getMonth() + 1)).slice(-2) + '-' + // Get the month and pad with leading zero if necessary
+        today.getFullYear() + // Get the full year
+        ' ' +
+        ('0' + today.getHours()).slice(-2) + ':' +
+        ('0' + today.getMinutes()).slice(-2) + ':' +
+        ('0' + today.getSeconds()).slice(-2);
 
     $('#datePicker input').val(formattedDateTime); // Set input value to today's date
 });
 
 $(document).ready(function () {
-    var table = $('#rawatinap').DataTable();
+    var table = $('#petlist').DataTable({
+        "scrollX": true,
+    });
 
-    $('#rawatinap tbody').on('click', 'tr.clickable-row', function () {
+    table.columns.adjust().draw();
+
+    $('#petlist tbody').on('click', 'tr.clickable-row', function () {
         var href = $(this).data('href');
         window.location.href = href;
     });
+    
 });
 
-function confirmDelete(id) {
-    if (confirm('Are you sure you want to delete this item?')) {
-      // Submit the form
-      document.getElementById('deleteForm' + id).submit();
-    }
-  }

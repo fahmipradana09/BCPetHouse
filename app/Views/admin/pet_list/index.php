@@ -15,13 +15,13 @@
           <?php endif;?>
         <div class="card-body px-0 pt-0 pb-2">
           <div class="table-responsive p-0 m-5">
-            <table id="rawatinap" class="table row-border hover" style="width:100%">
+            <table id="petlist" class="table display compact" style="width:100%">
               <thead>
                   <tr>
                       <th>No</th>
                       <th>Pet Name</th>
                       <th>Owner Name</th>
-                      <th>Address</th>
+                      <th class="col-3">Address</th>
                       <th>Phone Number</th>
                       <th>Pet Gender</th>
                       <th>Color</th>
@@ -46,7 +46,7 @@
                         <?= $p['owner_name']?>
                       </td>
 
-                      <td class="align-middle justify-content-center ">
+                      <td class="align-middle justify-content-center col-3 text-truncate">
                         <?= $p['address']?>
                       </td>
 

@@ -124,31 +124,31 @@
           <table class="table table-bordered table-hover" id="tab_logic">
                 <thead>
                   <tr>
-                    <th class="text-center">
+                    <th class="text-center no-sort">
                       No.
                     </th>
 
-                    <th class="text-center">
+                    <th class="text-center resize">
                       Date Checkup
                     </th>
 
-                    <th class="text-center">
+                    <th class="text-center resize">
                       Amnesa
                     </th>
 
-                    <th class="text-center">
+                    <th class="text-center resize">
                       Status Present
                     </th>
 
-                    <th class="text-center">
+                    <th class="text-center resize">
                       Temuan Klinis
                     </th>
 
-                    <th class="text-center">
+                    <th class="text-center resize">
                       Diagnosa
                     </th>
 
-                    <th class="text-center">
+                    <th class="text-center resize">
                       Pengobatan
                     </th>
                   </tr>

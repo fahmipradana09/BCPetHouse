@@ -164,7 +164,7 @@ class Ambulatoir extends BaseController
             ->with('treatment',$validation->getError('treatment'));
         }
 
-         //dd($this->request->getVar());
+        dd($this->request->getVar());
         $this-> petModel->save([
             'owner_name' => $this->request->getVar('ownerName'),
             'name' => $this->request->getVar('petName'),

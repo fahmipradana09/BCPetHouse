@@ -14,7 +14,7 @@ class PetProfileModel extends Model
     protected $returnType     = 'array';
     // protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['pet_id','owner_name', 'name', 'age', 'address', 'animal_type', 'fur_color', 'phone', 'radioGender','race','gender'];
+    protected $allowedFields = ['pet_id','owner_name', 'name', 'age', 'address', 'animal_type', 'color', 'phone', 'radioGender','race','gender'];
 
     // Dates
     protected $useTimestamps = true;
