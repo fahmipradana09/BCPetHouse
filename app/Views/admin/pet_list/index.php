@@ -21,28 +21,28 @@
                       <th>No</th>
                       <th>Pet Name</th>
                       <th>Owner Name</th>
-                      <th class="col-3">Address</th>
+                      <th>Address</th>
                       <th>Phone Number</th>
                       <th>Pet Gender</th>
                       <th>Color</th>
                       <th>Race</th>
-                      <th>Action</th>
+                      <th class="text-center">Action</th>
                   </tr>
               </thead>
               
               <tbody>
                 <?php $i = 1; ?>
                 <?php foreach ($pet as $p): ?>
-                  <tr class="clickable-row" data-href="<?= base_url('/PetList/detail/') . $p['id'] ?>">
-                      <td class="align-middle justify-content-center">
+                  <tr class="clickable-row" data-href="<?= base_url('/PetList/detail/') . $p['id'] ?>" data-flag="edit">
+                      <td class="align-middle justify-content-center text-center">
                         <?= $i++; ?>
                       </td>
 
-                      <td class="align-middle ustify-content-center">
+                      <td class="align-middle justify-content-center col-2">
                         <?= $p['name']?>
                       </td>
 
-                      <td class="align-middle justify-content-center">
+                      <td class="align-middle justify-content-center col-2">
                         <?= $p['owner_name']?>
                       </td>
 
@@ -50,55 +50,45 @@
                         <?= $p['address']?>
                       </td>
 
-                      <td class="align-middle justify-content-center">
+                      <td class="align-middle justify-content-center col-2">
                         <?= $p['phone']?>
                       </td>
 
-                      <td class="align-middle justify-content-center">
+                      <td class="align-middle justify-content-center col-2">
                         <?= $p['gender']?>
                       </td>
 
-                      <td class="align-middle justify-content-center">
+                      <td class="align-middle justify-content-center col-2">
                         <?= $p['color']?>
                       </td>
                       
-                      <td class="align-middle justify-content-center">
+                      <td class="align-middle justify-content-center col-2">
                         <?= $p['race']?>
                       </td>
                       
-                      <td class="align-middle text-center">
-                        <div class="gap-2 d-md-block">
-                          <a class="btn btn-primary btn-sm" href='<?= base_url('/PetList/detail/'). $p['id']?>'>
-                          Edit
-                          </a>
-                          <form action="<?= base_url('/PetList/delete/'). $p['id']?>" method="post" class="d-inline">
-                            <?= csrf_field();?>
-                            <input type="hidden" name="_method" value="DELETE">
-                            <button type="submit" class="btn btn-danger text-white btn-sm" onclick="return confirm('Apakah anda yakin menghapus <?=$p['name']?>?');">
-                              Delete
-                            </button>
-                          </form>
-                          
+                      <td class="align-middle justify-content-center">
+                        <div class="d-flex">
+                            <form action="<?= base_url('/PetList/detail/'). $p['id']?>" method="get" class="d-inline mr-2">
+                                <?= csrf_field();?>
+                                <button type="submit" class="btn btn-primary btn-sm">Edit</button>
+                            </form>
+                            <div style="margin-right: 6px;"></div>
+                            <form action="<?= base_url('/PetList/delete/'). $p['id']?>" method="post" class="d-inline">
+                                <?= csrf_field();?>
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="btn btn-danger text-white btn-sm" onclick="return confirm('Apakah anda yakin menghapus <?=$p['name']?>?');">
+                                    Delete
+                                </button>
+                            </form>
                         </div>
                       </td>
+
+
+
                   </tr>
                   <?php endforeach ;?>
 
               </tbody>
-
-              <tfoot>
-                  <tr>
-                      <th>No  </th>
-                      <th>Pet Name</th>
-                      <th>Owner Name</th>
-                      <th>Address</th>
-                      <th>Phone Number</th>
-                      <th>Pet Gender</th>
-                      <th>Fur Color</th>
-                      <th>Race</th>
-                      <th>Action</th>
-                  </tr>
-              </tfoot>
           </table>
           </div>
         </div>

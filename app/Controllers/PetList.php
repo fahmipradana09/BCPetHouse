@@ -25,29 +25,32 @@ class PetList extends BaseController
 
     public function detail($id)
     {
+        
         //dd($this->petModel->getPetProfile($id));
         //dd($id);
-       $data = [
-        'active' => 'detailpet',
-        'pet' => $this->petModel->getPetProfile($id),
-        'validation' => \Config\Services::validation(),
-        'errorValidasi' => Session()->getFlashdata("errorValidasi"), //ini alternatif nya pake flash data 
-        'ownerName' => Session()->getFlashdata("ownerName"),
-        'petName' => Session()->getFlashdata("petName"),
-        'age' => Session()->getFlashdata("age"),    
-        'address' => Session()->getFlashdata("address"),
-        'phoneNumber' => Session()->getFlashdata("phoneNumber"),
-        'animalType' => Session()->getFlashdata("animalType"),
-        'race' => Session()->getFlashdata("race"),
-        'color' => Session()->getFlashdata("color"),
-        'gender' => Session()->getFlashdata("gender"),
-        'amnesa' => Session()->getFlashdata("amnesa"),
-        'statusPresent' => Session()->getFlashdata("statusPresent"),
-        'temuanKlinis' => Session()->getFlashdata("temuanKlinis"),
-        'diagnosa' => Session()->getFlashdata("diagnosa"),
-        'treatment' => Session()->getFlashdata("treatment"),
-        
-       ];
+        $flag = $this->request->getGet('flag');
+        $data = [
+            'active' => 'detailpet',
+            'pet' => $this->petModel->getPetProfile($id),
+            'flag' => $flag,
+            'validation' => \Config\Services::validation(),
+            'errorValidasi' => Session()->getFlashdata("errorValidasi"), //ini alternatif nya pake flash data 
+            'ownerName' => Session()->getFlashdata("ownerName"),
+            'petName' => Session()->getFlashdata("petName"),
+            'age' => Session()->getFlashdata("age"),    
+            'address' => Session()->getFlashdata("address"),
+            'phoneNumber' => Session()->getFlashdata("phoneNumber"),
+            'animalType' => Session()->getFlashdata("animalType"),
+            'race' => Session()->getFlashdata("race"),
+            'color' => Session()->getFlashdata("color"),
+            'gender' => Session()->getFlashdata("gender"),
+            'amnesa' => Session()->getFlashdata("amnesa"),
+            'statusPresent' => Session()->getFlashdata("statusPresent"),
+            'temuanKlinis' => Session()->getFlashdata("temuanKlinis"),
+            'diagnosa' => Session()->getFlashdata("diagnosa"),
+            'treatment' => Session()->getFlashdata("treatment"),
+            
+        ];
     
 
         //dd($data);

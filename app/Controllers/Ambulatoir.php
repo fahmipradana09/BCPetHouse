@@ -53,6 +53,43 @@ class Ambulatoir extends BaseController
         return view('admin/ambulatoir/create', $data);
     }
 
+    public function detail($id)
+    {
+        //dd($this->petModel->getPetProfile($id));
+        //dd($id);
+       $data = [
+        'active' => 'detailpet',
+        'pet' => $this->ambulatoirModel->getAmbulatoir($id),
+        'validation' => \Config\Services::validation(),
+        'errorValidasi' => Session()->getFlashdata("errorValidasi"), //ini alternatif nya pake flash data 
+        'ownerName' => Session()->getFlashdata("ownerName"),
+        'petName' => Session()->getFlashdata("petName"),
+        'age' => Session()->getFlashdata("age"),    
+        'address' => Session()->getFlashdata("address"),
+        'phoneNumber' => Session()->getFlashdata("phoneNumber"),
+        'animalType' => Session()->getFlashdata("animalType"),
+        'race' => Session()->getFlashdata("race"),
+        'color' => Session()->getFlashdata("color"),
+        'gender' => Session()->getFlashdata("gender"),
+        'amnesa' => Session()->getFlashdata("amnesa"),
+        'statusPresent' => Session()->getFlashdata("statusPresent"),
+        'temuanKlinis' => Session()->getFlashdata("temuanKlinis"),
+        'diagnosa' => Session()->getFlashdata("diagnosa"),
+        'treatment' => Session()->getFlashdata("treatment"),
+        
+       ];
+    
+
+        //dd($data);
+       return view('admin/ambulatoir/detail',$data);
+
+       //jika page tidak ditemukan
+       if(empty($data['pet']))
+       {
+        throw new \CodeIgniter\Exceptions\PageNotFoundException('Data '.$id.'tidak terdaftar');
+       }
+    }
+
     public function save()
     {
 
@@ -164,7 +201,7 @@ class Ambulatoir extends BaseController
             ->with('treatment',$validation->getError('treatment'));
         }
 
-        dd($this->request->getVar());
+        //dd($this->request->getVar());
         $this-> petModel->save([
             'owner_name' => $this->request->getVar('ownerName'),
             'name' => $this->request->getVar('petName'),

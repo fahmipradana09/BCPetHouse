@@ -12,7 +12,7 @@
           <div class="col-md-5 mt-3">
             <label for="inputPetName" class="form-label text-truncate">Pet Name</label>
             <div>
-            <input type="text" name="petName" class="form-control <?=($petName) ? 'is-invalid' : ''; ?>" id="inputPetName" value="<?= $pet['name'] ? $pet['name'] : '' ?>" autofocus>
+            <input type="text" name="petName" class="form-control <?=($petName) ? 'is-invalid' : ''; ?>" id="inputPetName" value="<?= $pet['name'] ? $pet['name'] : '' ?>" <?= $flag ? 'readonly' : '' ?> autofocus>
             <div class="invalid-feedback">
                 <?= $petName ?>
               </div>
@@ -22,7 +22,7 @@
           <div class="col-md-5 mt-3">
             <label for="inputOwnerName" class="form-label">Owner Name</label>
             <div>
-                <input type="text" name="ownerName" class="form-control <?=($ownerName) ? 'is-invalid' : ''; ?>" id="inputOwnerName" placeholder="Type Here...."  value="<?= $pet['owner_name'] ? $pet['owner_name'] : '' ?>">
+                <input type="text" name="ownerName" class="form-control <?=($ownerName) ? 'is-invalid' : ''; ?>" id="inputOwnerName" placeholder="Type Here...."  value="<?= $pet['owner_name'] ? $pet['owner_name'] : '' ?>" <?= $flag ? 'readonly' : '' ?>>
                 <div class="invalid-feedback">
                 <?= $ownerName ?>
               </div>
@@ -32,7 +32,7 @@
           <div class="col-md-2 mt-3">
           <label for="inputAge" class="form-label text-truncate">Age</label>
             <div>
-                <input type="text" name="age" class="form-control <?=($age) ? 'is-invalid' : ''; ?>" id="inputAge" placeholder="Type Here...." value="<?= $pet['age'] ? $pet['age'] : '' ?>">
+                <input type="text" name="age" class="form-control <?=($age) ? 'is-invalid' : ''; ?>" id="inputAge" placeholder="Type Here...." value="<?= $pet['age'] ? $pet['age'] : '' ?>" <?= $flag ? 'readonly' : '' ?>>
                 <div class="invalid-feedback">
                   <?= $age ?>
                 </div>
@@ -42,7 +42,7 @@
           <div class="col-md-12 mt-3">
             <label for="inputAddress" class="form-label text-truncate">Address</label>
             <div>
-              <textarea class="form-control <?=($address) ? 'is-invalid' : ''; ?>" name="address" id="inputAddress" rows="3"><?= $pet['address'] ? $pet['address'] : '' ?></textarea>
+              <textarea class="form-control <?=($address) ? 'is-invalid' : ''; ?>" name="address" id="inputAddress" rows="3" <?= $flag ? 'readonly' : '' ?> ><?= $pet['address'] ? $pet['address'] : '' ?></textarea>
               <div class="invalid-feedback">
                 <?= $address ?>
               </div>
@@ -52,7 +52,7 @@
           <div class="col-md-3 mt-3">
             <label for="inputFurColor" class="form-label text-truncate">Phone Number</label>
             <div>
-              <input type="text" name="phoneNumber" id="inputPhone" class="form-control <?=($phoneNumber) ? 'is-invalid' : ''; ?>" id="inputPhoneNumber" placeholder="Type Here...."  value="<?= $pet['phone'] ? $pet['phone'] : '' ?>">
+              <input type="text" name="phoneNumber" id="inputPhone" class="form-control <?=($phoneNumber) ? 'is-invalid' : ''; ?>" id="inputPhoneNumber" placeholder="Type Here...."  value="<?= $pet['phone'] ? $pet['phone'] : '' ?>" <?= $flag ? 'readonly' : '' ?>>
               <div class="invalid-feedback">
                 <?= $phoneNumber ?>
               </div>
@@ -62,7 +62,7 @@
           <div class="col-md-3 mt-3">
             <label for="inputAnimalType" class="form-label text-truncate">Animal Type</label>
             <div>
-              <input type="text" name="animalType" class="form-control <?=($animalType) ? 'is-invalid' : ''; ?>" id="inputAnimalType" placeholder="Type Here...." value="<?= $pet['animal_type'] ? $pet['animal_type'] : '' ?>">
+              <input type="text" name="animalType" class="form-control <?=($animalType) ? 'is-invalid' : ''; ?>" id="inputAnimalType" placeholder="Type Here...." value="<?= $pet['animal_type'] ? $pet['animal_type'] : '' ?>" <?= $flag ? 'readonly' : '' ?>>
               <div class="invalid-feedback">
                 <?= $animalType ?>
               </div>
@@ -72,7 +72,7 @@
           <div class="col-md-3 mt-3">
             <label for="inputFurColor" class="form-label text-truncate">Race</label>
             <div>
-              <input type="text" name="race" class="form-control <?=($race) ? 'is-invalid' : ''; ?>" id="inputRace" placeholder="Type Here...." value="<?= $pet['race'] ? $pet['race'] : '' ?>">
+              <input type="text" name="race" class="form-control <?=($race) ? 'is-invalid' : ''; ?>" id="inputRace" placeholder="Type Here...." value="<?= $pet['race'] ? $pet['race'] : '' ?>" <?= $flag ? 'readonly' : '' ?>>
               <div class="invalid-feedback">
                 <?= $race ?>
               </div>
@@ -82,7 +82,7 @@
           <div class="col-md-3 mt-3">
             <label for="inputFurColor" class="form-label text-truncate">Color</label>
             <div>
-              <input type="text" name="color" class="form-control <?=($color) ? 'is-invalid' : ''; ?>" id="inputFurColor" placeholder="Type Here...." value="<?= $pet['color'] ? $pet['color'] : '' ?>">
+              <input type="text" name="color" class="form-control <?=($color) ? 'is-invalid' : ''; ?>" id="inputFurColor" placeholder="Type Here...." value="<?= $pet['color'] ? $pet['color'] : '' ?>" <?= $flag ? 'readonly' : '' ?>>
               <div class="invalid-feedback">
                 <?= $color ?>
               </div>
@@ -92,31 +92,31 @@
           <div class="col-md-6 mt-3">
           <label for="inputGender" class="form-label text-truncate">Gender</label>
           <div class="form-check">
-              <input class="form-check-input" type="radio" name="gender" id="radioMale" value="male"  <?= ($pet['gender'] === 'male') ? 'checked' : '' ?>>
+              <input class="form-check-input" type="radio" name="gender" id="radioMale" value="male"  <?= ($pet['gender'] === 'male') ? 'checked' : '' ?> <?= $flag ? 'disable' : '' ?>>
               <label class="form-check-label" for="radioMale">
                   Male
               </label>
           </div>
           <div class="form-check">
-              <input class="form-check-input" type="radio" name="gender" id="radioFemale" value="female"  <?= ($pet['gender'] === 'female') ? 'checked' : '' ?>>
+              <input class="form-check-input" type="radio" name="gender" id="radioFemale" value="female"  <?= ($pet['gender'] === 'female') ? 'checked' : '' ?> <?= $flag ? 'disable' : '' ?>>
               <label class="form-check-label" for="radioFemale">
                   Female
               </label>
           </div>
           <div class="form-check">
-              <input class="form-check-input" type="radio" name="gender" id="radioUndefined" value="undefined" <?= ($pet['gender'] !== 'male' && $pet['gender'] !== 'female') ? 'checked' : '' ?>>
+              <input class="form-check-input" type="radio" name="gender" id="radioUndefined" value="undefined" <?= ($pet['gender'] !== 'male' && $pet['gender'] !== 'female') ? 'checked' : '' ?> <?= $flag ? 'disable' : '' ?>>
               <label class="form-check-label" for="radioUndefined">
                   Undefined
               </label>
           </div>
       </div>
 
-          
-            <div class="col-md-6 align-items-start form-check form-switch my-4">
+      <?php if (!$flag): ?>
+          <div class="col-md-6 align-items-start form-check form-switch my-4">
               <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckHospitalization">
               <label class="form-check-label" for="flexSwitchCheckHospitalization">Tindak lanjut Rawat inap</label>
-            </div>
-
+          </div>
+      <?php endif; ?>
         
         <div class="container">
           <div class="row clearfix">

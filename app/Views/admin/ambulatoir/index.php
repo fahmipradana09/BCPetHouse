@@ -21,14 +21,14 @@
             <table id="ambulatoir" class="table row-border hover" style="width:100%">
             <thead>
                   <tr>
-                      <th>No</th>
+                      <th class="text-center">No</th>
                       <th>Date Checkup</th>
-                      <th>Pet Name</th>
-                      <th>Amnesa</th>
-                      <th>Status Finding</th>
-                      <th>Clinical Finding</th>
-                      <th>Medication</th>
-                      <th>Action</th>
+                      <th class="col-2">Pet Name</th>
+                      <th class="col-2">Amnesa</th>
+                      <th class="col-2">Status Finding</th>
+                      <th class="col-2">Clinical Finding</th>
+                      <th class="col-2">Medication</th>
+                      <th class="text-center">Action</th>
                   </tr>
               </thead>
               
@@ -36,97 +36,56 @@
                 <?php $i = 1; ?>
                 <?php foreach ($ambulatoir as $p): ?>
                   <tr>
-                      <td><?= $i++; ?></td>
-                      <td><?= $p['date_checkup']?></td>
-                      <td><?= $p['pet_id']?></td>
-                      <td><?= $p['amnesa']?></td>
-                      <td><?= $p['status_present']?></td>
-                      <td><?= $p['clinical_finding']?></td>
-                      <td><?= $p['medication']?></td>
-                      <td class="align-middle text-center">
-                      <div class="d-grid gap-2 d-md-block">
-                        <a class="btn btn-primary btn-sm" href='<?= base_url('/PetList/detail/'). $p['id']?>'>
-                        Edit
-                        </a>
-                        <form action="<?= base_url('/PetList/delete/'). $p['id']?>" method="post" class="d-inline">
-                          <?= csrf_field();?>
-                          <input type="hidden" name="_method" value="DELETE">
-                          <button type="submit" class="btn btn-danger text-white btn-sm" onclick="return confirm('Apakah anda yakin menghapus <?=$p['pet_id']?>?');">
-                            Delete
-                          </button>
-                        </form>
-                        
-                      </div>
-                    </td>
+                      <td class="text-center">
+                        <?= $i++; ?>
+                      </td>
+
+                      <td>
+                        <?= $p['date_checkup']?>
+                      </td>
+                      <td class="col-2 text-truncate">
+                        <?= $p['name']?>
+                      </td>
+
+                      <td class="col-2 text-truncate">
+                        <?= $p['amnesa']?>
+                      </td>
+
+                      <td class="col-2 text-truncate">
+                        <?= $p['status_present']?>
+                      </td>
+
+                      <td class="col-2 text-truncate">
+                        <?= $p['clinical_finding']?>
+                      </td>
+
+                      <td class="col-2 text-truncate">
+                        <?= $p['medication']?>
+                      </td>
+
+                      <td class="align-middle justify-content-center">
+                        <div class="d-flex">
+                            <form action="<?= base_url('/Ambulatoir/detail/'). $p['id']?>" method="get" class="d-inline">
+                                <?= csrf_field();?>
+                                <button type="submit" class="btn btn-primary btn-sm">Edit</button>
+                            </form>
+                            <div style="margin-right: 6px;"></div>
+                            <form action="<?= base_url('/PetList/delete/'). $p['id']?>" method="post" class="d-inline">
+                                <?= csrf_field();?>
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="btn btn-danger text-white btn-sm" onclick="return confirm('Apakah anda yakin menghapus <?=$p['name']?>?');">
+                                    Delete
+                                </button>
+                            </form>
+                        </div>
+                      </td>
                   </tr>
                   <?php endforeach ;?>
 
               </tbody>
-
-              <tfoot>
-                  <tr>
-                      <th>No</th>
-                      <th>Date Checkup</th>
-                      <th>Pet Name</th>
-                      <th>Amnesa</th>
-                      <th>Status Finding</th>
-                      <th>Clinical Finding</th>
-                      <th>Medication</th>
-                      <th>Action</th>
-                  </tr>
-              </tfoot>
           </table>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="modalCreate" tabindex="-1"  data-bs-backdrop="static" aria-labelledby="exampleModalCenterTitle" style="display: none;" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Create Position</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <!--Body-->
-      <div class="modal-body">
-        <form class="row">
-            <div class="col-md-6 mt-3">
-              <label for="inputOwnerName" class="form-label">Owner Name</label>
-              <div class="input-group input-group-outline">
-                  <input type="text" class="form-control" id="inputOwnerName" placeholder="Type Here....">
-              </div>
-            </div>
-
-            <div class="col-md-6 mt-3">
-              <label for="inputPetName" class="form-label text-truncate">Pet Name</label>
-              <div class="input-group input-group-outline">
-                  <input type="text" class="form-control" id="inputPetName" placeholder="Type Here....">
-              </div>
-            </div>
-
-            <div class="col-md-12 mt-3">
-              <label for="inputAddress" class="form-label text-truncate">Address</label>
-              <div class="input-group input-group-outline">
-                <textarea class="form-control" id="inputAddress" rows="3"></textarea>
-              </div>
-            </div>
-
-            <div class="col-md-6 mt-3">
-              <label for="inputPetName" class="form-label text-truncate">Pet Name</label>
-              <div class="input-group input-group-outline">
-                  <input type="text" class="form-control" id="inputPetName" placeholder="Type Here....">
-              </div>
-            </div>
-
-        </form>
-      </div>
-      <!--end Body-->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Create</button>
       </div>
     </div>
   </div>

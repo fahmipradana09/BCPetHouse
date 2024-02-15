@@ -53,10 +53,16 @@ $(document).ready(function () {
 
     table.columns.adjust().draw();
 
+    // $('#petlist tbody').on('click', 'tr.clickable-row', function () {
+    //     var href = $(this).data('href');
+    //     window.location.href = href;
+    // });
+    
     $('#petlist tbody').on('click', 'tr.clickable-row', function () {
         var href = $(this).data('href');
-        window.location.href = href;
+        var flag = $(this).data('flag'); // Get the flag value from the data attribute
+        // Append the flag parameter to the URL
+        window.location.href = href + '?flag=' + flag;
     });
-    
 });
 

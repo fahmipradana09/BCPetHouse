@@ -33,9 +33,14 @@ class AmbulatoirsModel extends Model
     {
         if ($id == false)
         {
-            return $this->findAll();
+            return $this->select('ambulatoir.*, pp.name, pp.owner_name')
+                        ->join('pet_profile as pp', 'ambulatoir.pet_id = pp.id')
+                        ->findAll();
         }
-        return $this->where(['id' => $id])->first();
+        return $this->select('ambulatoir.*, pp.*')
+                    ->join('pet_profile as pp', 'ambulatoir.pet_id = pp.id')
+                    ->where('ambulatoir.id',$id)->first();
+        // return $this->where(['id' => $id])->first();
     }
 
 }
