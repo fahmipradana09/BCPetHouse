@@ -109,94 +109,112 @@
                   Undefined
               </label>
           </div>
-      </div>
-
-      <?php if (!$flag): ?>
-          <div class="col-md-6 align-items-start form-check form-switch my-4">
-              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckHospitalization">
-              <label class="form-check-label" for="flexSwitchCheckHospitalization">Tindak lanjut Rawat inap</label>
           </div>
-      <?php endif; ?>
+
+          <!-- <?php if (!$flag): ?>
+              <div class="col-md-6 align-items-start form-check form-switch my-4">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckHospitalization">
+                  <label class="form-check-label" for="flexSwitchCheckHospitalization">Tindak lanjut Rawat inap</label>
+              </div>
+          <?php endif; ?> -->
         
-        <div class="container">
-          <div class="row clearfix">
-          <div class="col-md-12 table-responsive column">
-          <table class="table table-bordered table-hover" id="tab_logic">
-                <thead>
-                  <tr>
-                    <th class="text-center no-sort">
-                      No.
-                    </th>
+          <div class="container">
+            <div class="row clearfix">
+              <div class="col-md-12 table-responsive column">
+                <table class="table table-bordered table-hover" id="tab_logic">
+                    <thead>
+                      <tr>
+                        <th class="text-center no-sort">
+                          No.
+                        </th>
 
-                    <th class="text-center resize">
-                      Date Checkup
-                    </th>
+                        <th class="text-center resize">
+                          Date Checkup
+                        </th>
 
-                    <th class="text-center resize">
-                      Amnesa
-                    </th>
+                        <th class="text-center resize">
+                          Amnesa
+                        </th>
 
-                    <th class="text-center resize">
-                      Status Present
-                    </th>
+                        <th class="text-center resize">
+                          Status Present
+                        </th>
 
-                    <th class="text-center resize">
-                      Temuan Klinis
-                    </th>
+                        <th class="text-center resize">
+                          Temuan Klinis
+                        </th>
 
-                    <th class="text-center resize">
-                      Diagnosa
-                    </th>
+                        <th class="text-center resize">
+                          Diagnosa
+                        </th>
 
-                    <th class="text-center resize">
-                      Pengobatan
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr id='addr0'>
-                    <td>1</td>
+                        <th class="text-center resize">
+                          Pengobatan
+                        </th>
 
-                    <td>
-                    <div class="date" id="datePicker">
-                      <input type="text" name='date[]' placeholder='Enter Date' class="form-control" disabled/>
-                    </div>
-                    </td>
+                        <th class="text-center resize">
+                          Rawat Inap
+                        </th>
 
-                    <td>
-                    <input type="text" name='amnesa' placeholder='Type here...' class="form-control <?=($amnesa) ? 'is-invalid' : ''; ?>" value="" />
-                    </td>
+                        <th class="text-center resize">
+                          Action
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    <tr id='addr0'>
+                    <?php $i = 1; ?>
+                    <?php foreach ($ambulatoir as $a): ?>
+                      
+                        <td>
+                          <?= $i++; ?>
+                        </td>
 
-                    <td>
-                    <input type="text" name='statusPresent' placeholder='Type here...' class="form-control <?=($statusPresent) ? 'is-invalid' : ''; ?>" value=""/>
-                    </td>
+                        <td>
+                          <input type="text" name='date' placeholder='Enter Date' class="form-control" value="<?= $a['date_checkup'] ? $a['date_checkup'] : '' ?>" <?= $flag ? 'readonly' : '' ?>/>
+                        </td>
 
-                    <td>
-                    <input type="text" name='temuanKlinis' placeholder='Type here...' class="form-control <?=($temuanKlinis) ? 'is-invalid' : ''; ?>" value=""/>
-                    </td>
+                        <td>
+                        <input type="text" name='amnesa' placeholder='Type here...' class="form-control" value="<?= $a['amnesa'] ? $a['amnesa'] : '' ?>" <?= $flag ? 'readonly' : '' ?> />
+                        </td>
 
-                    <td>
-                    <input type="text" name='diagnosa' placeholder='Type here...' class="form-control <?=($diagnosa) ? 'is-invalid' : ''; ?>" value=""/>
-                    </td>
+                        <td>
+                        <input type="text" name='statusPresent' placeholder='Type here...' class="form-control" value="<?= $a['diagnosis'] ? $a['diagnosis'] : '' ?>" <?= $flag ? 'readonly' : '' ?>/>
+                        </td>
 
-                    <td>
-                    <input type="text" name='treatment' placeholder='Type here...' class="form-control  <?=($treatment) ? 'is-invalid' : ''; ?>" value=""/>
-                    </td>
-                    
+                        <td>
+                        <input type="text" name='temuanKlinis' placeholder='Type here...' class="form-control" value="<?= $a['status_present'] ? $a['status_present'] : '' ?>" <?= $flag ? 'readonly' : '' ?>/>
+                        </td>
 
-                  </tr>
+                        <td>
+                        <input type="text" name='diagnosa' placeholder='Type here...' class="form-control" value="<?= $a['clinical_finding'] ? $a['clinical_finding'] : '' ?>" <?= $flag ? 'readonly' : '' ?>/>
+                        </td>
+
+                        <td>
+                        <input type="text" name='treatment' placeholder='Type here...' class="form-control" value="<?= $a['medication'] ? $a['medication'] : '' ?>" <?= $flag ? 'readonly' : '' ?>/>
+                        </td>
+                        
+                        <td>
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckHospitalization">
+                        <label class="form-check-label" for="flexSwitchCheckHospitalization">Tindak lanjut Rawat inap</label>
+                        </td>
+
+                      </tr>
+                          
+                      <?php endforeach ;?>
                       <tr id='addr1'></tr>
-                </tbody>
-              </table>
+                    </tbody>
+                  </table>
+              </div>
+            </div>
+            <button id="add_row" type="button" class="btn btn-default pull-left">Add Row</button>
+            <button id='delete_row' type="button" class="pull-right btn btn-default">Delete Row</button>
           </div>
-        </div>
-        <button id="add_row" class="btn btn-default pull-left">Add Row</button><button id='delete_row' class="pull-right btn btn-default">Delete Row</button>
-   </div>
 
-   <div class="d-flex justify-content-center">
-      <button type="submit" id="savePet" class="btn bg-primary justify-content-center text-white btn-default col-md-6 mx-3 mt-4">Save</button>
-    </div>
-    </form>
+          <div class="d-flex justify-content-center">
+            <button type="submit" id="savePet" class="btn bg-primary justify-content-center text-white btn-default col-md-6 mx-3 mt-4">Save</button>
+          </div>
+        </form>
   </div>
 </div>
 <?= $this->endSection(); ?>   

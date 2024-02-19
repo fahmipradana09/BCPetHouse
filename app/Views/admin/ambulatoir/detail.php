@@ -159,7 +159,7 @@
 
                     <td>
                     <div class="date" id="datePicker">
-                      <input type="text" name='date[]' placeholder='Enter Date' class="form-control" disabled/>
+                      <input type="text" name='date' placeholder='Enter Date' class="form-control" disabled/>
                     </div>
                     </td>
 
@@ -191,7 +191,7 @@
           </div>
         </div>
         <button id="add_row" class="btn btn-default pull-left">Add Row</button><button id='delete_row' class="pull-right btn btn-default">Delete Row</button>
-   </div>
+  </div>
 
    <div class="d-flex justify-content-center">
       <button type="submit" id="savePet" class="btn bg-primary justify-content-center text-white btn-default col-md-6 mx-3 mt-4">Save</button>

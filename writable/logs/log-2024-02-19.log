@@ -1,0 +1,448 @@
+INFO - 2024-02-19 07:03:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-19 07:03:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-19 07:03:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-19 07:03:36 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'bcpet_db', 3306, '', 0)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ambulat...', Array, false)
+#4 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Project (external)\BCPetHouse\app\Models\AmbulatoirsModel.php(48): CodeIgniter\BaseModel->findAll()
+#7 D:\Project (external)\BCPetHouse\app\Controllers\Ambulatoir.php(26): App\Models\AmbulatoirsModel->getAmbulatoirAndPetList()
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->index()
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#10 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ambulat...', Array, false)
+#3 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\Project (external)\BCPetHouse\app\Models\AmbulatoirsModel.php(48): CodeIgniter\BaseModel->findAll()
+#6 D:\Project (external)\BCPetHouse\app\Controllers\Ambulatoir.php(26): App\Models\AmbulatoirsModel->getAmbulatoirAndPetList()
+#7 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->index()
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#12 {main}
+CRITICAL - 2024-02-19 07:03:36 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ambulatoir`.*, `pp`.`name`, `pp`.`owner_name`
+FROM `ambulatoir`
+JOIN `pet_profile` as `pp` ON `ambulatoir`.`pet_id` = `pp`.`id`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\AmbulatoirsModel.php(48): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Ambulatoir.php(26): App\Models\AmbulatoirsModel->getAmbulatoirAndPetList()
+ 7 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Ambulatoir->index()
+ 8 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-19 07:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-19 07:03:41 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'bcpet_db', 3306, '', 0)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ambulat...', Array, false)
+#4 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Project (external)\BCPetHouse\app\Models\AmbulatoirsModel.php(48): CodeIgniter\BaseModel->findAll()
+#7 D:\Project (external)\BCPetHouse\app\Controllers\Ambulatoir.php(26): App\Models\AmbulatoirsModel->getAmbulatoirAndPetList()
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->index()
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#10 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ambulat...', Array, false)
+#3 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\Project (external)\BCPetHouse\app\Models\AmbulatoirsModel.php(48): CodeIgniter\BaseModel->findAll()
+#6 D:\Project (external)\BCPetHouse\app\Controllers\Ambulatoir.php(26): App\Models\AmbulatoirsModel->getAmbulatoirAndPetList()
+#7 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->index()
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#12 {main}
+CRITICAL - 2024-02-19 07:03:41 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ambulatoir`.*, `pp`.`name`, `pp`.`owner_name`
+FROM `ambulatoir`
+JOIN `pet_profile` as `pp` ON `ambulatoir`.`pet_id` = `pp`.`id`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\AmbulatoirsModel.php(48): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Ambulatoir.php(26): App\Models\AmbulatoirsModel->getAmbulatoirAndPetList()
+ 7 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Ambulatoir->index()
+ 8 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-19 07:03:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-19 07:03:45 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'bcpet_db', 3306, '', 0)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ambulat...', Array, false)
+#4 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Project (external)\BCPetHouse\app\Models\AmbulatoirsModel.php(48): CodeIgniter\BaseModel->findAll()
+#7 D:\Project (external)\BCPetHouse\app\Controllers\Ambulatoir.php(26): App\Models\AmbulatoirsModel->getAmbulatoirAndPetList()
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->index()
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#10 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ambulat...', Array, false)
+#3 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\Project (external)\BCPetHouse\app\Models\AmbulatoirsModel.php(48): CodeIgniter\BaseModel->findAll()
+#6 D:\Project (external)\BCPetHouse\app\Controllers\Ambulatoir.php(26): App\Models\AmbulatoirsModel->getAmbulatoirAndPetList()
+#7 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->index()
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#12 {main}
+CRITICAL - 2024-02-19 07:03:45 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ambulatoir`.*, `pp`.`name`, `pp`.`owner_name`
+FROM `ambulatoir`
+JOIN `pet_profile` as `pp` ON `ambulatoir`.`pet_id` = `pp`.`id`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\AmbulatoirsModel.php(48): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Ambulatoir.php(26): App\Models\AmbulatoirsModel->getAmbulatoirAndPetList()
+ 7 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Ambulatoir->index()
+ 8 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-19 07:03:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-19 07:03:49 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'bcpet_db', 3306, '', 0)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ambulat...', Array, false)
+#4 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Project (external)\BCPetHouse\app\Models\AmbulatoirsModel.php(48): CodeIgniter\BaseModel->findAll()
+#7 D:\Project (external)\BCPetHouse\app\Controllers\Ambulatoir.php(26): App\Models\AmbulatoirsModel->getAmbulatoirAndPetList()
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->index()
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#10 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ambulat...', Array, false)
+#3 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\Project (external)\BCPetHouse\app\Models\AmbulatoirsModel.php(48): CodeIgniter\BaseModel->findAll()
+#6 D:\Project (external)\BCPetHouse\app\Controllers\Ambulatoir.php(26): App\Models\AmbulatoirsModel->getAmbulatoirAndPetList()
+#7 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->index()
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#12 {main}
+CRITICAL - 2024-02-19 07:03:49 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ambulatoir`.*, `pp`.`name`, `pp`.`owner_name`
+FROM `ambulatoir`
+JOIN `pet_profile` as `pp` ON `ambulatoir`.`pet_id` = `pp`.`id`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\AmbulatoirsModel.php(48): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Ambulatoir.php(26): App\Models\AmbulatoirsModel->getAmbulatoirAndPetList()
+ 7 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Ambulatoir->index()
+ 8 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-19 07:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-19 07:03:53 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'bcpet_db', 3306, '', 0)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ambulat...', Array, false)
+#4 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Project (external)\BCPetHouse\app\Models\AmbulatoirsModel.php(48): CodeIgniter\BaseModel->findAll()
+#7 D:\Project (external)\BCPetHouse\app\Controllers\Ambulatoir.php(26): App\Models\AmbulatoirsModel->getAmbulatoirAndPetList()
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->index()
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#10 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ambulat...', Array, false)
+#3 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\Project (external)\BCPetHouse\app\Models\AmbulatoirsModel.php(48): CodeIgniter\BaseModel->findAll()
+#6 D:\Project (external)\BCPetHouse\app\Controllers\Ambulatoir.php(26): App\Models\AmbulatoirsModel->getAmbulatoirAndPetList()
+#7 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->index()
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#12 {main}
+CRITICAL - 2024-02-19 07:03:53 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ambulatoir`.*, `pp`.`name`, `pp`.`owner_name`
+FROM `ambulatoir`
+JOIN `pet_profile` as `pp` ON `ambulatoir`.`pet_id` = `pp`.`id`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\AmbulatoirsModel.php(48): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Ambulatoir.php(26): App\Models\AmbulatoirsModel->getAmbulatoirAndPetList()
+ 7 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Ambulatoir->index()
+ 8 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-19 07:03:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-19 07:03:58 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'bcpet_db', 3306, '', 0)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ambulat...', Array, false)
+#4 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Project (external)\BCPetHouse\app\Models\AmbulatoirsModel.php(48): CodeIgniter\BaseModel->findAll()
+#7 D:\Project (external)\BCPetHouse\app\Controllers\Ambulatoir.php(26): App\Models\AmbulatoirsModel->getAmbulatoirAndPetList()
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->index()
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#10 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ambulat...', Array, false)
+#3 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\Project (external)\BCPetHouse\app\Models\AmbulatoirsModel.php(48): CodeIgniter\BaseModel->findAll()
+#6 D:\Project (external)\BCPetHouse\app\Controllers\Ambulatoir.php(26): App\Models\AmbulatoirsModel->getAmbulatoirAndPetList()
+#7 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->index()
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#12 {main}
+CRITICAL - 2024-02-19 07:03:58 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ambulatoir`.*, `pp`.`name`, `pp`.`owner_name`
+FROM `ambulatoir`
+JOIN `pet_profile` as `pp` ON `ambulatoir`.`pet_id` = `pp`.`id`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\AmbulatoirsModel.php(48): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Ambulatoir.php(26): App\Models\AmbulatoirsModel->getAmbulatoirAndPetList()
+ 7 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Ambulatoir->index()
+ 8 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-19 07:03:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-19 07:04:02 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'bcpet_db', 3306, '', 0)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ambulat...', Array, false)
+#4 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Project (external)\BCPetHouse\app\Models\AmbulatoirsModel.php(48): CodeIgniter\BaseModel->findAll()
+#7 D:\Project (external)\BCPetHouse\app\Controllers\Ambulatoir.php(26): App\Models\AmbulatoirsModel->getAmbulatoirAndPetList()
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->index()
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#10 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ambulat...', Array, false)
+#3 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\Project (external)\BCPetHouse\app\Models\AmbulatoirsModel.php(48): CodeIgniter\BaseModel->findAll()
+#6 D:\Project (external)\BCPetHouse\app\Controllers\Ambulatoir.php(26): App\Models\AmbulatoirsModel->getAmbulatoirAndPetList()
+#7 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->index()
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#12 {main}
+CRITICAL - 2024-02-19 07:04:02 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ambulatoir`.*, `pp`.`name`, `pp`.`owner_name`
+FROM `ambulatoir`
+JOIN `pet_profile` as `pp` ON `ambulatoir`.`pet_id` = `pp`.`id`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\AmbulatoirsModel.php(48): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Ambulatoir.php(26): App\Models\AmbulatoirsModel->getAmbulatoirAndPetList()
+ 7 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Ambulatoir->index()
+ 8 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-19 07:04:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-19 07:04:06 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'bcpet_db', 3306, '', 0)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rawat_i...', Array, false)
+#4 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Project (external)\BCPetHouse\app\Models\RawatInapModel.php(39): CodeIgniter\BaseModel->findAll()
+#7 D:\Project (external)\BCPetHouse\app\Controllers\RawatInap.php(19): App\Models\RawatInapModel->getRawatInap()
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\RawatInap->index()
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+#10 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rawat_i...', Array, false)
+#3 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\Project (external)\BCPetHouse\app\Models\RawatInapModel.php(39): CodeIgniter\BaseModel->findAll()
+#6 D:\Project (external)\BCPetHouse\app\Controllers\RawatInap.php(19): App\Models\RawatInapModel->getRawatInap()
+#7 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\RawatInap->index()
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#12 {main}
+CRITICAL - 2024-02-19 07:04:06 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rawat_inap`.*, `am`.*, `pp`.*
+FROM `rawat_inap`
+JOIN `ambulatoir` as `am` ON `rawat_inap`.`id_ambulatoir` = `am`.`id`
+JOIN `pet_profile` as `pp` ON `rawat_inap`.`id_petProfile` = `pp`.`id`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\RawatInapModel.php(39): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\RawatInap.php(19): App\Models\RawatInapModel->getRawatInap()
+ 7 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->index()
+ 8 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-19 07:04:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-19 07:09:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-19 07:09:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-19 07:09:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-19 07:09:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-19 07:09:47 --> Undefined variable $ambulatoir
+in APPPATH\Views\admin\ambulatoir\index.php on line 37.
+ 1 APPPATH\Views\admin\ambulatoir\index.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ambulatoir', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\ambulatoir\\index.php', 37)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\ambulatoir\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/ambulatoir/index', [], true)
+ 5 APPPATH\Controllers\Ambulatoir.php(28): view('admin/ambulatoir/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Ambulatoir->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-19 07:09:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-19 07:10:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-19 07:10:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-19 07:10:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-19 07:10:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-19 07:10:38 --> Undefined variable $ambulatoir
+in APPPATH\Views\admin\ambulatoir\index.php on line 37.
+ 1 APPPATH\Views\admin\ambulatoir\index.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ambulatoir', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\ambulatoir\\index.php', 37)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\ambulatoir\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/ambulatoir/index', [], true)
+ 5 APPPATH\Controllers\Ambulatoir.php(28): view('admin/ambulatoir/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Ambulatoir->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-19 07:11:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-19 07:27:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-19 07:27:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-19 07:33:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-19 07:33:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-19 07:35:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-19 07:49:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-19 07:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-19 07:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-19 07:51:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-19 08:00:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-19 08:01:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-19 08:01:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-19 08:01:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-19 08:02:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-19 08:02:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-19 08:20:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-19 08:20:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-19 08:20:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

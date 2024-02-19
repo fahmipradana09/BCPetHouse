@@ -23,7 +23,7 @@ class Ambulatoir extends BaseController
     {
         $data = [
             'active' => 'ambulatoir',
-            'ambulatoir' => $this->ambulatoirModel->getAmbulatoir()
+            'ambulatoir' => $this->ambulatoirModel->getAmbulatoirAndPetList()
         ];
         return view('admin/ambulatoir/index',$data);
     }

@@ -2,14 +2,18 @@
 
 namespace App\Controllers;
 
+use App\Models\AmbulatoirsModel;
 use App\Models\PetProfileModel;
 
 class PetList extends BaseController
 {
     protected $petModel;
+    protected $ambulatoirModel;
+
     public function __construct()
     {
         $this->petModel = new PetProfileModel();
+        $this->ambulatoirModel = new AmbulatoirsModel();
     }
 
     public function index()
@@ -25,13 +29,13 @@ class PetList extends BaseController
 
     public function detail($id)
     {
-        
         //dd($this->petModel->getPetProfile($id));
         //dd($id);
         $flag = $this->request->getGet('flag');
         $data = [
             'active' => 'detailpet',
             'pet' => $this->petModel->getPetProfile($id),
+            'ambulatoir' => $this->ambulatoirModel->getAmbulatoirDetailPet($id),
             'flag' => $flag,
             'validation' => \Config\Services::validation(),
             'errorValidasi' => Session()->getFlashdata("errorValidasi"), //ini alternatif nya pake flash data 
@@ -44,11 +48,11 @@ class PetList extends BaseController
             'race' => Session()->getFlashdata("race"),
             'color' => Session()->getFlashdata("color"),
             'gender' => Session()->getFlashdata("gender"),
-            'amnesa' => Session()->getFlashdata("amnesa"),
-            'statusPresent' => Session()->getFlashdata("statusPresent"),
-            'temuanKlinis' => Session()->getFlashdata("temuanKlinis"),
-            'diagnosa' => Session()->getFlashdata("diagnosa"),
-            'treatment' => Session()->getFlashdata("treatment"),
+            // 'amnesa' => Session()->getFlashdata("amnesa"),
+            // 'statusPresent' => Session()->getFlashdata("statusPresent"),
+            // 'temuanKlinis' => Session()->getFlashdata("temuanKlinis"),
+            // 'diagnosa' => Session()->getFlashdata("diagnosa"),
+            // 'treatment' => Session()->getFlashdata("treatment"),
             
         ];
     
@@ -131,36 +135,36 @@ class PetList extends BaseController
                     'required' => 'Gender Wajib diisi'
                 ],
             ],
-            'amnesa' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Amnesa Wajib diisi'
-                ],
-            ],
-            'statusPresent' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Status Present Wajib diisi'
-                ],
-            ],
-            'temuanKlinis' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Temuan Klinis Wajib diisi'
-                ],
-            ],
-            'diagnosa' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Diagnosa Wajib diisi'
-                ],
-            ],
-            'treatment' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Diagnosa Wajib diisi'
-                ],
-            ],
+            // 'amnesa' => [
+            //     'rules' => 'required',
+            //     'errors' => [
+            //         'required' => 'Amnesa Wajib diisi'
+            //     ],
+            // ],
+            // 'statusPresent' => [
+            //     'rules' => 'required',
+            //     'errors' => [
+            //         'required' => 'Status Present Wajib diisi'
+            //     ],
+            // ],
+            // 'temuanKlinis' => [
+            //     'rules' => 'required',
+            //     'errors' => [
+            //         'required' => 'Temuan Klinis Wajib diisi'
+            //     ],
+            // ],
+            // 'diagnosa' => [
+            //     'rules' => 'required',
+            //     'errors' => [
+            //         'required' => 'Diagnosa Wajib diisi'
+            //     ],
+            // ],
+            // 'treatment' => [
+            //     'rules' => 'required',
+            //     'errors' => [
+            //         'required' => 'Diagnosa Wajib diisi'
+            //     ],
+            // ],
 
         ])){
             //dd(\Config\Services::validation());
@@ -175,12 +179,12 @@ class PetList extends BaseController
             ->with('animalType',$validation->getError('animalType'))
             ->with('race',$validation->getError('race'))
             ->with('color',$validation->getError('color'))
-            ->with('gender',$validation->getError('gender'))
-            ->with('amnesa',$validation->getError('amnesa'))
-            ->with('statusPresent',$validation->getError('statusPresent'))
-            ->with('temuanKlinis',$validation->getError('temuanKlinis'))
-            ->with('diagnosa',$validation->getError('diagnosa'))
-            ->with('treatment',$validation->getError('treatment'));
+            ->with('gender',$validation->getError('gender'));
+            // ->with('amnesa',$validation->getError('amnesa'))
+            // ->with('statusPresent',$validation->getError('statusPresent'))
+            // ->with('temuanKlinis',$validation->getError('temuanKlinis'))
+            // ->with('diagnosa',$validation->getError('diagnosa'))
+            // ->with('treatment',$validation->getError('treatment'));
         }
 
         

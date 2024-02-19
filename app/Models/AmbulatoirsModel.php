@@ -29,7 +29,17 @@ class AmbulatoirsModel extends Model
 //     protected $skipValidation       = false;
 //     protected $cleanValidationRules = true;
 
-    public function getAmbulatoir($id = false)
+    public function getAmbulatoirDetailPet($id)
+    {
+        //return $this->where('ambulatoir.id',$id)->first();
+        return $this->select('ambulatoir.*')
+                    ->join('pet_profile as pp', 'ambulatoir.pet_id = pp.id')
+                    ->where('pp.id',$id)->findAll();
+    }
+
+    
+
+    public function getAmbulatoirAndPetList($id = false)
     {
         if ($id == false)
         {

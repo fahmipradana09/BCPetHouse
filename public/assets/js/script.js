@@ -21,7 +21,8 @@ $(document).ready(function(){
     $('#addr'+i).html($('#addr'+b).html()).find('td:first-child').html(i+1);
     $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
     i++; 
-});
+    });
+    
    $("#delete_row").click(function(){
        if(i>1){
        $("#addr"+(i-1)).html('');
@@ -35,10 +36,9 @@ $(document).ready(function(){
 $(function(){
     var today = new Date(); // Get current date
     var formattedDateTime =
-        ('0' + today.getDate()).slice(-2) + '-' + // Get the day and pad with leading zero if necessary
-        ('0' + (today.getMonth() + 1)).slice(-2) + '-' + // Get the month and pad with leading zero if necessary
-        today.getFullYear() + // Get the full year
-        ' ' +
+        today.getFullYear() + '-' +
+        ('0' + (today.getMonth() + 1)).slice(-2) + '-' +
+        ('0' + today.getDate()).slice(-2) + ' ' +
         ('0' + today.getHours()).slice(-2) + ':' +
         ('0' + today.getMinutes()).slice(-2) + ':' +
         ('0' + today.getSeconds()).slice(-2);
@@ -65,4 +65,6 @@ $(document).ready(function () {
         window.location.href = href + '?flag=' + flag;
     });
 });
+
+
 
