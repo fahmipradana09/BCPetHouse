@@ -27,6 +27,7 @@ class RawatInap extends BaseController
         //dd($this->petModel->getPetProfile($id));
         //dd($id);
        $data = [
+        'id' => $id,
         'active' => 'detailpet',
         'dataInap' => $this->rawatInapModel->getRawatInap($id),
         'validation' => \Config\Services::validation(),
@@ -50,7 +51,7 @@ class RawatInap extends BaseController
     
 
         //dd($data);
-       return view('admin/pet_list/detail',$data);
+       return view('admin/rawat_inap/detail',$data);
 
        //jika page tidak ditemukan
        if(empty($data['dataInap']))
@@ -63,7 +64,7 @@ class RawatInap extends BaseController
     {
         $this->rawatInapModel->delete($id);
         session()->setFlashdata('message','Data berhasil dihapus.');
-        return redirect()->to('petList');
+        return redirect()->to('RawatInap');
     }
 
     public function save($id)

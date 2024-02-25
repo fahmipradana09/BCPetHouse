@@ -35,7 +35,7 @@
               <tbody>
                 <?php $i = 1; ?>
                 <?php foreach ($ambulatoir as $p): ?>
-                  <tr>
+                  <tr <tr class="clickable-row" data-href="<?= base_url('/Ambulatoir/detail/') . $r['id'] ?>" data-flag="edit">
                       <td class="text-center">
                         <?= $i++; ?>
                       </td>

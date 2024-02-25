@@ -162,7 +162,6 @@
                       </tr>
                     </thead>
                     <tbody>
-                    <tr id='addr0'>
                     <?php $i = 1; ?>
                     <?php foreach ($ambulatoir as $a): ?>
                       
@@ -199,10 +198,26 @@
                         <label class="form-check-label" for="flexSwitchCheckHospitalization">Tindak lanjut Rawat inap</label>
                         </td>
 
+                        <td class="align-middle justify-content-center">
+                        <div class="d-flex">
+                            <form action="<?= base_url('/PetList/detail/'). $a['id']?>" method="get" class="d-inline mr-2">
+                                <?= csrf_field();?>
+                                <button type="submit" class="btn btn-primary btn-sm">Edit</button>
+                            </form>
+                            <div style="margin-right: 6px;"></div>
+                            <form action="<?= base_url('/PetList/delete/'). $a['id']?>" method="post" class="d-inline">
+                                <?= csrf_field();?>
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="btn btn-danger text-white btn-sm" onclick="return confirm('Apakah anda yakin menghapus <?=$a['amnesa']?>?');">
+                                    Delete
+                                </button>
+                            </form>
+                        </div>
+                      </td>
+
                       </tr>
                           
                       <?php endforeach ;?>
-                      <tr id='addr1'></tr>
                     </tbody>
                   </table>
               </div>

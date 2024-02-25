@@ -59,7 +59,7 @@ class Ambulatoir extends BaseController
         //dd($id);
        $data = [
         'active' => 'detailpet',
-        'pet' => $this->ambulatoirModel->getAmbulatoir($id),
+        'pet' => $this->ambulatoirModel->getAmbulatoirAndPetList($id),
         'validation' => \Config\Services::validation(),
         'errorValidasi' => Session()->getFlashdata("errorValidasi"), //ini alternatif nya pake flash data 
         'ownerName' => Session()->getFlashdata("ownerName"),

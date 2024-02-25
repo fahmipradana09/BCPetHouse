@@ -31,18 +31,17 @@ class RawatInapModel extends Model
 
     public function getRawatInap($id = false)
     {
-        if ($id == false)
-        {
-            return $this->select('rawat_inap.*, am.*, pp.*')
-                        ->join('ambulatoir as am', 'rawat_inap.id_ambulatoir = am.id')
-                        ->join('pet_profile as pp', 'rawat_inap.id_petProfile = pp.id')
-                        ->findAll();
+        // Select columns explicitly to avoid ambiguity and ensure clarity
+        $this->select('rawat_inap.id AS rawat_inap_id, rawat_inap.*, ambulatoir.id AS ambulatoir_id, ambulatoir.*, pet_profile.id AS pet_profile_id, pet_profile.*')
+             ->join('ambulatoir', 'rawat_inap.id_ambulatoir = ambulatoir.id')
+             ->join('pet_profile', 'rawat_inap.id_petProfile = pet_profile.id');
+
+        if ($id === false) {
+            return $this->findAll();
+        } else {
+            return $this->where('rawat_inap.id', $id)->first();
         }
-        return $this->select('rawat_inap.*, am.*, pp.*')
-                    ->join('ambulatoir as am', 'rawat_inap.id_ambulatoir = am.id')
-                    ->join('pet_profile as pp', 'rawat_inap.id_petProfile = pp.id')
-                    ->where('rawat_inap.id',$id)->first();
+
+    }
     }
 
-
-}
