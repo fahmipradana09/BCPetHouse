@@ -99,3 +99,417 @@ in APPPATH\Views\admin\rawat_inap\detail.php on line 10.
  8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-26 06:05:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 06:13:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 06:13:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 06:13:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 06:41:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 06:41:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 06:41:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 06:41:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 06:41:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 06:41:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 06:42:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 06:42:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 07:08:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-26 07:08:38 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\rawat_inap\detail.php on line 10.
+ 1 APPPATH\Views\admin\rawat_inap\detail.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/detail', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(54): view('admin/rawat_inap/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail('8')
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-26 07:08:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-26 07:08:38 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\rawat_inap\detail.php on line 10.
+ 1 APPPATH\Views\admin\rawat_inap\detail.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/detail', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(54): view('admin/rawat_inap/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail('8')
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-26 07:08:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 07:08:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-26 07:08:42 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\rawat_inap\detail.php on line 10.
+ 1 APPPATH\Views\admin\rawat_inap\detail.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/detail', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(54): view('admin/rawat_inap/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail('8')
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-26 07:08:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 07:08:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 07:08:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 07:08:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 07:08:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 07:08:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-26 07:08:49 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\rawat_inap\detail.php on line 10.
+ 1 APPPATH\Views\admin\rawat_inap\detail.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/detail', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(54): view('admin/rawat_inap/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail('8')
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-26 09:29:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-26 09:29:33 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\rawat_inap\detail.php on line 10.
+ 1 APPPATH\Views\admin\rawat_inap\detail.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/detail', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(54): view('admin/rawat_inap/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail('8')
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-26 09:29:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:29:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-26 09:29:39 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\rawat_inap\detail.php on line 10.
+ 1 APPPATH\Views\admin\rawat_inap\detail.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/detail', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(54): view('admin/rawat_inap/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail('8')
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-26 09:30:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:30:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:30:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:30:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:35:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:35:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:35:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:39:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:39:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:39:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:40:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-26 09:46:33 --> Undefined array key "id"
+in APPPATH\Views\admin\rawat_inap\index.php on line 34.
+ 1 APPPATH\Views\admin\rawat_inap\index.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\index.php', 34)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/index', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(22): view('admin/rawat_inap/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-26 09:46:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-26 09:46:51 --> Undefined array key "name"
+in APPPATH\Views\admin\rawat_inap\index.php on line 40.
+ 1 APPPATH\Views\admin\rawat_inap\index.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\index.php', 40)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/index', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(22): view('admin/rawat_inap/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-26 09:46:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-26 09:46:52 --> Undefined array key "name"
+in APPPATH\Views\admin\rawat_inap\index.php on line 40.
+ 1 APPPATH\Views\admin\rawat_inap\index.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\index.php', 40)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/index', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(22): view('admin/rawat_inap/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-26 09:46:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-26 09:46:53 --> Undefined array key "name"
+in APPPATH\Views\admin\rawat_inap\index.php on line 40.
+ 1 APPPATH\Views\admin\rawat_inap\index.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\index.php', 40)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/index', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(22): view('admin/rawat_inap/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-26 09:46:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-26 09:46:54 --> Undefined array key "name"
+in APPPATH\Views\admin\rawat_inap\index.php on line 40.
+ 1 APPPATH\Views\admin\rawat_inap\index.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\index.php', 40)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/index', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(22): view('admin/rawat_inap/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-26 09:47:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:47:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:48:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:48:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:48:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:48:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-26 09:48:38 --> Undefined array key "name"
+in APPPATH\Views\admin\rawat_inap\index.php on line 40.
+ 1 APPPATH\Views\admin\rawat_inap\index.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\index.php', 40)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/index', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(22): view('admin/rawat_inap/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-26 09:48:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:48:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-26 09:48:41 --> Undefined array key "name"
+in APPPATH\Views\admin\rawat_inap\index.php on line 40.
+ 1 APPPATH\Views\admin\rawat_inap\index.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\index.php', 40)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/index', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(22): view('admin/rawat_inap/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-26 09:48:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:48:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:48:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:51:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:51:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:51:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:52:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:52:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-26 09:52:23 --> Undefined array key "name"
+in APPPATH\Views\admin\rawat_inap\index.php on line 40.
+ 1 APPPATH\Views\admin\rawat_inap\index.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\index.php', 40)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/index', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(22): view('admin/rawat_inap/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-26 09:52:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-26 09:52:54 --> mysqli_sql_exception: Unknown column 'am.name' in 'field list' in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `rawat_i...', 0)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rawat_i...')
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rawat_i...')
+#3 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rawat_i...', Array, false)
+#4 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Project (external)\BCPetHouse\app\Models\RawatInapModel.php(39): CodeIgniter\BaseModel->findAll()
+#7 D:\Project (external)\BCPetHouse\app\Controllers\RawatInap.php(19): App\Models\RawatInapModel->getRawatInap()
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\RawatInap->index()
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+#10 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#13 {main}
+CRITICAL - 2024-02-26 09:52:54 --> Unknown column 'am.name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rawat_inap`.*, `am`.`name`, `pp`.*
+FROM `rawat_inap`
+JOIN `ambulatoir` as `am` ON `rawat_inap`.`id_ambulatoir` = `am`.`id`
+JOIN `pet_profile` as `pp` ON `rawat_inap`.`id_petProfile` = `pp`.`id`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\RawatInapModel.php(39): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\RawatInap.php(19): App\Models\RawatInapModel->getRawatInap()
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-26 09:53:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:53:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:53:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:54:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-26 09:54:01 --> Undefined array key "owner_name"
+in APPPATH\Views\admin\rawat_inap\index.php on line 44.
+ 1 APPPATH\Views\admin\rawat_inap\index.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "owner_name"', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\index.php', 44)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/index', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(22): view('admin/rawat_inap/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-26 09:54:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-26 09:54:11 --> Undefined array key "address"
+in APPPATH\Views\admin\rawat_inap\index.php on line 48.
+ 1 APPPATH\Views\admin\rawat_inap\index.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "address"', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\index.php', 48)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/index', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(22): view('admin/rawat_inap/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-26 09:54:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:54:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:54:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:55:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:55:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:55:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:55:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:55:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 09:57:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-26 09:57:23 --> Undefined array key "rawat_inap.id"
+in APPPATH\Views\admin\rawat_inap\index.php on line 34.
+ 1 APPPATH\Views\admin\rawat_inap\index.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "rawat_inap.id"', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\index.php', 34)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/index', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(22): view('admin/rawat_inap/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-26 09:57:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-26 09:57:25 --> Undefined array key "rawat_inap.id"
+in APPPATH\Views\admin\rawat_inap\index.php on line 34.
+ 1 APPPATH\Views\admin\rawat_inap\index.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "rawat_inap.id"', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\index.php', 34)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/index', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(22): view('admin/rawat_inap/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-26 10:35:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 10:35:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-26 10:35:33 --> mysqli_sql_exception: Unknown column 'am.id =' in 'field list' in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `rawat_i...', 0)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rawat_i...')
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rawat_i...')
+#3 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rawat_i...', Array, false)
+#4 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Project (external)\BCPetHouse\app\Models\RawatInapModel.php(39): CodeIgniter\BaseModel->findAll()
+#7 D:\Project (external)\BCPetHouse\app\Controllers\RawatInap.php(19): App\Models\RawatInapModel->getRawatInap()
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\RawatInap->index()
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+#10 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#13 {main}
+CRITICAL - 2024-02-26 10:35:33 --> Unknown column 'am.id =' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rawat_inap`.*, `am`.*, `am`.`id =` as `ambulatoir_id`, `pp`.*, `pp`.`id` as `pet_profile_id`
+FROM `rawat_inap`
+JOIN `ambulatoir` as `am` ON `rawat_inap`.`id_ambulatoir` = `am`.`id`
+JOIN `pet_profile` as `pp` ON `rawat_inap`.`id_petProfile` = `pp`.`id`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\RawatInapModel.php(39): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\RawatInap.php(19): App\Models\RawatInapModel->getRawatInap()
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-26 10:35:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-26 10:35:54 --> Undefined array key "rawat_inap.id"
+in APPPATH\Views\admin\rawat_inap\index.php on line 34.
+ 1 APPPATH\Views\admin\rawat_inap\index.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "rawat_inap.id"', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\index.php', 34)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/index', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(22): view('admin/rawat_inap/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-26 10:36:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 10:36:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-26 10:36:53 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\rawat_inap\detail.php on line 10.
+ 1 APPPATH\Views\admin\rawat_inap\detail.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/detail', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(54): view('admin/rawat_inap/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail('8')
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-26 10:36:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-26 10:36:53 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\rawat_inap\detail.php on line 10.
+ 1 APPPATH\Views\admin\rawat_inap\detail.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/detail', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(54): view('admin/rawat_inap/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail('8')
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-26 10:36:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 10:36:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-26 10:36:56 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\rawat_inap\detail.php on line 10.
+ 1 APPPATH\Views\admin\rawat_inap\detail.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/detail', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(54): view('admin/rawat_inap/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail('8')
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-26 10:37:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 10:38:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 10:38:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 10:42:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-26 10:42:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

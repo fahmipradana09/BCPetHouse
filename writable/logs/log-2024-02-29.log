@@ -1,0 +1,227 @@
+INFO - 2024-02-29 01:24:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 01:24:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-29 01:25:19 --> Error connecting to the database: ErrorException: mysqli::real_connect(): Error while reading greeting packet. PID=23192 in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'D:\\Project (ext...', 184)
+#1 D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'bcpet_db', 3306, '', 0)
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rawat_i...', Array, false)
+#5 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#7 D:\Project (external)\BCPetHouse\app\Models\RawatInapModel.php(39): CodeIgniter\BaseModel->findAll()
+#8 D:\Project (external)\BCPetHouse\app\Controllers\RawatInap.php(19): App\Models\RawatInapModel->getRawatInap()
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\RawatInap->index()
+#10 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+#11 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#14 {main}
+
+Next mysqli_sql_exception: MySQL server has gone away in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'bcpet_db', 3306, '', 0)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rawat_i...', Array, false)
+#4 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Project (external)\BCPetHouse\app\Models\RawatInapModel.php(39): CodeIgniter\BaseModel->findAll()
+#7 D:\Project (external)\BCPetHouse\app\Controllers\RawatInap.php(19): App\Models\RawatInapModel->getRawatInap()
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\RawatInap->index()
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+#10 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rawat_i...', Array, false)
+#3 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\Project (external)\BCPetHouse\app\Models\RawatInapModel.php(39): CodeIgniter\BaseModel->findAll()
+#6 D:\Project (external)\BCPetHouse\app\Controllers\RawatInap.php(19): App\Models\RawatInapModel->getRawatInap()
+#7 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\RawatInap->index()
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#12 {main}
+CRITICAL - 2024-02-29 01:25:19 --> Unable to connect to the database.
+Main connection [MySQLi]: MySQL server has gone away
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rawat_inap`.*, `pp`.`name`, `pp`.`owner_name`, `pp`.`address`
+FROM `rawat_inap`
+JOIN `ambulatoir` as `am` ON `rawat_inap`.`id_ambulatoir` = `am`.`id`
+JOIN `pet_profile` as `pp` ON `rawat_inap`.`id_petProfile` = `pp`.`id`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\RawatInapModel.php(39): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\RawatInap.php(19): App\Models\RawatInapModel->getRawatInap()
+ 7 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->index()
+ 8 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-29 01:25:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-29 01:25:59 --> Error connecting to the database: ErrorException: mysqli::real_connect(): Error while reading greeting packet. PID=23192 in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'D:\\Project (ext...', 184)
+#1 D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'bcpet_db', 3306, '', 0)
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ambulat...', Array, false)
+#5 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#7 D:\Project (external)\BCPetHouse\app\Models\AmbulatoirsModel.php(48): CodeIgniter\BaseModel->findAll()
+#8 D:\Project (external)\BCPetHouse\app\Controllers\Ambulatoir.php(26): App\Models\AmbulatoirsModel->getAmbulatoirAndPetList()
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->index()
+#10 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#11 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#14 {main}
+
+Next mysqli_sql_exception: MySQL server has gone away in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'bcpet_db', 3306, '', 0)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ambulat...', Array, false)
+#4 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Project (external)\BCPetHouse\app\Models\AmbulatoirsModel.php(48): CodeIgniter\BaseModel->findAll()
+#7 D:\Project (external)\BCPetHouse\app\Controllers\Ambulatoir.php(26): App\Models\AmbulatoirsModel->getAmbulatoirAndPetList()
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->index()
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#10 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ambulat...', Array, false)
+#3 D:\Project (external)\BCPetHouse\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Project (external)\BCPetHouse\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\Project (external)\BCPetHouse\app\Models\AmbulatoirsModel.php(48): CodeIgniter\BaseModel->findAll()
+#6 D:\Project (external)\BCPetHouse\app\Controllers\Ambulatoir.php(26): App\Models\AmbulatoirsModel->getAmbulatoirAndPetList()
+#7 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->index()
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#12 {main}
+CRITICAL - 2024-02-29 01:25:59 --> Unable to connect to the database.
+Main connection [MySQLi]: MySQL server has gone away
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ambulatoir`.*, `pp`.`name`, `pp`.`owner_name`
+FROM `ambulatoir`
+JOIN `pet_profile` as `pp` ON `ambulatoir`.`pet_id` = `pp`.`id`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\AmbulatoirsModel.php(48): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Ambulatoir.php(26): App\Models\AmbulatoirsModel->getAmbulatoirAndPetList()
+ 7 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Ambulatoir->index()
+ 8 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-02-29 01:25:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-29 05:14:06 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 246.
+ 1 SYSTEMPATH\CodeIgniter.php(246): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(210): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(88): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-02-29 05:14:06 --> Uncaught Error: Class "Locale" not found in D:\Project (external)\BCPetHouse\system\I18n\TimeTrait.php:74
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\I18n\TimeTrait.php(115): CodeIgniter\I18n\Time->__construct(NULL, NULL, NULL)
+#1 D:\Project (external)\BCPetHouse\system\HTTP\ResponseTrait.php(468): CodeIgniter\I18n\Time::now()
+#2 D:\Project (external)\BCPetHouse\system\HTTP\ResponseTrait.php(446): CodeIgniter\HTTP\Response->sendHeaders()
+#3 D:\Project (external)\BCPetHouse\system\Debug\ExceptionHandler.php(78): CodeIgniter\HTTP\Response->send()
+#4 D:\Project (external)\BCPetHouse\system\Debug\Exceptions.php(146): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Exceptions\FrameworkException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\FrameworkException))
+#6 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+The framework needs the following extension(s) installed and loaded: intl.
+#0 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(246): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(210): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 D:\Project (external)\BCPetHouse\spark(88): CodeIgniter\CodeIgniter->initialize()
+#3 {main}
+in SYSTEMPATH\I18n\TimeTrait.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-02-29 05:14:36 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 246.
+ 1 SYSTEMPATH\CodeIgniter.php(246): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(210): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(88): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-02-29 05:14:36 --> Uncaught Error: Class "Locale" not found in D:\Project (external)\BCPetHouse\system\I18n\TimeTrait.php:74
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\I18n\TimeTrait.php(115): CodeIgniter\I18n\Time->__construct(NULL, NULL, NULL)
+#1 D:\Project (external)\BCPetHouse\system\HTTP\ResponseTrait.php(468): CodeIgniter\I18n\Time::now()
+#2 D:\Project (external)\BCPetHouse\system\HTTP\ResponseTrait.php(446): CodeIgniter\HTTP\Response->sendHeaders()
+#3 D:\Project (external)\BCPetHouse\system\Debug\ExceptionHandler.php(78): CodeIgniter\HTTP\Response->send()
+#4 D:\Project (external)\BCPetHouse\system\Debug\Exceptions.php(146): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Exceptions\FrameworkException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\FrameworkException))
+#6 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+The framework needs the following extension(s) installed and loaded: intl.
+#0 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(246): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(210): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 D:\Project (external)\BCPetHouse\spark(88): CodeIgniter\CodeIgniter->initialize()
+#3 {main}
+in SYSTEMPATH\I18n\TimeTrait.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-02-29 04:14:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:14:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:14:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:15:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:15:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:15:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:15:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:15:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:15:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:15:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:15:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:15:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:15:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:15:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:15:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:15:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:15:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:15:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:15:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:15:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:15:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:15:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:19:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:20:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:20:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:21:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:21:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:21:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:21:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:21:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:21:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:21:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:21:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:21:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:45:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:45:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:45:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:45:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:45:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 04:45:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
