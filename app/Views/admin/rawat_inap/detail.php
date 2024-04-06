@@ -21,7 +21,7 @@
               </div>
             
               <div class="row align-items-center">
-                <label for="age" class="col-auto col-form-label ">Age :</label>
+                <label for="age" class="col-auto col-form-label">Age :</label>
                 <div class="col">
                   <div class="underline-wrapper">
                     <input type="text" readonly class="form-control-plaintext py-0 text-end" id="age" value="<?= $dataInap['age'] ? $dataInap['age'] : '' ?>">
@@ -74,6 +74,7 @@
                 </div>
               </div>
         </div>
+
         <div class="column col-6">
             <div class="row align-items-start">
               <label for="diagnosa" class="col-auto col-form-label">Diagnosa :</label>
@@ -90,89 +91,19 @@
             </div>
 
             <div class="row align-items-start">
-              <label for="medication" class="col-4 col-form-label wrap-text">Rencana Pengobatan :</label>
+              <label for="medicationPlan" class="col-4 col-form-label wrap-text">Rencana Pengobatan :</label>
               <div class="col d-flex justify-content-end">
-              <textarea class="form-control" name="prognosa" id="inputMedication" rows="3"><?= $dataInap['medication'] ? $dataInap['medication'] : '' ?></textarea>
+              <textarea class="form-control" name="medicationPlan" id="inputmedicationPlan" rows="3"><?= $dataInap['medication_plan'] ? $dataInap['medication_plan'] : '' ?></textarea>
               </div>
             </div>
         </div>
   </div>
         
-        <div class="container">
-          <div class="row clearfix">
-          <div class="col-md-12 table-responsive column">
-          <table class="table table-bordered table-hover" id="tab_logic">
-                <thead>
-                  <tr>
-                    <th class="text-center no-sort">
-                      No.
-                    </th>
-
-                    <th class="text-center resize">
-                      Date Checkup
-                    </th>
-
-                    <th class="text-center resize">
-                      Amnesa
-                    </th>
-
-                    <th class="text-center resize">
-                      Status Present
-                    </th>
-
-                    <th class="text-center resize">
-                      Temuan Klinis
-                    </th>
-
-                    <th class="text-center resize">
-                      Diagnosa
-                    </th>
-
-                    <th class="text-center resize">
-                      Pengobatan
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr id='addr0'>
-                    <td>1</td>
-
-                    <td>
-                    <div class="date" id="datePicker">
-                      <input type="text" name='date[]' placeholder='Enter Date' class="form-control" disabled/>
-                    </div>
-                    </td>
-
-                    <td>
-                    <input type="text" name='amnesa' placeholder='Type here...' class="form-control <?=($amnesa) ? 'is-invalid' : ''; ?>" value="" />
-                    </td>
-
-                    <td>
-                    <input type="text" name='statusPresent' placeholder='Type here...' class="form-control <?=($statusPresent) ? 'is-invalid' : ''; ?>" value=""/>
-                    </td>
-
-                    <td>
-                    <input type="text" name='temuanKlinis' placeholder='Type here...' class="form-control <?=($temuanKlinis) ? 'is-invalid' : ''; ?>" value=""/>
-                    </td>
-
-                    <td>
-                    <input type="text" name='diagnosa' placeholder='Type here...' class="form-control <?=($diagnosa) ? 'is-invalid' : ''; ?>" value=""/>
-                    </td>
-
-                    <td>
-                    <input type="text" name='treatment' placeholder='Type here...' class="form-control  <?=($treatment) ? 'is-invalid' : ''; ?>" value=""/>
-                    </td>
-                    
-
-                  </tr>
-                      <tr id='addr1'></tr>
-                </tbody>
-              </table>
+      <div class="row col-12">
+          <div class="col-12 table-responsive">
+              <div id="rawatInapDetail"></div>
           </div>
-        </div>
-        <button id="add_row" class="btn btn-default pull-left">Add Row</button>
-        <button id='delete_row' class="pull-right btn btn-default">Delete Row</button>
-   </div>
+      </div>
 
    <div class="d-flex justify-content-center">
       <button type="submit" id="savePet" class="btn bg-primary justify-content-center text-white btn-default col-md-6 mx-3 mt-4">Save</button>
@@ -180,4 +111,15 @@
     </form>
   </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+      // Fetch data from PHP variable and convert to JSON
+      var data = <?= json_encode($datafisiologis) ?>;
+
+      // Initialize the spreadsheet with the fetched data
+      initRawatInapDetail(data);
+  });
+</script>
+
 <?= $this->endSection(); ?>   

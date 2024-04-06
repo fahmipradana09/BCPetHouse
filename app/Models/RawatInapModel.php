@@ -43,5 +43,6 @@ class RawatInapModel extends Model
                     ->join('pet_profile as pp', 'rawat_inap.id_petProfile = pp.id')
                     ->where('rawat_inap.id',$id)->first();
     }
+
 }
 

@@ -49,7 +49,7 @@
                       </td>
 
                       <td class="align-middle justify-content-center col-3">
-                        <?= $r['date_checkup']?>
+                        <?= $r['date_in_hospitalized']?>
                       </td>
 
                       <td class="align-middle justify-content-center col-2">

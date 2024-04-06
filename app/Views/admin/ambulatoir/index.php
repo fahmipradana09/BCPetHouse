@@ -22,7 +22,7 @@
             <thead>
                   <tr>
                       <th class="text-center">No</th>
-                      <th>Date Checkup</th>
+                      <th class="col-2">Date Checkup</th>
                       <th class="col-2">Pet Name</th>
                       <th class="col-2">Amnesa</th>
                       <th class="col-2">Status Finding</th>
@@ -40,7 +40,7 @@
                         <?= $i++; ?>
                       </td>
 
-                      <td>
+                      <td class="col-2 text-truncate">
                         <?= $p['date_checkup']?>
                       </td>
                       <td class="col-2 text-truncate">

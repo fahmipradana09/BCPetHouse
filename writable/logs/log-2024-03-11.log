@@ -1,0 +1,36 @@
+INFO - 2024-03-11 03:18:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-11 03:18:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-11 03:23:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-11 04:02:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-11 04:04:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-11 04:05:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-11 04:12:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-11 04:17:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-11 04:17:34 --> mysqli_sql_exception: Unknown column 'rawat_inap.diagnosa' in 'field list' in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `fisiolo...', 0)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fisiolo...')
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fisiolo...')
+#3 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `fisiolo...', Array, false)
+#4 D:\Project (external)\BCPetHouse\app\Controllers\RawatInap.php(21): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Project (external)\BCPetHouse\app\Controllers\RawatInap.php(43): App\Controllers\RawatInap->db_fisiologis('1')
+#6 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\RawatInap->detail('1')
+#7 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+#8 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#11 {main}
+CRITICAL - 2024-03-11 04:17:34 --> Unknown column 'rawat_inap.diagnosa' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `fisiologis`.*, `rawat_inap`.`diagnosa`, `rawat_inap`.`date_checkup`, `rawat_inap`.`prognosa`, `rawat_inap`.`medication_plan`
+FROM `fisiologis`
+JOIN `rawat_inap` ON `fisiologis`.`rawat_inap_id` = `rawat_inap`.`id`
+WHERE `rawat_inap`.`id` = :rawat_inap.id:', [...], false)
+ 2 APPPATH\Controllers\RawatInap.php(21): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\RawatInap.php(43): App\Controllers\RawatInap->db_fisiologis('1')
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail('1')
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-03-11 04:17:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
