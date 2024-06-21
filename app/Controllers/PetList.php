@@ -16,6 +16,15 @@ class PetList extends BaseController
         $this->ambulatoirModel = new AmbulatoirsModel();
     }
 
+    public function db_ambulatoir($id){
+        $db = \Config\Database::connect();
+        $builder = $db->table('ambulatoir');
+        $builder->select('*');
+        $builder->where('ambulatoir.pet_id',$id);
+        $query = $builder->get();
+        return $query->getResultArray();
+    }
+
     public function index()
     {   
  
@@ -35,7 +44,7 @@ class PetList extends BaseController
         $data = [
             'active' => 'detailpet',
             'pet' => $this->petModel->getPetProfile($id),
-            'ambulatoir' => $this->ambulatoirModel->getAmbulatoirDetailPet($id),
+            'dataAmbulatoir' => $this->db_ambulatoir($id),
             'flag' => $flag,
             'validation' => \Config\Services::validation(),
             'errorValidasi' => Session()->getFlashdata("errorValidasi"), //ini alternatif nya pake flash data 
@@ -48,11 +57,11 @@ class PetList extends BaseController
             'race' => Session()->getFlashdata("race"),
             'color' => Session()->getFlashdata("color"),
             'gender' => Session()->getFlashdata("gender"),
-            // 'amnesa' => Session()->getFlashdata("amnesa"),
-            // 'statusPresent' => Session()->getFlashdata("statusPresent"),
-            // 'temuanKlinis' => Session()->getFlashdata("temuanKlinis"),
-            // 'diagnosa' => Session()->getFlashdata("diagnosa"),
-            // 'treatment' => Session()->getFlashdata("treatment"),
+            'amnesa' => Session()->getFlashdata("amnesa"),
+            'statusPresent' => Session()->getFlashdata("statusPresent"),
+            'clincialFinding' => Session()->getFlashdata("clincialFinding"),
+            'diagnose' => Session()->getFlashdata("diagnose"),
+            'medication' => Session()->getFlashdata("medication"),
             
         ];
     
@@ -205,4 +214,70 @@ class PetList extends BaseController
         session()->setFlashdata('message','Data Success Updated');
         return redirect()->to('PetList');
     }
+    
+    public function saveAmbulatoir($id)
+    {
+        $validation = \Config\Services::validation();
+        //dd($this->request->getVar());
+        
+        if(!$this->validate([
+            'amnesa' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Amnesa Wajib diisi'
+                ],
+            ],
+            'statusPresent' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Status Present Wajib diisi'
+                ],
+            ],
+            'clinicalFinding' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Temuan Klinis Wajib diisi'
+                ],
+            ],
+            'diagnosis' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Diagnosa Wajib diisi'
+                ],
+            ],
+            'medication' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Diagnosa Wajib diisi'
+                ],
+            ],
+
+        ])){
+            //dd(\Config\Services::validation());
+            //dd($this->request->getVar());
+            return redirect()->to(base_url('petlist/detail/'.$id))
+            ->with('errorValidasi',$validation->listErrors())
+            ->with('amnesa',$validation->getError('amnesa'))
+            ->with('statusPresent',$validation->getError('statusPresent'))
+            ->with('clinicalFinding',$validation->getError('clinicalFinding'))
+            ->with('diagnosis',$validation->getError('diagnosis'))
+            ->with('medication',$validation->getError('medication'));
+        }
+
+        
+        //dd($id);
+        $this->petModel->save([
+            'id' => $id,
+            'amnesa' => $this->request->getVar('amnesa'),
+            'status_present' => $this->request->getVar('statusPresent'),
+            'clinical_finding' => $this->request->getVar('clinicalFinding'),
+            'diagnosis' => $this->request->getVar('diagnosis'),
+            'medication' => $this->request->getVar('medication'),
+        ]);
+
+        session()->setFlashdata('message','Data Success Added');
+        return redirect()->to('PetList');
+    }
+    
+
 }

@@ -33,27 +33,6 @@ new DataTable('#detailAmbulatoir', {
 //    });
 // });
 
-$(document).ready(function(){
-    var ambulatoirData = json_encode($ambulatoir) // Assuming $ambulatoir is an array of data
-
-    var i = ambulatoirData.length;
-    
-    // Add a new row at the bottom of the table
-    $("#add_row").click(function(){
-        var newRow = '<tr id="addr' + i + '">' + $('#addr0').html() + '</tr>';
-        $('#tab_logic tbody').append(newRow);
-        $('#addr' + i + ' td:first-child').html(i + 1);
-        i++;
-    });
-
-    // Delete the last row
-    $("#delete_row").click(function(){
-        if (i > 1){
-            $("#addr" + (i - 1)).remove();
-            i--;
-        }
-    });
-});
 
 $(function(){
     var today = new Date(); // Get current date

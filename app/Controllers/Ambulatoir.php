@@ -73,8 +73,8 @@ class Ambulatoir extends BaseController
         'gender' => Session()->getFlashdata("gender"),
         'amnesa' => Session()->getFlashdata("amnesa"),
         'statusPresent' => Session()->getFlashdata("statusPresent"),
-        'temuanKlinis' => Session()->getFlashdata("temuanKlinis"),
-        'diagnosa' => Session()->getFlashdata("diagnosa"),
+        'clincialFinding' => Session()->getFlashdata("clincialFinding"),
+        'diagnose' => Session()->getFlashdata("diagnose"),
         'treatment' => Session()->getFlashdata("treatment"),
         
        ];
@@ -231,4 +231,7 @@ class Ambulatoir extends BaseController
         session()->setFlashdata('message','Data Success');
         return redirect()->to('Ambulatoir');
     }
+
+    
+    
 }

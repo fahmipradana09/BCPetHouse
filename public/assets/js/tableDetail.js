@@ -152,25 +152,203 @@ function initRawatInapDetail(data) {
     });
 }
 
-function saveFisiologisData(data) {
-    // Send an AJAX request to the server
-    fetch('rawatInap/saveFisiologis', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Failed to save data.');
-        }
-        return response.json();
-    })
-    .then(data => {
-        console.log(data.message); // Success message from the server
-    })
-    .catch(error => {
-        console.error(error.message); // Error message if request fails
+
+// function initAmbulatoirDetail(data) {
+//     // Sort data by the 'date_checkup' field from newest to oldest
+//     data.sort((a, b) => new Date(b.date_checkup) - new Date(a.date_checkup));
+
+//     // Convert each item in the data array to a row in the spreadsheet
+//     var spreadsheetData = data.map(function(item) {
+//         return [
+//             item.date_checkup,
+//             item.amnesa,
+//             item.status_present,
+//             item.clinical_finding,
+//             item.diagnosis,
+//             item.medication,
+//             item.hospitalized_status,
+//             ''
+//         ];
+//     });
+
+//     spreadsheetData.unshift(new Array(8).fill(''));
+
+//     jspreadsheet(document.getElementById('ambulatoirDetail'), {
+//         data: spreadsheetData,
+//         tableOverflow: true,
+//         pagination: 6,
+//         paginationOptions: [5,10],
+//         lazyLoading: true,
+//         loadingSpin: true,
+//         tableWidth: '100%',
+//         columns: [
+//             { type: 'text', title: 'Date Checkup', width: 200 },
+//             { type: 'text', title: 'Amnesa', width: 100 },
+//             { type: 'text', title: 'Status Present', width: 100 },
+//             { type: 'text', title: 'Clinical Finding', width: 100 },
+//             { type: 'text', title: 'Diagnosis', width: 100 },
+//             { type: 'text', title: 'Medication', width: 100 },
+//             { type: 'text', title: 'Hospitalize Status', width: 75 },
+//             { type: 'text', title: 'Action', width:200}
+//             { type: 'button', title: 'Action', width: 200, readOnly: true }
+//             // Add more columns as necessary
+//         ],
+//         nestedHeaders:[
+//                         {
+//                             title: 'History Ambulatoir',
+//                             colspan: '7'
+//                         },  
+//                         { 
+//                             colspan:'1'
+//                         }
+
+//                     ],
+//     });
+// }
+
+
+function initAmbulatoirDetail(data) {
+    
+    // Sort data by the 'date_checkup' field from newest to oldest
+    data.sort((a, b) => new Date(b.date_checkup) - new Date(a.date_checkup));
+
+    // Convert each item in the data array to a row in the spreadsheet
+    var spreadsheetData = data.map(function(item) {
+        return [
+            item.date_checkup,
+            item.amnesa,
+            item.status_present,
+            item.clinical_finding,
+            item.diagnosis,
+            item.medication,
+            item.hospitalized_status,
+        ];
     });
+
+    var customContextMenu = [
+        { name: 'Copy', action: 'copy' },
+        { name: 'Paste', action: 'paste' },
+        { name: '---------', disabled: true }, // Separator
+        { name: 'Insert Column', action: 'insertColumn' },
+        { name: 'Delete Column', action: 'deleteColumn' },
+        { name: '---------', disabled: true }, // Separator
+        { name: 'Insert Row', action: 'insertRow' },
+        { name: 'Delete Row', action: 'deleteRow' },
+        { name: '---------', disabled: true }, // Separator
+        { name: 'Alignment', submenu: { 
+            items: [
+                { name: 'Left', action: 'alignLeft' },
+                { name: 'Center', action: 'alignCenter' },
+                { name: 'Right', action: 'alignRight' }
+            ]
+        }}
+    ];
+
+    jspreadsheet(document.getElementById('ambulatoirDetail'), {
+        data: spreadsheetData,  
+        pagination: 6,
+        paginationOptions: [5, 10],
+        lazyLoading: true,  
+        loadingSpin: true,
+        tableWidth: '100%',
+        tableOverflow: true,
+        columns: [
+            { type: 'text', title: 'Date Checkup', width: 240 },
+            { type: 'text', title: 'Amnesa', width: 200 },
+            { type: 'text', title: 'Status Present', width: 140 },
+            { type: 'text', title: 'Clinical Finding', width: 140 },
+            { type: 'text', title: 'Diagnosis', width: 140 },
+            { type: 'text', title: 'Medication', width: 140 },
+            { type: 'text', title: 'Hospitalize Status', width: 95 },
+        ],
+        nestedHeaders: [
+            {
+                title: 'History Ambulatoir',
+                colspan: 7
+            }
+        ],
+        contextMenu: customContextMenu
+    });
+}
+
+// function saveRow(instance, row) {
+//     var data = instance.getRowData(row);
+//     // Send data to server via AJAX
+//     fetch('/saveAmbulatoirDetail', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify(data)
+//     }).then(response => response.json())
+//     .then(result => {
+//         if (result.success) {
+//             alert('Data saved successfully');
+//             // Optionally reload data or update the table
+//         } else {
+//             alert('Failed to save data');
+//         }
+//     }).catch(error => {
+//         console.error('Error:', error);
+//     });
+// }
+
+
+
+// function saveFisiologisData(data) {
+//     // Send an AJAX request to the server
+//     fetch('rawatInap/saveFisiologis', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(data),
+//     })
+//     .then(response => {
+//         if (!response.ok) {
+//             throw new Error('Failed to save data.');
+//         }
+//         return response.json();
+//     })
+//     .then(data => {
+//         console.log(data.message); // Success message from the server
+//     })
+//     .catch(error => {
+//         console.error(error.message); // Error message if request fails
+//     });
+// }
+
+function saveFisiologiAmbulatoirData(instance, row, petId) {
+    var rowData = instance.getRowData(row);
+    var data = {
+        date_checkup: rowData[0],
+        amnesa: rowData[1],
+        status_present: rowData[2],
+        clinical_finding: rowData[3],
+        diagnosis: rowData[4],
+        medication: rowData[5],
+        hospitalized_status: rowData[6]
+    };
+    
+    dd(data);
+
+fetch(`/PetList/save/${petId}`, {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+})
+.then(response => response.json())
+.then(data => {
+    if (data.success) {
+        alert('Data saved successfully!');
+        // Optionally, reload the table or update the UI to reflect the saved data
+    } else {
+        alert('Failed to save data: ' + JSON.stringify(data.errors));
+    }
+})
+.catch(error => {
+    console.error('Error:', error);
+});
 }
