@@ -266,17 +266,18 @@ class PetList extends BaseController
 
         
         //dd($id);
-        $this->petModel->save([
-            'id' => $id,
+        $this->ambulatoirModel->save([
+            'pet_id' => $id,
             'amnesa' => $this->request->getVar('amnesa'),
             'status_present' => $this->request->getVar('statusPresent'),
             'clinical_finding' => $this->request->getVar('clinicalFinding'),
             'diagnosis' => $this->request->getVar('diagnosis'),
+            'hospitalized_status' => $this->request->getVar('hospitalized_status'), 
             'medication' => $this->request->getVar('medication'),
         ]);
 
         session()->setFlashdata('message','Data Success Added');
-        return redirect()->to('PetList');
+        return redirect()->to('PetList/detail/'.$id);
     }
     
 

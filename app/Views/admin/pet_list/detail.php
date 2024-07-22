@@ -7,9 +7,14 @@
         <div class="card-header pb-0">
           <h4>Ambulatoir</h4>
         </div>
-
-        <button type="button" class="btn bg-primary mb-0 text-white m-5" data-bs-toggle="modal" data-bs-target="#newAmbulatoir">
-            Open Modal
+        <?php if (session()->getFlashdata('message')):?>
+            <div class="alert alert-success alert-dismissible text-white fade show mx-3 mt-3 py-1" role="alert">
+            <?= session()->getFlashdata('message'); ?>
+            <button type="button" class="btn-close text-white" data-dismiss="alert" aria-label="Close"></button>
+            </div>
+          <?php endif;?>
+        <button type="button" class="btn bg-primary mb-0 text-white mx-3 mt-3" data-bs-toggle="modal" data-bs-target="#newAmbulatoir">
+            Create new Ambulatoir
         </button>
 
         <form class="row m-3" action="<?= base_url(); ?>PetList/save/<?= $pet['id']?>" method="post">
@@ -135,7 +140,9 @@
 </div>
     
 
-<div class="modal fade" id="newAmbulatoir" tabindex="-1"  data-bs-backdrop="static" aria-labelledby="exampleModalCenterTitle" style="display: none;" aria-hidden="true">
+<!-- modal -->
+
+<div class="modal fade" id="newAmbulatoir" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalCenterTitle" style="display: none;" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
@@ -144,67 +151,76 @@
       </div>
       <!--Body-->
       <div class="modal-body">
-        <form class="row">
-
-            <div class="col-md-6 mt-3">
-              <label for="inputAmnesa" class="form-label">Amnesa</label>
-              <div>
-                <input type="text" name="amnesa" class="form-control <?=($amnesa) ? 'is-invalid' : ''; ?>" id="inputAmnesa" placeholder="Type Here....">
-                <div class="invalid-feedback">
-                  <?= $amnesa ?>
-                </div>
+        <form class="row" action="<?= base_url(); ?>PetList/saveAmbulatoir/<?= $pet['id']?>" method="post">
+          <?= csrf_field(); ?>
+          <div class="col-md-6 mt-3">
+            <label for="inputAmnesa" class="form-label">Amnesa</label>
+            <div>
+              <input type="text" name="amnesa" class="form-control <?= session('amnesa') ? 'is-invalid' : ''; ?>" id="inputAmnesa" placeholder="Type Here....">
+              <div class="invalid-feedback">
+                <?= session('amnesa') ?>
               </div>
             </div>
+          </div>
 
-            <div class="col-md-6 mt-3">
-              <label for="inputStatusPresent" class="form-label text-truncate">Status Present</label>
-              <div>
-                <input type="text" name="statusPresent" class="form-control <?=($statusPresent) ? 'is-invalid' : ''; ?>" id="inputStatusPresent" placeholder="Type Here....">
-                <div class="invalid-feedback">
-                  <?= $statusPresent ?>
-                </div>
+          <div class="col-md-6 mt-3">
+            <label for="inputStatusPresent" class="form-label text-truncate">Status Present</label>
+            <div>
+              <input type="text" name="statusPresent" class="form-control <?= session('statusPresent') ? 'is-invalid' : ''; ?>" id="inputStatusPresent" placeholder="Type Here....">
+              <div class="invalid-feedback">
+                <?= session('statusPresent') ?>
               </div>
             </div>
+          </div>
 
-            <div class="col-md-12 mt-3">
-              <label for="inputClinicalFinding" class="form-label text-truncate">Clincial Finding</label>
-              <div>
-                <textarea class="form-control <?=($clincialFinding) ? 'is-invalid' : ''; ?>" name="clincialFinding" id="inputClinicalFinding" rows="3" ></textarea>
-                  <div class="invalid-feedback">
-                    <?= $clincialFinding ?>
-                  </div>
+          <div class="col-md-12 mt-3">
+            <label for="inputClinicalFinding" class="form-label text-truncate">Clinical Finding</label>
+            <div>
+              <textarea class="form-control <?= session('clinicalFinding') ? 'is-invalid' : ''; ?>" name="clinicalFinding" id="inputClinicalFinding" rows="3"></textarea>
+              <div class="invalid-feedback">
+                <?= session('clinicalFinding') ?>
               </div>
             </div>
+          </div>
 
-            <div class="col-md-6 mt-3">
-              <label for="inputDiagnosis" class="form-label text-truncate">Diagnosis</label>
-              <div>
-                <input type="text" name="diagnose" class="form-control <?=($diagnose) ? 'is-invalid' : ''; ?>" id="inputDiagnosis" placeholder="Type Here....">
-                <div class="invalid-feedback">
-                  <?= $diagnose ?>
-                </div>
+          <div class="col-md-6 mt-3">
+            <label for="inputDiagnosis" class="form-label text-truncate">Diagnosis</label>
+            <div>
+              <input type="text" name="diagnosis" class="form-control <?= session('diagnosis') ? 'is-invalid' : ''; ?>" id="inputDiagnosis" placeholder="Type Here....">
+              <div class="invalid-feedback">
+                <?= session('diagnosis') ?>
               </div>
             </div>
+          </div>
 
-            <div class="col-md-12 mt-3">
-              <label for="inputMedication" class="form-label text-truncate">Medication</label>
-              <div>
-                <textarea class="form-control <?=($medication) ? 'is-invalid' : ''; ?>" name="medication" id="inputMedication" rows="3"></textarea>
-                  <div class="invalid-feedback">
-                    <?= $medication ?>
-                  </div>
+          <div class="form-check col-md-6 mt-3">
+            <input class="form-check-input" type="checkbox" value="1" id="hospitalized_status">
+            <label class="form-check-label" for="hospitalized_status">
+              Hospitalized
+            </label>
+          </div>
+          
+          <div class="col-md-12 mt-3">
+            <label for="inputMedication" class="form-label text-truncate">Medication</label>
+            <div>
+              <textarea class="form-control <?= session('medication') ? 'is-invalid' : ''; ?>" name="medication" id="inputMedication" rows="3"></textarea>
+              <div class="invalid-feedback">
+                <?= session('medication') ?>
+              </div>
             </div>
-            </div>
+          </div>
+          <!-- Closing form tag moved to include the submit button -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" id="saveAmbulatoir" class="btn bg-primary justify-content-center text-white">Create</button>
+          </div>
         </form>
-      </div>
-      <!--end Body-->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Create</button>
       </div>
     </div>
   </div>
 </div>
+
+
 
 
 <script>

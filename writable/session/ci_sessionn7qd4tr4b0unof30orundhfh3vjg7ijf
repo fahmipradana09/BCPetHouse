@@ -1,0 +1,13 @@
+__ci_last_regenerate|i:1720454551;_ci_previous_url|s:38:"http://localhost:8080/petlist/detail/8";_ci_old_input|a:2:{s:3:"get";a:0:{}s:4:"post";a:6:{s:14:"csrf_test_name";s:32:"f9ca746a4273f4a50d29b6e1a3231fe9";s:6:"amnesa";s:0:"";s:13:"statusPresent";s:0:"";s:15:"clinicalFinding";s:0:"";s:9:"diagnosis";s:0:"";s:10:"medication";s:0:"";}}__ci_vars|a:8:{s:13:"_ci_old_input";s:3:"old";s:21:"_ci_validation_errors";s:3:"old";s:13:"errorValidasi";s:3:"old";s:6:"amnesa";s:3:"old";s:13:"statusPresent";s:3:"old";s:15:"clinicalFinding";s:3:"old";s:9:"diagnosis";s:3:"old";s:10:"medication";s:3:"old";}_ci_validation_errors|a:5:{s:6:"amnesa";s:18:"Amnesa Wajib diisi";s:13:"statusPresent";s:26:"Status Present Wajib diisi";s:15:"clinicalFinding";s:25:"Temuan Klinis Wajib diisi";s:9:"diagnosis";s:20:"Diagnosa Wajib diisi";s:10:"medication";s:20:"Diagnosa Wajib diisi";}errorValidasi|s:387:"<!-- DEBUG-VIEW START 1 SYSTEMPATH\Validation\Views\list.php -->
+	<div class="errors" role="alert">
+		<ul>
+					<li>Amnesa Wajib diisi</li>
+					<li>Status Present Wajib diisi</li>
+					<li>Temuan Klinis Wajib diisi</li>
+					<li>Diagnosa Wajib diisi</li>
+					<li>Diagnosa Wajib diisi</li>
+				</ul>
+	</div>
+
+<!-- DEBUG-VIEW ENDED 1 SYSTEMPATH\Validation\Views\list.php -->
+";amnesa|s:18:"Amnesa Wajib diisi";statusPresent|s:26:"Status Present Wajib diisi";clinicalFinding|s:25:"Temuan Klinis Wajib diisi";diagnosis|s:20:"Diagnosa Wajib diisi";medication|s:20:"Diagnosa Wajib diisi";
