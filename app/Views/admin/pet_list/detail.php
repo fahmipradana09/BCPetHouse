@@ -193,8 +193,8 @@
             </div>
           </div>
 
-          <div class="form-check col-md-6 mt-3">
-            <input class="form-check-input" type="checkbox" value="1" id="hospitalized_status">
+          <div class="d-flex align-items-center form-check col-md-6 mt-3">
+            <input class="form-check-input align-items-center" type="checkbox" value="1" id="hospitalized_status">
             <label class="form-check-label" for="hospitalized_status">
               Hospitalized
             </label>
