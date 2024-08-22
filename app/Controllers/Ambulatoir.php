@@ -18,7 +18,6 @@ class Ambulatoir extends BaseController
         $this->ambulatoirModel = new AmbulatoirsModel();
 
     }
-
     public function index()
     {
         $data = [
@@ -74,7 +73,7 @@ class Ambulatoir extends BaseController
         'amnesa' => Session()->getFlashdata("amnesa"),
         'statusPresent' => Session()->getFlashdata("statusPresent"),
         'clincialFinding' => Session()->getFlashdata("clincialFinding"),
-        'diagnose' => Session()->getFlashdata("diagnose"),
+        'diagnosis' => Session()->getFlashdata("diagnosis"),
         'treatment' => Session()->getFlashdata("treatment"),
         
        ];
@@ -212,10 +211,12 @@ class Ambulatoir extends BaseController
             'race' => $this->request->getVar('race'),
             'color' => $this->request->getVar('color'),
             'gender'=>$this->request->getVar('gender'),
+            'hospitalized_status'=>$this->request->getVar('rawatInap')
         ]);
 
         $petId = $this->petModel->getInsertID();
         //dd($petId);
+        //dd($ambulatorId);
 
         $this->ambulatoirModel->save([
             'pet_id'=> $petId,
@@ -226,10 +227,19 @@ class Ambulatoir extends BaseController
             'diagnosis' => $this->request->getVar('diagnosa'),
             'medication' => $this->request->getVar('treatment')                                                                                   
         ]);
-        
 
+        $ambulatoirId = $this->ambulatoirModel->getInsertID();
+        $hostpitalized = $this->request->getVar('rawatInap');
+
+        session()->set('ambulatoirId', $ambulatoirId);
+        
         session()->setFlashdata('message','Data Success');
-        return redirect()->to('Ambulatoir');
+        if($hostpitalized == '1'){
+            return redirect()->to('RawatInap/detail/'.$ambulatoirId);
+        }else{
+            return redirect()->to('Ambulatoir');
+        }
+        
     }
 
     

@@ -35,7 +35,7 @@
                       <td class="align-middle text-center justify-content-center">
                         <?= $i++; ?>
                       </td>
-
+ 
                       <td class="align-middle justify-content-center col-2">
                         <?= $r['name']?>
                       </td>

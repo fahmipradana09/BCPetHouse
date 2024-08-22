@@ -24,7 +24,7 @@ class RawatInap extends BaseController
 
     public function index()
     {
-        $data = [
+        $data = [ 
             'active' => 'rawatinap',
             'dataInap' =>  $this->rawatInapModel->getRawatInap()
         ];
@@ -36,6 +36,8 @@ class RawatInap extends BaseController
     {
         //dd($this->petModel->getPetProfile($id));
         //dd($id);
+
+       $ambulatoirId = session()->get('ambulatoirId');
        $data = [
         'id' => $id,
         'active' => 'detailpet',
@@ -45,6 +47,11 @@ class RawatInap extends BaseController
         'errorValidasi' => Session()->getFlashdata("errorValidasi"), //ini alternatif nya pake flash data 
         'ownerName' => Session()->getFlashdata("ownerName")
        ];
+
+       //add new ambulatoir if there's in flash data
+       if ($ambulatoirId != null){
+        $data = ['ambulatoirId' => $ambulatoirId];
+       }
     
 
         //dd($data);

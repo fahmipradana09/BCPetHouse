@@ -88,4 +88,24 @@ $(document).ready(function () {
 });
 
 
+document.getElementById('sidebar-toggle').addEventListener('click', function() {
+    const sidebar = document.getElementById('sidenav-main');
+    sidebar.classList.toggle('collapsed');
 
+    const isCollapsed = sidebar.classList.contains('collapsed');
+    localStorage.setItem('sidebarCollapsed', isCollapsed);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const sidebar = document.getElementById('sidenav-main');
+    const mainContent = document.querySelector('.main-content');
+
+    // Get the collapse state from localStorage
+    const isCollapsed = localStorage.getItem('sidebarCollapsed') === 'true';
+
+    // Apply the collapse state
+    if (isCollapsed) {
+        sidebar.classList.add('collapsed');
+        mainContent.classList.add('expanded');
+    }
+});

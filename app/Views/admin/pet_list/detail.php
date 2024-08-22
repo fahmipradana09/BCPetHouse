@@ -17,7 +17,7 @@
             Create new Ambulatoir
         </button>
 
-        <form class="row m-3" action="<?= base_url(); ?>PetList/save/<?= $pet['id']?>" method="post">
+        <form class="row m-3" action="<?= base_url(); ?>PetList/save/ <?= $pet['id']?>" method="post">
           <?= csrf_field(); ?>
           <div class="col-md-5 mt-3">
             <label for="inputPetName" class="form-label text-truncate">Pet Name</label>

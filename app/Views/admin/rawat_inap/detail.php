@@ -7,7 +7,7 @@
         <div class="card-header pb-0">
           <h4>Rawat Inap</h4>
         </div>
-        <form class="container-fluid mt-5 mx-3" action="<?= base_url(); ?>RawatInap/save/<?= $dataInap['id']?>" method="post">
+        <form class="container-fluid mt-5 mx-3" action="<?= base_url(); ?>RawatInap/save/<?= $dataInap['id'] ?>" method="post">
           <?= csrf_field(); ?>
           <div class="row col-12">
           <div class="column col-6">

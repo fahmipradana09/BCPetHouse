@@ -172,11 +172,11 @@
                     </td>
 
                     <td>
-                    <input type="text" name='temuanKlinis' placeholder='Type here...' class="form-control <?=($temuanKlinis) ? 'is-invalid' : ''; ?>" value=""/>
+                    <input type="text" name='temuanKlinis' placeholder='Type here...' class="form-control <?=($clincialFinding) ? 'is-invalid' : ''; ?>" value=""/>
                     </td>
 
                     <td>
-                    <input type="text" name='diagnosa' placeholder='Type here...' class="form-control <?=($diagnosa) ? 'is-invalid' : ''; ?>" value=""/>
+                    <input type="text" name='diagnosa' placeholder='Type here...' class="form-control <?=($diagnosis) ? 'is-invalid' : ''; ?>" value=""/>
                     </td>
 
                     <td>

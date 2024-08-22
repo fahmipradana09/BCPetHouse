@@ -53,7 +53,7 @@
           <div class="col-md-3 mt-3">
             <label for="inputFurColor" class="form-label text-truncate">Phone Number</label>
             <div>
-              <input type="text" name="phoneNumber" class="form-control <?=($phoneNumber) ? 'is-invalid' : ''; ?>" id="inputPhoneNumber" placeholder="Type Here...."  value="<?= old('phoneNumber') ?>">
+              <input type="number" name="phoneNumber" class="form-control <?=($phoneNumber) ? 'is-invalid' : ''; ?>" id="inputPhoneNumber" placeholder="Type Here...."  value="<?= old('phoneNumber') ?>">
               <div class="invalid-feedback">
                 <?= $phoneNumber ?>
               </div>
@@ -110,7 +110,7 @@
             </div>
           
             <div class="col-md-6 align-items-start form-check form-switch my-4">
-              <input class="form-check-input" type="checkbox" role="switch" name="rawatInap" id="flexSwitchCheckHospitalization">
+              <input class="form-check-input" type="checkbox" role="switch" value="1" name="rawatInap" id="flexSwitchCheckHospitalization">
               <label class="form-check-label" for="flexSwitchCheckHospitalization">Tindak lanjut Rawat inap</label>
             </div>
 

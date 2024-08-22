@@ -23511,7 +23511,7 @@ hr.horizontal.gray-light {
 }
 
 @media (min-width: 1200px) {
-  .g-sidenav-hidden.rtl .main-content {
+  .g-sidenav-hidden.rtl . {
     margin-right: 6rem !important;
   }
 
