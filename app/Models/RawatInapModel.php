@@ -14,7 +14,7 @@ class RawatInapModel extends Model
     protected $returnType     = 'array';
     // protected $useSoftDeletes = true;
 
-    protected $allowedFields = [];
+    protected $allowedFields = ['medication','id_ambulatoir','id_petProfile','prognosa','medication_plan'];
 
     // Dates
     protected $useTimestamps = true;

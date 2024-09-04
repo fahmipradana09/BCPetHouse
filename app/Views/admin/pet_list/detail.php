@@ -5,7 +5,7 @@
     <div class="col-12">
       <div class="card mb-4">
         <div class="card-header pb-0">
-          <h4>Ambulatoir</h4>
+          <h4>Detail Pet</h4>
         </div>
         <?php if (session()->getFlashdata('message')):?>
             <div class="alert alert-success alert-dismissible text-white fade show mx-3 mt-3 py-1" role="alert">
@@ -102,19 +102,19 @@
           <div class="col-md-6 mt-3">
           <label for="inputGender" class="form-label text-truncate">Gender</label>
           <div class="form-check">
-              <input class="form-check-input" type="radio" name="gender" id="radioMale" value="male"  <?= ($pet['gender'] === 'male') ? 'checked' : '' ?> <?= $flag ? 'disable' : '' ?>>
+              <input class="form-check-input" type="radio" name="gender" id="radioMale" value="male"  <?= ($pet['gender'] === 'male') ? 'checked' : '' ?> <?= $flag ? 'disabled' : '' ?>>
               <label class="form-check-label" for="radioMale">
                   Male
               </label>
           </div>
           <div class="form-check">
-              <input class="form-check-input" type="radio" name="gender" id="radioFemale" value="female"  <?= ($pet['gender'] === 'female') ? 'checked' : '' ?> <?= $flag ? 'disable' : '' ?>>
+              <input class="form-check-input" type="radio" name="gender" id="radioFemale" value="female"  <?= ($pet['gender'] === 'female') ? 'checked' : '' ?> <?= $flag ? 'disabled' : '' ?>>
               <label class="form-check-label" for="radioFemale">
                   Female
               </label>
           </div>
           <div class="form-check">
-              <input class="form-check-input" type="radio" name="gender" id="radioUndefined" value="undefined" <?= ($pet['gender'] !== 'male' && $pet['gender'] !== 'female') ? 'checked' : '' ?> <?= $flag ? 'disable' : '' ?>>
+              <input class="form-check-input" type="radio" name="gender" id="radioUndefined" value="undefined" <?= ($pet['gender'] !== 'male' && $pet['gender'] !== 'female') ? 'checked' : '' ?> <?= $flag ? 'disabled' : '' ?>>
               <label class="form-check-label" for="radioUndefined">
                   Undefined
               </label>
@@ -128,15 +128,39 @@
               </div>
           <?php endif; ?> -->
         
-          <div>
-                <div id="ambulatoirDetail" style="width: 100%;"></div>
+
+          <div id="loadingSpinner" class="d-flex justify-content-center align-items-center d-none">
+              <div class="spinner-border text-primary" role="status">
+                  <span class="visually-hidden">Loading...</span>
+              </div>
           </div>
 
+          <div id="ambulatoirDetail" style="width: 100%;"></div>
+
           <div class="d-flex justify-content-center">
-            <button type="submit" id="savePet" class="btn bg-primary justify-content-center text-white btn-default col-md-6 mx-3 mt-4">Save</button>
+            <button type="button" id="triggerModalPet" class="btn bg-primary justify-content-center text-white btn-default col-md-6 mx-3 mt-4">Save</button>
           </div>
         </form>
   </div>
+
+  <div class="modal fade" id="confirmModalPet" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="confirmModalLabel">Confirm Submission</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to save this information? 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" id="confirmSavePet" class="btn bg-primary text-white">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
     
 
@@ -218,6 +242,7 @@
       </div>
     </div>
   </div>
+
 </div>
 
 
@@ -232,5 +257,7 @@
       initAmbulatoirDetail(data);
       
   });
+  
 </script>
 <?= $this->endSection(); ?>   
+

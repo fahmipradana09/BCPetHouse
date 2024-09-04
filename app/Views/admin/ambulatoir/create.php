@@ -110,6 +110,7 @@
             </div>
           
             <div class="col-md-6 align-items-start form-check form-switch my-4">
+              <input type="hidden" name="rawatInap" value="0">
               <input class="form-check-input" type="checkbox" role="switch" value="1" name="rawatInap" id="flexSwitchCheckHospitalization">
               <label class="form-check-label" for="flexSwitchCheckHospitalization">Tindak lanjut Rawat inap</label>
             </div>
@@ -189,10 +190,36 @@
           </div>
         </div>
         <div class="d-flex justify-content-center">
-          <button type="submit" id="saveAmbulatoir" class="btn bg-primary justify-content-center text-white btn-default col-md-6 mx-3 mt-4">Save</button>
+          <button type="button" id="triggerModal" class="btn bg-primary justify-content-center text-white btn-default col-md-6 mx-3 mt-4">Save</button>
         </div>
     </form>
      
   </div>
+
+<!-- Modal for Confirmation -->
+ 
+    <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="confirmModalLabel">Confirm Submission</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to save this information? 
+          <span id="hospitalizeState"></span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" id="confirmSave" class="btn bg-primary text-white">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
+
+
+
+
 <?= $this->endSection(); ?>

@@ -1,0 +1,376 @@
+INFO - 2024-09-03 01:57:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 01:57:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 01:58:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 01:58:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 01:58:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 01:58:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 01:58:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-03 01:58:35 --> Undefined variable $dataInap
+in APPPATH\Views\admin\rawat_inap\detail.php on line 10.
+ 1 APPPATH\Views\admin\rawat_inap\detail.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataInap', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/detail', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(58): view('admin/rawat_inap/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail('12')
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-09-03 02:45:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-03 02:45:17 --> Undefined variable $dataInap
+in APPPATH\Views\admin\rawat_inap\detail.php on line 10.
+ 1 APPPATH\Views\admin\rawat_inap\detail.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataInap', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/detail', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(58): view('admin/rawat_inap/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail('12')
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-09-03 02:50:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-03 02:50:01 --> Undefined variable $dataInap
+in APPPATH\Views\admin\rawat_inap\detail.php on line 10.
+ 1 APPPATH\Views\admin\rawat_inap\detail.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataInap', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/detail', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(58): view('admin/rawat_inap/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail('12')
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-09-03 02:50:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 02:50:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-03 02:50:32 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bcpet_db`.`ambulatoir`, CONSTRAINT `FK_ambulatoir_rawat_inap` FOREIGN KEY (`rawatInap_id`) REFERENCES `rawat_inap` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION) in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `am...', 0)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `am...')
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `am...')
+#3 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `am...', Array, false)
+#4 D:\Project (external)\BCPetHouse\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\Project (external)\BCPetHouse\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 D:\Project (external)\BCPetHouse\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\Project (external)\BCPetHouse\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 D:\Project (external)\BCPetHouse\app\Controllers\Ambulatoir.php(221): CodeIgniter\BaseModel->save(Array)
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+#10 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#11 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#14 {main}
+CRITICAL - 2024-09-03 02:50:32 --> Cannot add or update a child row: a foreign key constraint fails (`bcpet_db`.`ambulatoir`, CONSTRAINT `FK_ambulatoir_rawat_inap` FOREIGN KEY (`rawatInap_id`) REFERENCES `rawat_inap` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ambulatoir` (`pet_id`, `date_checkup`, `amnesa`, `status_present`, `clinical_finding`, `diagnosis`, `medication`, `created_at`, `updated_at`) VALUES (:pet_id:, :date_checkup:, :amnesa:, :status_present:, :clinical_finding:, :diagnosis:, :medication:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Ambulatoir.php(221): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+ 8 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-09-03 02:52:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-03 02:52:04 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bcpet_db`.`ambulatoir`, CONSTRAINT `FK_ambulatoir_rawat_inap` FOREIGN KEY (`rawatInap_id`) REFERENCES `rawat_inap` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION) in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `am...', 0)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `am...')
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `am...')
+#3 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `am...', Array, false)
+#4 D:\Project (external)\BCPetHouse\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\Project (external)\BCPetHouse\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 D:\Project (external)\BCPetHouse\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\Project (external)\BCPetHouse\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 D:\Project (external)\BCPetHouse\app\Controllers\Ambulatoir.php(221): CodeIgniter\BaseModel->save(Array)
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+#10 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#11 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#14 {main}
+CRITICAL - 2024-09-03 02:52:04 --> Cannot add or update a child row: a foreign key constraint fails (`bcpet_db`.`ambulatoir`, CONSTRAINT `FK_ambulatoir_rawat_inap` FOREIGN KEY (`rawatInap_id`) REFERENCES `rawat_inap` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ambulatoir` (`pet_id`, `date_checkup`, `amnesa`, `status_present`, `clinical_finding`, `diagnosis`, `medication`, `created_at`, `updated_at`) VALUES (:pet_id:, :date_checkup:, :amnesa:, :status_present:, :clinical_finding:, :diagnosis:, :medication:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Ambulatoir.php(221): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+ 8 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-09-03 02:52:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 02:52:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-03 02:52:31 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bcpet_db`.`ambulatoir`, CONSTRAINT `FK_ambulatoir_rawat_inap` FOREIGN KEY (`rawatInap_id`) REFERENCES `rawat_inap` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION) in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `am...', 0)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `am...')
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `am...')
+#3 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `am...', Array, false)
+#4 D:\Project (external)\BCPetHouse\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\Project (external)\BCPetHouse\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 D:\Project (external)\BCPetHouse\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\Project (external)\BCPetHouse\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 D:\Project (external)\BCPetHouse\app\Controllers\Ambulatoir.php(221): CodeIgniter\BaseModel->save(Array)
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+#10 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#11 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#14 {main}
+CRITICAL - 2024-09-03 02:52:31 --> Cannot add or update a child row: a foreign key constraint fails (`bcpet_db`.`ambulatoir`, CONSTRAINT `FK_ambulatoir_rawat_inap` FOREIGN KEY (`rawatInap_id`) REFERENCES `rawat_inap` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ambulatoir` (`pet_id`, `date_checkup`, `amnesa`, `status_present`, `clinical_finding`, `diagnosis`, `medication`, `created_at`, `updated_at`) VALUES (:pet_id:, :date_checkup:, :amnesa:, :status_present:, :clinical_finding:, :diagnosis:, :medication:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Ambulatoir.php(221): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+ 8 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-09-03 02:56:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-03 02:56:42 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bcpet_db`.`ambulatoir`, CONSTRAINT `FK_ambulatoir_rawat_inap` FOREIGN KEY (`rawatInap_id`) REFERENCES `rawat_inap` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION) in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `am...', 0)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `am...')
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `am...')
+#3 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `am...', Array, false)
+#4 D:\Project (external)\BCPetHouse\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\Project (external)\BCPetHouse\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 D:\Project (external)\BCPetHouse\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\Project (external)\BCPetHouse\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 D:\Project (external)\BCPetHouse\app\Controllers\Ambulatoir.php(234): CodeIgniter\BaseModel->save(Array)
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+#10 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#11 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#14 {main}
+CRITICAL - 2024-09-03 02:56:42 --> Cannot add or update a child row: a foreign key constraint fails (`bcpet_db`.`ambulatoir`, CONSTRAINT `FK_ambulatoir_rawat_inap` FOREIGN KEY (`rawatInap_id`) REFERENCES `rawat_inap` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ambulatoir` (`pet_id`, `date_checkup`, `amnesa`, `status_present`, `clinical_finding`, `diagnosis`, `medication`, `created_at`, `updated_at`) VALUES (:pet_id:, :date_checkup:, :amnesa:, :status_present:, :clinical_finding:, :diagnosis:, :medication:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Ambulatoir.php(234): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+ 8 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-09-03 02:56:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 02:57:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-03 02:57:06 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bcpet_db`.`ambulatoir`, CONSTRAINT `FK_ambulatoir_rawat_inap` FOREIGN KEY (`rawatInap_id`) REFERENCES `rawat_inap` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION) in D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Project (external)\BCPetHouse\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `am...', 0)
+#1 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `am...')
+#2 D:\Project (external)\BCPetHouse\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `am...')
+#3 D:\Project (external)\BCPetHouse\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `am...', Array, false)
+#4 D:\Project (external)\BCPetHouse\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\Project (external)\BCPetHouse\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 D:\Project (external)\BCPetHouse\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\Project (external)\BCPetHouse\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 D:\Project (external)\BCPetHouse\app\Controllers\Ambulatoir.php(234): CodeIgniter\BaseModel->save(Array)
+#9 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+#10 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+#11 D:\Project (external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\Project (external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 D:\Project (external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project (ext...')
+#14 {main}
+CRITICAL - 2024-09-03 02:57:06 --> Cannot add or update a child row: a foreign key constraint fails (`bcpet_db`.`ambulatoir`, CONSTRAINT `FK_ambulatoir_rawat_inap` FOREIGN KEY (`rawatInap_id`) REFERENCES `rawat_inap` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ambulatoir` (`pet_id`, `date_checkup`, `amnesa`, `status_present`, `clinical_finding`, `diagnosis`, `medication`, `created_at`, `updated_at`) VALUES (:pet_id:, :date_checkup:, :amnesa:, :status_present:, :clinical_finding:, :diagnosis:, :medication:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Ambulatoir.php(234): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+ 8 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-09-03 03:09:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-03 03:09:02 --> Undefined variable $ambulatorId
+in APPPATH\Controllers\Ambulatoir.php on line 249.
+ 1 APPPATH\Controllers\Ambulatoir.php(249): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ambulatorId', 'D:\\Project (external)\\BCPetHouse\\app\\Controllers\\Ambulatoir.php', 249)
+ 2 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Ambulatoir->save()
+ 3 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ambulatoir))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-09-03 03:09:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 03:09:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-03 03:09:21 --> Undefined variable $dataInap
+in APPPATH\Views\admin\rawat_inap\detail.php on line 10.
+ 1 APPPATH\Views\admin\rawat_inap\detail.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataInap', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/detail', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(58): view('admin/rawat_inap/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail('0')
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-09-03 03:10:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 03:10:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 03:10:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-03 03:10:38 --> Undefined variable $dataInap
+in APPPATH\Views\admin\rawat_inap\detail.php on line 10.
+ 1 APPPATH\Views\admin\rawat_inap\detail.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataInap', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/detail', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(58): view('admin/rawat_inap/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail('2')
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-09-03 03:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 03:34:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 03:34:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 03:34:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-03 03:34:55 --> Undefined variable $dataInap
+in APPPATH\Views\admin\rawat_inap\detail.php on line 10.
+ 1 APPPATH\Views\admin\rawat_inap\detail.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataInap', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/detail', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(58): view('admin/rawat_inap/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-09-03 03:34:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-03 03:34:55 --> Undefined variable $dataInap
+in APPPATH\Views\admin\rawat_inap\detail.php on line 10.
+ 1 APPPATH\Views\admin\rawat_inap\detail.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataInap', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/detail', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(58): view('admin/rawat_inap/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-09-03 03:34:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 03:34:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-03 03:34:57 --> Undefined variable $dataInap
+in APPPATH\Views\admin\rawat_inap\detail.php on line 10.
+ 1 APPPATH\Views\admin\rawat_inap\detail.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataInap', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/detail', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(58): view('admin/rawat_inap/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail('2')
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-09-03 03:34:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 03:42:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-03 03:42:35 --> Undefined variable $dataInap
+in APPPATH\Views\admin\rawat_inap\detail.php on line 10.
+ 1 APPPATH\Views\admin\rawat_inap\detail.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataInap', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/detail', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(58): view('admin/rawat_inap/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-09-03 03:42:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-03 03:42:35 --> Undefined variable $dataInap
+in APPPATH\Views\admin\rawat_inap\detail.php on line 10.
+ 1 APPPATH\Views\admin\rawat_inap\detail.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataInap', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/detail', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(58): view('admin/rawat_inap/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-09-03 03:58:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-03 03:58:14 --> Undefined variable $dataInap
+in APPPATH\Views\admin\rawat_inap\detail.php on line 10.
+ 1 APPPATH\Views\admin\rawat_inap\detail.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataInap', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/detail', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(58): view('admin/rawat_inap/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-09-03 03:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 03:58:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-03 03:58:16 --> Undefined variable $dataInap
+in APPPATH\Views\admin\rawat_inap\detail.php on line 10.
+ 1 APPPATH\Views\admin\rawat_inap\detail.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataInap', 'D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project (external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/detail', [], true)
+ 5 APPPATH\Controllers\RawatInap.php(58): view('admin/rawat_inap/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project (external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-09-03 04:02:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 04:02:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 04:02:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 04:02:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 04:02:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 04:02:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 04:02:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 06:55:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 06:55:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 06:55:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 06:55:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 06:55:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 06:55:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 06:56:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 06:56:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 06:56:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 06:56:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 06:56:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 06:56:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 06:56:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 06:56:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 07:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 07:16:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 07:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 07:16:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 07:16:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 07:16:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 07:17:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 07:17:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 07:17:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 07:17:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 07:17:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 07:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 07:17:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 07:17:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 07:17:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 07:17:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 09:28:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

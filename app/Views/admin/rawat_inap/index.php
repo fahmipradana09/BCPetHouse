@@ -15,7 +15,7 @@
           <?php endif;?>
         <div class="card-body px-0 pt-0 pb-2">
           <div class="table-responsive p-0 m-5">
-            <table id="rawatInap" class="table display compact" style="width:100%">
+            <table id="rawatInap" class="table row-border hover" style="width:100%">
               <thead>
                   <tr>
                       <th>No</th>

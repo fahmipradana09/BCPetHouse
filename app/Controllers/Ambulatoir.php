@@ -4,20 +4,33 @@ namespace App\Controllers;
 
 use App\Models\AmbulatoirsModel;
 use App\Models\PetProfileModel;
+use App\Models\RawatInapModel;
 
 
 class Ambulatoir extends BaseController
 {
     protected $petModel;
     protected $ambulatoirModel;
+    protected $rawatInapModel;
 
 
     public function __construct()
     {
         $this->petModel = new PetProfileModel();
         $this->ambulatoirModel = new AmbulatoirsModel();
+        $this->rawatInapModel = new RawatInapModel();
 
     }
+
+    public function db_ambulatoir($id){
+        $db = \Config\Database::connect();
+        $builder = $db->table('ambulatoir');
+        $builder->select('id');
+        $builder->where('ambulatoir.pet_id',$id);
+        $query = $builder->get();
+        return $query->getResultArray();
+    }
+    
     public function index()
     {
         $data = [
@@ -56,37 +69,39 @@ class Ambulatoir extends BaseController
     {
         //dd($this->petModel->getPetProfile($id));
         //dd($id);
-       $data = [
-        'active' => 'detailpet',
-        'pet' => $this->ambulatoirModel->getAmbulatoirAndPetList($id),
-        'validation' => \Config\Services::validation(),
-        'errorValidasi' => Session()->getFlashdata("errorValidasi"), //ini alternatif nya pake flash data 
-        'ownerName' => Session()->getFlashdata("ownerName"),
-        'petName' => Session()->getFlashdata("petName"),
-        'age' => Session()->getFlashdata("age"),    
-        'address' => Session()->getFlashdata("address"),
-        'phoneNumber' => Session()->getFlashdata("phoneNumber"),
-        'animalType' => Session()->getFlashdata("animalType"),
-        'race' => Session()->getFlashdata("race"),
-        'color' => Session()->getFlashdata("color"),
-        'gender' => Session()->getFlashdata("gender"),
-        'amnesa' => Session()->getFlashdata("amnesa"),
-        'statusPresent' => Session()->getFlashdata("statusPresent"),
-        'clincialFinding' => Session()->getFlashdata("clincialFinding"),
-        'diagnosis' => Session()->getFlashdata("diagnosis"),
-        'treatment' => Session()->getFlashdata("treatment"),
+        $flag = $this->request->getGet('flag');
+        $data = [
+            'active' => 'detailpet',
+            'flag' => $flag,
+            'pet' => $this->ambulatoirModel->getAmbulatoirAndPetList($id),
+            'validation' => \Config\Services::validation(),
+            'errorValidasi' => Session()->getFlashdata("errorValidasi"), //ini alternatif nya pake flash data 
+            'ownerName' => Session()->getFlashdata("ownerName"),
+            'petName' => Session()->getFlashdata("petName"),
+            'age' => Session()->getFlashdata("age"),    
+            'address' => Session()->getFlashdata("address"),
+            'phoneNumber' => Session()->getFlashdata("phoneNumber"),
+            'animalType' => Session()->getFlashdata("animalType"),
+            'race' => Session()->getFlashdata("race"),
+            'color' => Session()->getFlashdata("color"),
+            'gender' => Session()->getFlashdata("gender"),
+            'amnesa' => Session()->getFlashdata("amnesa"),
+            'statusPresent' => Session()->getFlashdata("statusPresent"),
+            'clincialFinding' => Session()->getFlashdata("clincialFinding"),
+            'diagnosis' => Session()->getFlashdata("diagnosis"),
+            'treatment' => Session()->getFlashdata("treatment"),
+            
+        ];
         
-       ];
-    
 
-        //dd($data);
-       return view('admin/ambulatoir/detail',$data);
+            //dd($data);
+        return view('admin/ambulatoir/detail',$data);
 
-       //jika page tidak ditemukan
-       if(empty($data['pet']))
-       {
-        throw new \CodeIgniter\Exceptions\PageNotFoundException('Data '.$id.'tidak terdaftar');
-       }
+        //jika page tidak ditemukan
+        if(empty($data['pet']))
+        {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data '.$id.'tidak terdaftar');
+        }
     }
 
     public function save()
@@ -94,6 +109,7 @@ class Ambulatoir extends BaseController
 
         $validation = \Config\Services::validation(); 
 
+    
         if(!$this->validate([
             'ownerName' => [
                 'rules' => 'required',
@@ -231,11 +247,18 @@ class Ambulatoir extends BaseController
         $ambulatoirId = $this->ambulatoirModel->getInsertID();
         $hostpitalized = $this->request->getVar('rawatInap');
 
-        session()->set('ambulatoirId', $ambulatoirId);
+
+        $this->rawatInapModel->save([
+            'id_ambulatoir' => $ambulatoirId,
+            'id_petProfile' => $petId
+        ]);
+
+        $rawatInapId = $this->rawatInapModel->getInsertID();
+        // session()->set('ambulatoirId', $ambulatoirId);
         
         session()->setFlashdata('message','Data Success');
         if($hostpitalized == '1'){
-            return redirect()->to('RawatInap/detail/'.$ambulatoirId);
+            return redirect()->to('RawatInap/detail/'.$rawatInapId.'?flag=edit');
         }else{
             return redirect()->to('Ambulatoir');
         }

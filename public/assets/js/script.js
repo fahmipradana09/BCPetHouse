@@ -109,3 +109,35 @@ document.addEventListener('DOMContentLoaded', function() {
         mainContent.classList.add('expanded');
     }
 });
+
+
+
+//modal confirm
+document.getElementById('triggerModal').addEventListener('click', function() {
+    // Get the state of the "hospitalize" switch
+var isHospitalized = document.getElementById('flexSwitchCheckHospitalization').checked;
+
+// Update the modal body text based on the switch state
+var hospitalizeText = isHospitalized ? " with hospitalize." : " without hospitalize.";
+document.getElementById('hospitalizeState').textContent = hospitalizeText;
+
+// Open the modal
+var myModal = new bootstrap.Modal(document.getElementById('confirmModal'), {});
+myModal.show();
+});
+
+document.getElementById('confirmSave').addEventListener('click', function() {
+document.querySelector('form').submit();  // Submit the form when confirmed
+});
+
+
+
+
+document.getElementById('triggerModalPet').addEventListener('click', function() {
+    var myModal = new bootstrap.Modal(document.getElementById('confirmModalPet'), {});
+    myModal.show();
+  });
+
+  document.getElementById('confirmSavePet').addEventListener('click', function() {
+    document.querySelector('form').submit();  // Submit the form when confirmed
+  });

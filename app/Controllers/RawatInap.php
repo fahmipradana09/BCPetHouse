@@ -50,18 +50,18 @@ class RawatInap extends BaseController
 
        //add new ambulatoir if there's in flash data
        if ($ambulatoirId != null){
-        $data = ['ambulatoirId' => $ambulatoirId];
-       }
+        $data['ambulatoirId'] = $ambulatoirId;
+        }
     
-
+        if(empty($data['dataInap']))
+        {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data '.$id.'tidak terdaftar');
+        }
         //dd($data);
        return view('admin/rawat_inap/detail',$data);
 
        //jika page tidak ditemukan
-       if(empty($data['dataInap']))
-       {
-        throw new \CodeIgniter\Exceptions\PageNotFoundException('Data '.$id.'tidak terdaftar');
-       }
+       
     }
 
     public function delete($id)
