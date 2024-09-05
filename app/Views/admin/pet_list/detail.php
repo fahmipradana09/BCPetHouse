@@ -127,15 +127,15 @@
                   <label class="form-check-label" for="flexSwitchCheckHospitalization">Tindak lanjut Rawat inap</label>
               </div>
           <?php endif; ?> -->
-        
-
-          <div id="loadingSpinner" class="d-flex justify-content-center align-items-center d-none">
-              <div class="spinner-border text-primary" role="status">
-                  <span class="visually-hidden">Loading...</span>
-              </div>
-          </div>
 
           <div id="ambulatoirDetail" style="width: 100%;"></div>
+
+          <div id="loadingSpinnerPet" class="d-flex justify-content-center align-items-center">
+            <div class="d-flex align-items-center">
+              <strong>Loading...   </strong>
+              <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+            </div>
+          </div>
 
           <div class="d-flex justify-content-center">
             <button type="button" id="triggerModalPet" class="btn bg-primary justify-content-center text-white btn-default col-md-6 mx-3 mt-4">Save</button>

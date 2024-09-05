@@ -3,13 +3,17 @@
 namespace App\Controllers;
 
 use App\Models\RawatInapModel;
+use App\Models\AmbulatoirsModel;
 
 class RawatInap extends BaseController
 {
     protected $rawatInapModel;
+    protected $ambulatoirModel;
     public function __construct()
     {
         $this->rawatInapModel = new RawatInapModel();
+        $this->ambulatoirModel = new AmbulatoirsModel();
+
     }
 
     public function db_fisiologis($id){
@@ -112,10 +116,14 @@ class RawatInap extends BaseController
         }
 
         
+        $this->ambulatoirModel->save([
+            
+        ]);
         //dd($id);
         $this->rawatInapModel->save([
             'id' => $id,
             'owner_name' => $this->request->getVar('ownerName'),
+            
         ]);
 
         session()->setFlashdata('message','Data Success Updated');

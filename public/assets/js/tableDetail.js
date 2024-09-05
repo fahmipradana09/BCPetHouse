@@ -1,8 +1,4 @@
 function initRawatInapDetail(data) {
-
-    //document.getElementById('loadingSpinner').style.display = 'flex';
-
-
     // Sort data by the 'date_checkup' field from newest to oldest
     data.sort((a, b) => new Date(b.date_rawatInap) - new Date(a.date_rawatInap));
 
@@ -154,9 +150,9 @@ function initRawatInapDetail(data) {
                        
                     ],
                     onload: function() {
-                    // Hide spinner
-                    document.getElementById('loadingSpinner').style.display = 'none';
-                    }
+                        // Hide spinner after data is loaded
+                        document.getElementById('loadingSpinnerRawatInap').classList.add('d-none');
+                    },
     });
 }
 
@@ -216,8 +212,6 @@ function initRawatInapDetail(data) {
 
 
 function initAmbulatoirDetail(data) {
-    // Show spinner
-    document.getElementById('loadingSpinner').classList.remove('d-none');
     
     // Sort data by the 'date_checkup' field from newest to oldest
     data.sort((a, b) => new Date(b.date_checkup) - new Date(a.date_checkup));
@@ -274,17 +268,12 @@ function initAmbulatoirDetail(data) {
         nestedHeaders: [
             { title: 'History Ambulatoir', colspan: 7 }
         ],
+        contextMenu: customContextMenu,
         onload: function() {
             // Hide spinner after data is loaded
             document.getElementById('loadingSpinner').classList.add('d-none');
         },
-        contextMenu: customContextMenu,
     });
-
-    // Fallback: Hide the spinner after 3 seconds if onload doesn't trigger
-    setTimeout(function() {
-        document.getElementById('loadingSpinner').classList.add('d-none');
-    }, 3000);
 }
 
 

@@ -227,7 +227,6 @@ class Ambulatoir extends BaseController
             'race' => $this->request->getVar('race'),
             'color' => $this->request->getVar('color'),
             'gender'=>$this->request->getVar('gender'),
-            'hospitalized_status'=>$this->request->getVar('rawatInap')
         ]);
 
         $petId = $this->petModel->getInsertID();
@@ -241,7 +240,8 @@ class Ambulatoir extends BaseController
             'status_present' => $this->request->getVar('statusPresent'),
             'clinical_finding' => $this->request->getVar('temuanKlinis'),
             'diagnosis' => $this->request->getVar('diagnosa'),
-            'medication' => $this->request->getVar('treatment')                                                                                   
+            'medication' => $this->request->getVar('treatment'),
+            'hospitalized_status'=>$this->request->getVar('rawatInap')                                                                                 
         ]);
 
         $ambulatoirId = $this->ambulatoirModel->getInsertID();

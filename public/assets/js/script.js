@@ -1,21 +1,27 @@
 $(document).ready(function () {
     var table = $('#ambulatoir').DataTable({
-        "scrollX": true
+        "scrollX": true,
     });
 
+    table.columns.adjust().draw();
+
+    // $('#petlist tbody').on('click', 'tr.clickable-row', function () {
+    //     var href = $(this).data('href');
+    //     window.location.href = href;
+    // });
+    
     $('#ambulatoir tbody').on('click', 'tr.clickable-row', function () {
         var href = $(this).data('href');
         var flag = $(this).data('flag'); // Get the flag value from the data attribute
         // Append the flag parameter to the URL
         window.location.href = href + '?flag=' + flag;
     });
-    
 });
 
-new DataTable('#detailAmbulatoir', {
-    info: false,
-    paging: false
-});
+// new DataTable('#detailAmbulatoir', {
+//     info: false,
+//     paging: false
+// });
 
 // $(document).ready(function(){
 //     var i=1;

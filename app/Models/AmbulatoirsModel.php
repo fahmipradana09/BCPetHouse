@@ -14,7 +14,7 @@ class AmbulatoirsModel extends Model
     protected $returnType     = 'array';
     // protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['pet_id','diagnosis','date_checkup', 'amnesa', 'status_present', 'clinical_finding', 'medication'];
+    protected $allowedFields = ['pet_id','diagnosis','date_checkup', 'amnesa', 'status_present', 'clinical_finding', 'medication','hospitalized_status'];
 
     // Dates
     protected $useTimestamps = true;
