@@ -217,11 +217,10 @@
             </div>
           </div>
 
-          <div class="d-flex align-items-center form-check col-md-6 mt-3">
-            <input class="form-check-input align-items-center" type="checkbox" value="1" id="hospitalized_status">
-            <label class="form-check-label" for="hospitalized_status">
-              Hospitalized
-            </label>
+          <div class="d-flex align-items-end form-check form-switch col-md-6 mt-3 mb-3">
+              <input type="hidden" name="rawatInap" value="0">
+              <input class="form-check-input" type="checkbox" role="switch" value="1" name="rawatInap" id="flexSwitchCheckHospitalization">
+              <label class="form-check-label" for="flexSwitchCheckHospitalization">Tindak lanjut Rawat inap</label>
           </div>
           
           <div class="col-md-12 mt-3">

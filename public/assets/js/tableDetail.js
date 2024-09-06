@@ -39,7 +39,7 @@ function initRawatInapDetail(data) {
         ];
     });
 
-    spreadsheetData.unshift(new Array(31).fill(''));
+    //spreadsheetData.unshift(new Array(31).fill(''));
 
     jspreadsheet(document.getElementById('rawatInapDetail'), {
         data: spreadsheetData,
@@ -271,7 +271,7 @@ function initAmbulatoirDetail(data) {
         contextMenu: customContextMenu,
         onload: function() {
             // Hide spinner after data is loaded
-            document.getElementById('loadingSpinner').classList.add('d-none');
+            document.getElementById('loadingSpinnerPet').classList.add('d-none');
         },
     });
 }

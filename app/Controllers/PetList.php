@@ -4,16 +4,19 @@ namespace App\Controllers;
 
 use App\Models\AmbulatoirsModel;
 use App\Models\PetProfileModel;
+use App\Models\RawatInapModel;
 
 class PetList extends BaseController
 {
     protected $petModel;
     protected $ambulatoirModel;
+    protected $rawatInapModel;
 
     public function __construct()
     {
         $this->petModel = new PetProfileModel();
         $this->ambulatoirModel = new AmbulatoirsModel();
+        $this->rawatInapModel = new RawatInapModel();
     }
 
     public function db_ambulatoir($id){
@@ -263,7 +266,6 @@ class PetList extends BaseController
             ->with('diagnosis',$validation->getError('diagnosis'))
             ->with('medication',$validation->getError('medication'));
         }
-
         
         //dd($id);
         $this->ambulatoirModel->save([
@@ -276,8 +278,22 @@ class PetList extends BaseController
             'medication' => $this->request->getVar('medication'),
         ]);
 
-        session()->setFlashdata('message','Data Success Added');
-        return redirect()->to('PetList/detail/'.$id);
+        $ambulatoirId = $this->ambulatoirModel->getInsertID();
+        $hostpitalized = $this->request->getVar('rawatInap');
+
+        $this->rawatInapModel->save([
+            'id_ambulatoir' => $ambulatoirId,
+            'id_petProfile' => $id
+        ]);
+
+        $rawatInapId = $this->rawatInapModel->getInsertID();
+
+        session()->setFlashdata('message','Data Success');
+        if($hostpitalized == '1'){
+            return redirect()->to('RawatInap/detail/'.$rawatInapId.'?flag=edit');
+        }else{
+            return redirect()->to('PetList/detail/'.$id.'?flag=edit');
+        }
     }
     
 

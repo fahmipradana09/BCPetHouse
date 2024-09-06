@@ -108,21 +108,25 @@ class RawatInap extends BaseController
 
         ])){
             //dd(\Config\Services::validation());
-            //dd($this->request->getVar());
+            dd($this->request->getVar());
             return redirect()->to(base_url('RawatInap/detail/'.$id))
             ->with('errorValidasi',$validation->listErrors())
             ->with('ownerName',$validation->getError('ownerName')) // Ini cara ngakalin biar data perkolomnya bisa dilempar ke create
             ->with('petName',$validation->getError('petName'));
         }
 
+        //$idAmbulatoir = $this->request->getVar('')
         
         $this->ambulatoirModel->save([
-            
+            'diagnosis' => $this->request->getVar('diagnosis'),
+            'medication' => $this->request->getVar('medication'),
         ]);
         //dd($id);
         $this->rawatInapModel->save([
             'id' => $id,
-            'owner_name' => $this->request->getVar('ownerName'),
+            'prognosa' => $this->request->getVar('prognosa'),
+            'medication_plan' => $this->request->getVar('medicationPlan'),
+
             
         ]);
 

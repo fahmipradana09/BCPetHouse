@@ -14,7 +14,7 @@ class RawatInapModel extends Model
     protected $returnType     = 'array';
     // protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['medication','id_ambulatoir','id_petProfile','prognosa','medication_plan'];
+    protected $allowedFields = ['id_ambulatoir','id_petProfile','prognosa','medication_plan'];
 
     // Dates
     protected $useTimestamps = true;
@@ -42,6 +42,10 @@ class RawatInapModel extends Model
                     ->join('ambulatoir as am', 'rawat_inap.id_ambulatoir = am.id')
                     ->join('pet_profile as pp', 'rawat_inap.id_petProfile = pp.id')
                     ->where('rawat_inap.id',$id)->first();
+    }
+
+    public function getIdAmbulatoir($id){
+        
     }
 
 }

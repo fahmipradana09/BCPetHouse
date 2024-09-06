@@ -78,20 +78,27 @@
         <div class="column col-6">
             <div class="row align-items-start">
               <label for="diagnosa" class="col-auto col-form-label">Diagnosa :</label>
-              <div class="col d-flex justify-content-end">
+              <div class="col d-flex justify-content-end ms-3">
               <textarea class="form-control" name="diagnosis" id="input diagnosis" rows="3"><?= $dataInap['diagnosis'] ? $dataInap['diagnosis'] : '' ?></textarea>
               </div>
             </div>
 
             <div class="row align-items-start my-2">
-              <label for="prognosa" class="col-auto col-form-label">Prognosa :</label>
+              <label for="medication" class="col-auto col-form-label">medication :</label>
               <div class="col d-flex justify-content-end">
+              <textarea class="form-control" name="medication" id="input medication" rows="3"><?= $dataInap['medication'] ? $dataInap['medication'] : '' ?></textarea>
+              </div>
+            </div>
+
+            <div class="row align-items-start my-2">
+              <label for="prognosa" class="col-auto col-form-label">Prognosa :</label>
+              <div class="col d-flex justify-content-end ms-3">
               <textarea class="form-control" name="prognosa" id="inputPrognosa" rows="3"><?= $dataInap['prognosa'] ? $dataInap['diagnosis'] : '' ?></textarea>
               </div>
             </div>
 
             <div class="row align-items-start">
-              <label for="medicationPlan" class="col-4 col-form-label wrap-text">Rencana Pengobatan :</label>
+              <label for="medicationPlan" class="col-3 col-form-label wrap-text">Rencana Pengobatan :</label>
               <div class="col d-flex justify-content-end">
               <textarea class="form-control" name="medicationPlan" id="inputmedicationPlan" rows="3"><?= $dataInap['medication_plan'] ? $dataInap['medication_plan'] : '' ?></textarea>
               </div>
