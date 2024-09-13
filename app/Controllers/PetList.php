@@ -50,22 +50,21 @@ class PetList extends BaseController
             'pet' => $this->petModel->getPetProfile($id),
             'dataAmbulatoir' => $this->db_ambulatoir($id),
             'flag' => $flag,
-            'validation' => \Config\Services::validation(),
-            // 'errorValidasi' => Session()->getFlashdata("errorValidasi"), //ini alternatif nya pake flash data 
-            // 'ownerName' => Session()->getFlashdata("ownerName"),
-            // 'petName' => Session()->getFlashdata("petName"),
-            // 'age' => Session()->getFlashdata("age"),    
-            // 'address' => Session()->getFlashdata("address"),
-            // 'phoneNumber' => Session()->getFlashdata("phoneNumber"),
-            // 'animalType' => Session()->getFlashdata("animalType"),
-            // 'race' => Session()->getFlashdata("race"),
-            // 'color' => Session()->getFlashdata("color"),
-            // 'gender' => Session()->getFlashdata("gender"),
-            // 'amnesa' => Session()->getFlashdata("amnesa"),
-            // 'statusPresent' => Session()->getFlashdata("statusPresent"),
-            // 'clincialFinding' => Session()->getFlashdata("clincialFinding"),
-            // 'diagnose' => Session()->getFlashdata("diagnose"),
-            // 'medication' => Session()->getFlashdata("medication"),
+            'errorValidasi' => Session()->getFlashdata("errorValidasi"), //ini alternatif nya pake flash data 
+            'ownerName' => Session()->getFlashdata("ownerName"),
+            'petName' => Session()->getFlashdata("petName"),
+            'age' => Session()->getFlashdata("age"),    
+            'address' => Session()->getFlashdata("address"),
+            'phoneNumber' => Session()->getFlashdata("phoneNumber"),
+            'animalType' => Session()->getFlashdata("animalType"),
+            'race' => Session()->getFlashdata("race"),
+            'color' => Session()->getFlashdata("color"),
+            'gender' => Session()->getFlashdata("gender"),
+            'amnesa' => Session()->getFlashdata("amnesa"),
+            'statusPresent' => Session()->getFlashdata("statusPresent"),
+            'clinicalFinding' => Session()->getFlashdata("clinicalFinding"),
+            'diagnosis' => Session()->getFlashdata("diagnosis"),
+            'medication' => Session()->getFlashdata("medication"),
             
         ];
     
@@ -150,7 +149,7 @@ class PetList extends BaseController
             ]
 
         ])){
-            //dd(\Config\Services::validation());
+            dd(\Config\Services::validation());
             //dd($this->request->getVar());
             return redirect()->to(base_url('PetList/detail/'.$id))
             ->with('errorValidasi',$validation->listErrors())
@@ -217,20 +216,20 @@ class PetList extends BaseController
             'medication' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Diagnosa Wajib diisi'
+                    'required' => 'Medication Wajib diisi'
                 ],
             ],
 
         ])){
             //dd(\Config\Services::validation());
             //dd($this->request->getVar());
-            return redirect()->to(base_url('PetList/detail/'.$id))->withInput()->with('validation',$this->validator);
-            // ->with('errorValidasi',$validation->listErrors())
-            // ->with('amnesa',$validation->getError('amnesa'))
-            // ->with('statusPresent',$validation->getError('statusPresent'))
-            // ->with('clinicalFinding',$validation->getError('clinicalFinding'))
-            // ->with('diagnosis',$validation->getError('diagnosis'))
-            // ->with('medication',$validation->getError('medication'));
+            return redirect()->to(base_url('PetList/detail/'.$id))->withInput()->with('validation',$this->validator)
+            ->with('errorValidasi',$validation->listErrors())
+            ->with('amnesa',$validation->getError('amnesa'))
+            ->with('statusPresent',$validation->getError('statusPresent'))
+            ->with('clinicalFinding',$validation->getError('clinicalFinding'))
+            ->with('diagnosis',$validation->getError('diagnosis'))
+            ->with('medication',$validation->getError('medication'));
         }
         
         //dd($id);

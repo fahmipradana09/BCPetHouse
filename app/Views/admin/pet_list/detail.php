@@ -16,25 +16,23 @@
         <button type="button" class="btn bg-primary mb-0 text-white mx-3 mt-3" data-bs-toggle="modal" data-bs-target="#newAmbulatoir">
             Create new Ambulatoir
         </button>
-        <?= $validation->listErrors()?>
-        <form class="row m-3" action="<?= base_url(); ?>PetList/save/<?= $pet['id']?>" method="post">
+        <form id="petLisForm" class="row m-3" action="<?= base_url(); ?>PetList/save/ <?= $pet['id']?>" method="post">
           <?= csrf_field(); ?>
           <div class="col-md-5 mt-3">
             <label for="inputPetName" class="form-label text-truncate">Pet Name</label>
             <div>
-            <input type="text" name="petName" class="form-control <?= ($validation->hasError("petName")) ? 'is-invalid' : ''; ?>" id="inputPetName" value="<?= $pet['name'] ? $pet['name'] : '' ?>" <?= $flag ? 'readonly' : '' ?> autofocus>
+            <input type="text" name="petName" class="form-control <?=($petName) ? 'is-invalid' : ''; ?>" id="inputPetName" value="<?= $pet['name'] ? $pet['name'] : '' ?>" <?= $flag ? 'readonly' : '' ?> autofocus>
             <div class="invalid-feedback">
-                <?= $validation->getError('petName'); ?>
+                <?= $petName ?>
               </div>
             </div>
           </div>
-
           <div class="col-md-5 mt-3">
             <label for="inputOwnerName" class="form-label">Owner Name</label>
             <div>
-                <input type="text" name="ownerName" class="form-control <?= ($validation->hasError("ownerName")) ? 'is-invalid' : ''; ?>" id="inputOwnerName" placeholder="Type Here...."  value="<?= $pet['owner_name'] ? $pet['owner_name'] : '' ?>" <?= $flag ? 'readonly' : '' ?>>
+                <input type="text" name="ownerName" class="form-control <?=($ownerName) ? 'is-invalid' : ''; ?>" id="inputOwnerName" placeholder="Type Here...."  value="<?= $pet['owner_name'] ? $pet['owner_name'] : '' ?>" <?= $flag ? 'readonly' : '' ?>>
                 <div class="invalid-feedback">
-                <?= $validation->getError('ownerName'); ?>
+                <?= $ownerName ?>
               </div>
             </div>
           </div>
@@ -42,63 +40,57 @@
           <div class="col-md-2 mt-3">
           <label for="inputAge" class="form-label text-truncate">Age</label>
             <div>
-                <input type="text" name="age" class="form-control <?= ($validation->hasError("age")) ? 'is-invalid' : ''; ?>" id="inputAge" placeholder="Type Here...." value="<?= $pet['age'] ? $pet['age'] : '' ?>" <?= $flag ? 'readonly' : '' ?>>
+                <input type="text" name="age" class="form-control <?=($age) ? 'is-invalid' : ''; ?>" id="inputAge" placeholder="Type Here...." value="<?= $pet['age'] ? $pet['age'] : '' ?>" <?= $flag ? 'readonly' : '' ?>>
                 <div class="invalid-feedback">
-                  <?= $validation->getError('age'); ?>
+                  <?= $age ?>
                 </div>
              </div>
           </div>
-
           <div class="col-md-12 mt-3">
             <label for="inputAddress" class="form-label text-truncate">Address</label>
             <div>
-              <textarea class="form-control <?= ($validation->hasError("address")) ? 'is-invalid' : ''; ?>" name="address" id="inputAddress" rows="3" <?= $flag ? 'readonly' : '' ?> ><?= $pet['address'] ? $pet['address'] : '' ?></textarea>
+              <textarea class="form-control <?=($address) ? 'is-invalid' : ''; ?>" name="address" id="inputAddress" rows="3" <?= $flag ? 'readonly' : '' ?> ><?= $pet['address'] ? $pet['address'] : '' ?></textarea>
               <div class="invalid-feedback">
-                <?= $validation->getError('address'); ?>
+                <?= $address ?>
               </div>
             </div>
           </div>
-
           <div class="col-md-3 mt-3">
             <label for="inputFurColor" class="form-label text-truncate">Phone Number</label>
             <div>
-              <input type="text" name="phoneNumber" id="inputPhone" class="form-control <?= ($validation->hasError("phoneNumber")) ? 'is-invalid' : ''; ?>" id="inputPhoneNumber" placeholder="Type Here...."  value="<?= $pet['phone'] ? $pet['phone'] : '' ?>" <?= $flag ? 'readonly' : '' ?>>
+              <input type="text" name="phoneNumber" id="inputPhone" class="form-control <?=($phoneNumber) ? 'is-invalid' : ''; ?>" id="inputPhoneNumber" placeholder="Type Here...."  value="<?= $pet['phone'] ? $pet['phone'] : '' ?>" <?= $flag ? 'readonly' : '' ?>>
               <div class="invalid-feedback">
-                <?= $validation->getError('phoneNumber'); ?>
+                <?= $phoneNumber ?>
               </div>
             </div>
           </div>
-
           <div class="col-md-3 mt-3">
             <label for="inputAnimalType" class="form-label text-truncate">Animal Type</label>
             <div>
-              <input type="text" name="animalType" class="form-control <?= ($validation->hasError("animalType")) ? 'is-invalid' : ''; ?>" id="inputAnimalType" placeholder="Type Here...." value="<?= $pet['animal_type'] ? $pet['animal_type'] : '' ?>" <?= $flag ? 'readonly' : '' ?>>
+              <input type="text" name="animalType" class="form-control <?=($animalType) ? 'is-invalid' : ''; ?>" id="inputAnimalType" placeholder="Type Here...." value="<?= $pet['animal_type'] ? $pet['animal_type'] : '' ?>" <?= $flag ? 'readonly' : '' ?>>
               <div class="invalid-feedback">
-                <?= $validation->getError('animalType'); ?>
+                <?= $animalType ?>
               </div>
             </div>
           </div>
-
           <div class="col-md-3 mt-3">
             <label for="inputFurColor" class="form-label text-truncate">Race</label>
             <div>
-              <input type="text" name="race" class="form-control <?= ($validation->hasError("race")) ? 'is-invalid' : ''; ?>" id="inputRace" placeholder="Type Here...." value="<?= $pet['race'] ? $pet['race'] : '' ?>" <?= $flag ? 'readonly' : '' ?>>
+              <input type="text" name="race" class="form-control <?=($race) ? 'is-invalid' : ''; ?>" id="inputRace" placeholder="Type Here...." value="<?= $pet['race'] ? $pet['race'] : '' ?>" <?= $flag ? 'readonly' : '' ?>>
               <div class="invalid-feedback">
-                <?= $validation->getError('race'); ?>
+                <?= $race ?>
               </div>
             </div>
           </div>
-
           <div class="col-md-3 mt-3">
             <label for="inputFurColor" class="form-label text-truncate">Color</label>
             <div>
-              <input type="text" name="color" class="form-control <?= ($validation->hasError("color")) ? 'is-invalid' : ''; ?>" id="inputFurColor" placeholder="Type Here...." value="<?= $pet['color'] ? $pet['color'] : '' ?>" <?= $flag ? 'readonly' : '' ?>>
+              <input type="text" name="color" class="form-control <?=($color) ? 'is-invalid' : ''; ?>" id="inputFurColor" placeholder="Type Here...." value="<?= $pet['color'] ? $pet['color'] : '' ?>" <?= $flag ? 'readonly' : '' ?>>
               <div class="invalid-feedback">
-                <?= $validation->getError('color'); ?>
+                <?= $color ?>
               </div>
             </div>
           </div>
-
           <div class="col-md-6 mt-3">
           <label for="inputGender" class="form-label text-truncate">Gender</label>
           <div class="form-check">
@@ -120,20 +112,16 @@
               </label>
           </div>
           </div>
-
           <div id="ambulatoirDetail" style="width: 100%;"></div>
-
           <div id="loadingSpinnerPet" class="d-flex justify-content-center align-items-center">
             <div class="d-flex align-items-center">
               <strong>Loading...   </strong>
               <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
             </div>
           </div>
-
           <div class="d-flex justify-content-center">
-              <button type="button" id="triggerModalPet" class="btn bg-primary justify-content-center text-white btn-default col-md-6 mx-3 mt-4">Save</button>
+            <button type="button" id="triggerModalPet" class="btn bg-primary justify-content-center text-white btn-default col-md-6 mx-3 mt-4">Save</button>
           </div>
-
         </form>
   </div>
 
@@ -169,14 +157,14 @@
       </div>
       <!--Body-->
       <div class="modal-body">
-        <form class="row" action="<?= base_url(); ?>PetList/saveAmbulatoir/<?= $pet['id']?>" method="post">
+        <form id="ambulatoirForm" class="row" action="<?= base_url(); ?>PetList/saveAmbulatoir/<?= $pet['id']?>" method="post">
           <?= csrf_field(); ?>
           <div class="col-md-6 mt-3">
             <label for="inputAmnesa" class="form-label">Amnesa</label>
             <div>
-              <input type="text" name="amnesa" class="form-control <?= ($validation->hasError("amnesa")) ? 'is-invalid' : ''; ?>" id="inputAmnesa" placeholder="Type Here....">
+              <input type="text" name="amnesa" class="form-control <?= $amnesa ? 'is-invalid' : ''; ?>" id="inputAmnesa" placeholder="Type Here....">
               <div class="invalid-feedback">
-                <?= isset($validation) ? $validation->getError('amnesa') : '' ?>
+                <?= $amnesa ?>
               </div>
             </div>
           </div>
@@ -184,9 +172,9 @@
           <div class="col-md-6 mt-3">
             <label for="inputStatusPresent" class="form-label text-truncate">Status Present</label>
             <div>
-              <input type="text" name="statusPresent" class="form-control <?= ($validation->hasError("statusPresent")) ? 'is-invalid' : ''; ?>" id="inputStatusPresent" placeholder="Type Here....">
+              <input type="text" name="statusPresent" class="form-control <?= $statusPresent ? 'is-invalid' : ''; ?>" id="inputStatusPresent" placeholder="Type Here....">
               <div class="invalid-feedback">
-                <?= $validation->getError('statusPresent'); ?>
+                <?= $statusPresent ?>
               </div>
             </div>
           </div>
@@ -194,9 +182,9 @@
           <div class="col-md-12 mt-3">
             <label for="inputClinicalFinding" class="form-label text-truncate">Clinical Finding</label>
             <div>
-              <textarea class="form-control <?= ($validation->hasError("clinicalFinding")) ? 'is-invalid' : ''; ?>" name="clinicalFinding" id="inputClinicalFinding" rows="3"></textarea>
+              <textarea class="form-control <?= $clinicalFinding ? 'is-invalid' : ''; ?>" name="clinicalFinding" id="inputClinicalFinding" rows="3"></textarea>
               <div class="invalid-feedback">
-                <?= $validation->getError('clinicalFinding'); ?>
+                <?= $clinicalFinding ?>
               </div>
             </div>
           </div>
@@ -204,9 +192,9 @@
           <div class="col-md-6 mt-3">
             <label for="inputDiagnosis" class="form-label text-truncate">Diagnosis</label>
             <div>
-              <input type="text" name="diagnosis" class="form-control <?= ($validation->hasError("diagnosis")) ? 'is-invalid' : ''; ?>" id="inputDiagnosis" placeholder="Type Here....">
+              <input type="text" name="diagnosis" class="form-control <?= $diagnosis ? 'is-invalid' : ''; ?>" id="inputDiagnosis" placeholder="Type Here....">
               <div class="invalid-feedback">
-                <?= $validation->getError('diagnosis'); ?>
+                <?= $diagnosis ?>
               </div>
             </div>
           </div>
@@ -220,9 +208,9 @@
           <div class="col-md-12 mt-3">
             <label for="inputMedication" class="form-label text-truncate">Medication</label>
             <div>
-              <textarea class="form-control <?= ($validation->hasError("medication")) ? 'is-invalid' : ''; ?>" name="medication" id="inputMedication" rows="3"></textarea>
+              <textarea class="form-control <?= $medication ? 'is-invalid' : ''; ?>" name="medication" id="inputMedication" rows="3"></textarea>
               <div class="invalid-feedback">
-                <?= $validation->getError('medication'); ?>
+                <?= $medication ?>
               </div>
             </div>
           </div>

@@ -80,7 +80,7 @@ $(document).ready(function () {
 
     // Confirm save button in hospitalize modal
     $('#confirmSave').on('click', function () {
-        $('form').submit();  // Submit the form when confirmed
+        $('#ambulatoirForm').submit();  // Submit the form when confirmed
     });
 
     // Modal for Pet save confirmation (triggerModalPet)
@@ -91,7 +91,7 @@ $(document).ready(function () {
 
     // Confirm save action and submit form
     $('#confirmSavePet').on('click', function () {
-        $('form').submit();  // This submits the form
+        $('#petLisForm').submit();  // This submits the form
     });
 
     // Optional dynamic row addition and deletion (if needed)
