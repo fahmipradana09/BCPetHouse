@@ -8,12 +8,18 @@
           <!-- Data nya kosong -->
           <h4>Create NEW Ambulatoir</h4>
         </div>
-        <form class="row m-3" action="<?= base_url(); ?>Ambulatoir/save" method="post">
+        <form class="row m-3 pb-3" action="<?= base_url(); ?>Ambulatoir/save" method="post">
           <?= csrf_field(); ?>
+
+          <!-- Pet Profile -->
+          <figure class="text-end">
+              <h1 class="bg-text-grey display-6 color-purple">Pet Profile</h1>
+          </figure>
+
           <div class="col-md-5 mt-3">
             <label for="inputPetName" class="form-label text-truncate">Pet Name</label>
             <div>
-                <input type="text" name="petName" class="form-control <?=($petName) ? 'is-invalid' : ''; ?>" id="inputPetName" placeholder="Type Here...." value="<?= old('petname') ?>">
+                <input type="text" name="petName" class="form-control <?=($petName) ? 'is-invalid' : ''; ?>" id="inputPetName" placeholder="Type Here...." value="<?= old('petName') ?>"autofocus>
                 <div class="invalid-feedback">
                   <?= $petName ?>
                 </div>
@@ -23,7 +29,7 @@
           <div class="col-md-5 mt-3">
             <label for="inputOwnerName" class="form-label">Owner Name</label>
             <div>
-                <input type="text" name="ownerName" class="form-control <?=($ownerName) ? 'is-invalid' : ''; ?>" id="inputOwnerName" placeholder="Type Here...." value="<?= old('ownerName') ?>" autofocus>
+                <input type="text" name="ownerName" class="form-control <?=($ownerName) ? 'is-invalid' : ''; ?>" id="inputOwnerName" placeholder="Type Here...." value="<?= old('ownerName') ?>">
                 <div class="invalid-feedback">
                 <?= $ownerName ?>
               </div>
@@ -43,7 +49,7 @@
           <div class="col-md-12 mt-3">
             <label for="inputAddress" class="form-label text-truncate">Address</label>
             <div>
-              <textarea class="form-control <?=($address) ? 'is-invalid' : ''; ?>" name="address" id="inputAddress" rows="3"><?= old('address') ?></textarea>
+              <textarea class="form-control <?=($address) ? 'is-invalid' : ''; ?>" name="address" id="inputAddress" placeholder="Type Here...." rows="3"><?= old('address') ?></textarea>
               <div class="invalid-feedback">
                 <?= $address ?>
               </div>
@@ -115,79 +121,73 @@
               <label class="form-check-label" for="flexSwitchCheckHospitalization">Tindak lanjut Rawat inap</label>
             </div>
 
-     
-          <div class="container">
-            <div class="row clearfix">
-            <div class="col-md-12 table-responsive column">
-              <table class="table table-bordered table-hover" id="tab_logic">
-                <thead>
-                  <tr>
-                    <th class="text-center">
-                      No.
-                    </th>
 
-                    <th class="text-center">
-                      Date Checkup
-                    </th>
+            <!-- Ambulatoir -->
+            <figure class="mt-6 text-end">
+              <h1 class="bg-text-grey display-6 color-purple">Ambulatoir</h1>
+            </figure>
 
-                    <th class="text-center">
-                      Amnesa
-                    </th>
+          <div class="col-md-6 mt-3">
+            <label for="inputAmnesa" class="form-label text-truncate">Amnesa</label>
+            <div>
+            <textarea class="form-control <?=($amnesa) ? 'is-invalid' : ''; ?>" name="amnesa" id="inputTemuanKlinis" placeholder="Type Here...." rows="3"><?= old('amnesa') ?></textarea>
+                <div class="invalid-feedback">
+                  <?= $amnesa ?>
+                </div>
+              </div>
+          </div>
 
-                    <th class="text-center">
-                      Status Present
-                    </th>
-
-                    <th class="text-center">
-                      Temuan Klinis
-                    </th>
-
-                    <th class="text-center">
-                      Diagnosa
-                    </th>
-
-                    <th class="text-center">
-                      Pengobatan
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr id='addr0'>
-                    <td>1</td>
-
-                    <td>
-                    <div class="date" id="datePicker">
-                      <input type="text" name='date' placeholder='Enter Date' class="form-control " readonly/>
-                    </div>
-                    </td>
-
-                    <td>
-                    <input type="text" name='amnesa' placeholder='Type here...' class="form-control <?=($amnesa) ? 'is-invalid' : ''; ?>"  value="<?= old('amnesa') ?>"/>
-                    </td>
-
-                    <td>
-                    <input type="text" name='statusPresent' placeholder='Type here...' class="form-control <?=($statusPresent) ? 'is-invalid' : ''; ?>"  value="<?= old('statusPresent') ?>"/>
-                    </td>
-
-                    <td>
-                    <input type="text" name='temuanKlinis' placeholder='Type here...' class="form-control <?=($temuanKlinis) ? 'is-invalid' : ''; ?>"  value="<?= old('temuanKlinis') ?>"/>
-                    </td>
-
-                    <td>
-                    <input type="text" name='diagnosa' placeholder='Type here...' class="form-control <?=($diagnosa) ? 'is-invalid' : ''; ?>"  value="<?= old('diagnosa') ?>"/>
-                    </td>
-
-                    <td>
-                    <input type="text" name='treatment' placeholder='Type here...' class="form-control <?=($treatment) ? 'is-invalid' : ''; ?>"  value="<?= old('treatmen') ?>"/>
-                    </td>
-                    
-
-                  </tr>
-                      <tr id='addr1'></tr>
-                </tbody>
-              </table>
+          <div class="col-md-6 mt-3">
+            <label for="inputStatusPresent" class="form-label">Status Present</label>
+            <div>
+            <textarea class="form-control <?=($statusPresent) ? 'is-invalid' : ''; ?>" name="statusPresent" id="inputStatusPresent" placeholder="Type Here...." rows="3"><?= old('statusPresent') ?></textarea>
+                <div class="invalid-feedback">
+                <?= $statusPresent ?>
+              </div>
             </div>
           </div>
+
+          <div class="col-md-12 mt-3">
+            <label for="inputTemuanKlinis" class="form-label text-truncate">Temuan Klinis</label>
+            <div>
+              <textarea class="form-control <?=($temuanKlinis) ? 'is-invalid' : ''; ?>" name="temuanKlinis" id="inputTemuanKlinis" placeholder="Type Here...." rows="3"><?= old('temuanKlinis') ?></textarea>
+              <div class="invalid-feedback">
+                <?= $temuanKlinis ?>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12 mt-3">
+            <label for="inputDiagnosis" class="form-label text-truncate">Diagnosa</label>
+            <div>
+              <textarea class="form-control <?=($diagnosa) ? 'is-invalid' : ''; ?>" name="diagnosa" id="inputDiagnosis" placeholder="Type Here...." rows="3"><?= old('diagnosa') ?></textarea>
+              <div class="invalid-feedback">
+                <?= $diagnosa ?>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12 mt-3">
+            <label for="inputTreatment" class="form-label text-truncate">Pengobatan</label>
+            <div>
+              <textarea class="form-control <?=($treatment) ? 'is-invalid' : ''; ?>" name="treatment" id="inputTreatment" placeholder="Type Here...." rows="3"><?= old('treatment') ?></textarea>
+              <div class="invalid-feedback">
+                <?= $treatment ?>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="col-md-12 mt-3 text-end">
+          <label for="inputTreatment" class="form-label text-truncate">Select Doctor</label>
+            <select name="cars" id="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+              </select>
+          </div> -->
+
+          
         </div>
         <div class="d-flex justify-content-center">
           <button type="button" id="triggerModal" class="btn bg-primary justify-content-center text-white btn-default col-md-6 mx-3 mt-4">Save</button>

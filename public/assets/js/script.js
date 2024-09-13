@@ -1,46 +1,62 @@
 $(document).ready(function () {
-    var table = $('#ambulatoir').DataTable({
+
+    // Initialize DataTable for ambulatoir
+    var tableAmbulatoir = $('#ambulatoir').DataTable({
         "scrollX": true,
     });
+    tableAmbulatoir.columns.adjust().draw();
 
-    table.columns.adjust().draw();
-
-    // $('#petlist tbody').on('click', 'tr.clickable-row', function () {
-    //     var href = $(this).data('href');
-    //     window.location.href = href;
-    // });
-    
+    // Redirect with flag parameter for ambulatoir
     $('#ambulatoir tbody').on('click', 'tr.clickable-row', function () {
         var href = $(this).data('href');
         var flag = $(this).data('flag'); // Get the flag value from the data attribute
         // Append the flag parameter to the URL
         window.location.href = href + '?flag=' + flag;
     });
-});
 
-// new DataTable('#detailAmbulatoir', {
-//     info: false,
-//     paging: false
-// });
+    // Initialize DataTable for petlist
+    var tablePetlist = $('#petlist').DataTable({
+        "scrollX": true,
+    });
+    tablePetlist.columns.adjust().draw();
 
-// $(document).ready(function(){
-//     var i=1;
-//    $("#add_row").click(function(){b=i-1;
-//     $('#addr'+i).html($('#addr'+b).html()).find('td:first-child').html(i+1);
-//     $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
-//     i++; 
-//     });
-    
-//    $("#delete_row").click(function(){
-//        if(i>1){
-//        $("#addr"+(i-1)).html('');
-//        i--;
-//        }
-//    });
-// });
+    // Redirect with flag parameter for petlist
+    $('#petlist tbody').on('click', 'tr.clickable-row', function () {
+        var href = $(this).data('href');
+        var flag = $(this).data('flag'); // Get the flag value from the data attribute
+        window.location.href = href + '?flag=' + flag;
+    });
 
+    // Initialize DataTable for rawatInap
+    var tableRawatInap = $('#rawatInap').DataTable({
+        "scrollX": true,
+    });
+    tableRawatInap.columns.adjust().draw();
 
-$(function(){
+    // Redirect with flag parameter for rawatInap
+    $('#rawatInap tbody').on('click', 'tr.clickable-row', function () {
+        var href = $(this).data('href');
+        var flag = $(this).data('flag'); // Get the flag value from the data attribute
+        window.location.href = href + '?flag=' + flag;
+    });
+
+    // Sidebar toggle functionality
+    $('#sidebar-toggle').on('click', function () {
+        const sidebar = $('#sidenav-main');
+        sidebar.toggleClass('collapsed');
+
+        const isCollapsed = sidebar.hasClass('collapsed');
+        localStorage.setItem('sidebarCollapsed', isCollapsed);
+    });
+
+    // Apply sidebar collapsed state from localStorage
+    const isCollapsed = localStorage.getItem('sidebarCollapsed') === 'true';
+    if (isCollapsed) {
+        $('#sidenav-main').addClass('collapsed');
+        $('.main-content').addClass('expanded');
+    }
+
+    // Date picker functionality
     var today = new Date(); // Get current date
     var formattedDateTime =
         today.getFullYear() + '-' +
@@ -51,99 +67,74 @@ $(function(){
         ('0' + today.getSeconds()).slice(-2);
 
     $('#datePicker input').val(formattedDateTime); // Set input value to today's date
-});
 
-$(document).ready(function () {
-    var table = $('#petlist').DataTable({
-        "scrollX": true,
+    // Modal for hospitalize state confirmation (triggerModal)
+    $('#triggerModal').on('click', function () {
+        var isHospitalized = $('#flexSwitchCheckHospitalization').prop('checked');
+        var hospitalizeText = isHospitalized ? " with hospitalize." : " without hospitalize.";
+        $('#hospitalizeState').text(hospitalizeText);
+
+        var myModal = new bootstrap.Modal(document.getElementById('confirmModal'), {});
+        myModal.show();
     });
 
-    table.columns.adjust().draw();
+    // Confirm save button in hospitalize modal
+    $('#confirmSave').on('click', function () {
+        $('form').submit();  // Submit the form when confirmed
+    });
 
-    // $('#petlist tbody').on('click', 'tr.clickable-row', function () {
-    //     var href = $(this).data('href');
-    //     window.location.href = href;
-    // });
-    
-    $('#petlist tbody').on('click', 'tr.clickable-row', function () {
-        var href = $(this).data('href');
-        var flag = $(this).data('flag'); // Get the flag value from the data attribute
-        // Append the flag parameter to the URL
-        window.location.href = href + '?flag=' + flag;
+    // Modal for Pet save confirmation (triggerModalPet)
+    $('#triggerModalPet').on('click', function () {
+        var myModal = new bootstrap.Modal(document.getElementById('confirmModalPet'), {});
+        myModal.show();
+    });
+
+    // Confirm save action and submit form
+    $('#confirmSavePet').on('click', function () {
+        $('form').submit();  // This submits the form
+    });
+
+    // Optional dynamic row addition and deletion (if needed)
+    var i = 1;
+    $("#add_row").click(function () {
+        var b = i - 1;
+        $('#addr' + i).html($('#addr' + b).html()).find('td:first-child').html(i + 1);
+        $('#tab_logic').append('<tr id="addr' + (i + 1) + '"></tr>');
+        i++;
+    });
+
+    $("#delete_row").click(function () {
+        if (i > 1) {
+            $("#addr" + (i - 1)).html('');
+            i--;
+        }
     });
 });
 
-$(document).ready(function () {
-    var table = $('#rawatInap').DataTable({
-        "scrollX": true,
-    });
 
-    table.columns.adjust().draw();
+// document.addEventListener("DOMContentLoaded", function() {
+//     // Main form save button
+//     document.getElementById("triggerModalPet").addEventListener("click", function() {
+//         // Trigger modal confirmation
+//         var confirmModal = new bootstrap.Modal(document.getElementById('confirmModalPet'));
+//         confirmModal.show();
+//     });
 
-    // $('#petlist tbody').on('click', 'tr.clickable-row', function () {
-    //     var href = $(this).data('href');
-    //     window.location.href = href;
-    // });
-    
-    $('#rawatInap tbody').on('click', 'tr.clickable-row', function () {
-        var href = $(this).data('href');
-        var flag = $(this).data('flag'); // Get the flag value from the data attribute
-        // Append the flag parameter to the URL
-        window.location.href = href + '?flag=' + flag;
-    });
-});
+//     // Confirm save button in the modal
+//     document.getElementById("confirmSavePet").addEventListener("click", function() {
+//         // Hide modal
+//         var confirmModal = bootstrap.Modal.getInstance(document.getElementById('confirmModalPet'));
+//         confirmModal.hide();
 
+//         // Submit the main form
+//         document.querySelector("form[action*='PetList/save/']").submit();
+//     });
 
-document.getElementById('sidebar-toggle').addEventListener('click', function() {
-    const sidebar = document.getElementById('sidenav-main');
-    sidebar.classList.toggle('collapsed');
+//     // Save ambulatoir form button
+//     document.getElementById("saveAmbulatoir").addEventListener("click", function(event) {
+//         event.preventDefault(); // Prevent default form submission
 
-    const isCollapsed = sidebar.classList.contains('collapsed');
-    localStorage.setItem('sidebarCollapsed', isCollapsed);
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const sidebar = document.getElementById('sidenav-main');
-    const mainContent = document.querySelector('.main-content');
-
-    // Get the collapse state from localStorage
-    const isCollapsed = localStorage.getItem('sidebarCollapsed') === 'true';
-
-    // Apply the collapse state
-    if (isCollapsed) {
-        sidebar.classList.add('collapsed');
-        mainContent.classList.add('expanded');
-    }
-});
-
-
-
-//modal confirm
-document.getElementById('triggerModal').addEventListener('click', function() {
-    // Get the state of the "hospitalize" switch
-var isHospitalized = document.getElementById('flexSwitchCheckHospitalization').checked;
-
-// Update the modal body text based on the switch state
-var hospitalizeText = isHospitalized ? " with hospitalize." : " without hospitalize.";
-document.getElementById('hospitalizeState').textContent = hospitalizeText;
-
-// Open the modal
-var myModal = new bootstrap.Modal(document.getElementById('confirmModal'), {});
-myModal.show();
-});
-
-document.getElementById('confirmSave').addEventListener('click', function() {
-document.querySelector('form').submit();  // Submit the form when confirmed
-});
-
-
-
-
-document.getElementById('triggerModalPet').addEventListener('click', function() {
-    var myModal = new bootstrap.Modal(document.getElementById('confirmModalPet'), {});
-    myModal.show();
-  });
-
-  document.getElementById('confirmSavePet').addEventListener('click', function() {
-    document.querySelector('form').submit();  // Submit the form when confirmed
-  });
+//         // Submit ambulatoir form
+//         document.querySelector("form[action*='PetList/saveAmbulatoir/']").submit();
+//     });
+// });

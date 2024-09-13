@@ -43,6 +43,7 @@ class PetList extends BaseController
     {
         //dd($this->petModel->getPetProfile($id));
         //dd($id);
+        //dd(\Config\Services::validation());
         $flag = $this->request->getGet('flag');
         $data = [
             'active' => 'detailpet',
@@ -50,21 +51,21 @@ class PetList extends BaseController
             'dataAmbulatoir' => $this->db_ambulatoir($id),
             'flag' => $flag,
             'validation' => \Config\Services::validation(),
-            'errorValidasi' => Session()->getFlashdata("errorValidasi"), //ini alternatif nya pake flash data 
-            'ownerName' => Session()->getFlashdata("ownerName"),
-            'petName' => Session()->getFlashdata("petName"),
-            'age' => Session()->getFlashdata("age"),    
-            'address' => Session()->getFlashdata("address"),
-            'phoneNumber' => Session()->getFlashdata("phoneNumber"),
-            'animalType' => Session()->getFlashdata("animalType"),
-            'race' => Session()->getFlashdata("race"),
-            'color' => Session()->getFlashdata("color"),
-            'gender' => Session()->getFlashdata("gender"),
-            'amnesa' => Session()->getFlashdata("amnesa"),
-            'statusPresent' => Session()->getFlashdata("statusPresent"),
-            'clincialFinding' => Session()->getFlashdata("clincialFinding"),
-            'diagnose' => Session()->getFlashdata("diagnose"),
-            'medication' => Session()->getFlashdata("medication"),
+            // 'errorValidasi' => Session()->getFlashdata("errorValidasi"), //ini alternatif nya pake flash data 
+            // 'ownerName' => Session()->getFlashdata("ownerName"),
+            // 'petName' => Session()->getFlashdata("petName"),
+            // 'age' => Session()->getFlashdata("age"),    
+            // 'address' => Session()->getFlashdata("address"),
+            // 'phoneNumber' => Session()->getFlashdata("phoneNumber"),
+            // 'animalType' => Session()->getFlashdata("animalType"),
+            // 'race' => Session()->getFlashdata("race"),
+            // 'color' => Session()->getFlashdata("color"),
+            // 'gender' => Session()->getFlashdata("gender"),
+            // 'amnesa' => Session()->getFlashdata("amnesa"),
+            // 'statusPresent' => Session()->getFlashdata("statusPresent"),
+            // 'clincialFinding' => Session()->getFlashdata("clincialFinding"),
+            // 'diagnose' => Session()->getFlashdata("diagnose"),
+            // 'medication' => Session()->getFlashdata("medication"),
             
         ];
     
@@ -83,14 +84,14 @@ class PetList extends BaseController
     {
         $this->petModel->delete($id);
         session()->setFlashdata('message','Data berhasil dihapus.');
-        return redirect()->to('petList');
+        return redirect()->to('PetList');
     }
 
     public function save($id)
     {
         $validation = \Config\Services::validation();
         //dd($this->request->getVar());
-        
+       
         if(!$this->validate([
             'ownerName' => [
                 'rules' => 'required',
@@ -146,42 +147,12 @@ class PetList extends BaseController
                 'errors' => [
                     'required' => 'Gender Wajib diisi'
                 ],
-            ],
-            // 'amnesa' => [
-            //     'rules' => 'required',
-            //     'errors' => [
-            //         'required' => 'Amnesa Wajib diisi'
-            //     ],
-            // ],
-            // 'statusPresent' => [
-            //     'rules' => 'required',
-            //     'errors' => [
-            //         'required' => 'Status Present Wajib diisi'
-            //     ],
-            // ],
-            // 'temuanKlinis' => [
-            //     'rules' => 'required',
-            //     'errors' => [
-            //         'required' => 'Temuan Klinis Wajib diisi'
-            //     ],
-            // ],
-            // 'diagnosa' => [
-            //     'rules' => 'required',
-            //     'errors' => [
-            //         'required' => 'Diagnosa Wajib diisi'
-            //     ],
-            // ],
-            // 'treatment' => [
-            //     'rules' => 'required',
-            //     'errors' => [
-            //         'required' => 'Diagnosa Wajib diisi'
-            //     ],
-            // ],
+            ]
 
         ])){
             //dd(\Config\Services::validation());
             //dd($this->request->getVar());
-            return redirect()->to(base_url('petlist/detail/'.$id))
+            return redirect()->to(base_url('PetList/detail/'.$id))
             ->with('errorValidasi',$validation->listErrors())
             ->with('ownerName',$validation->getError('ownerName')) // Ini cara ngakalin biar data perkolomnya bisa dilempar ke create
             ->with('petName',$validation->getError('petName'))
@@ -192,15 +163,10 @@ class PetList extends BaseController
             ->with('race',$validation->getError('race'))
             ->with('color',$validation->getError('color'))
             ->with('gender',$validation->getError('gender'));
-            // ->with('amnesa',$validation->getError('amnesa'))
-            // ->with('statusPresent',$validation->getError('statusPresent'))
-            // ->with('temuanKlinis',$validation->getError('temuanKlinis'))
-            // ->with('diagnosa',$validation->getError('diagnosa'))
-            // ->with('treatment',$validation->getError('treatment'));
         }
 
         
-        //dd($id);
+        //dd($this->request->getVar());
         $this->petModel->save([
             'id' => $id,
             'owner_name' => $this->request->getVar('ownerName'),
@@ -215,7 +181,7 @@ class PetList extends BaseController
         ]);
 
         session()->setFlashdata('message','Data Success Updated');
-        return redirect()->to('PetList');
+        return redirect()->to('PetList/detail/'.$id);
     }
     
     public function saveAmbulatoir($id)
@@ -258,13 +224,13 @@ class PetList extends BaseController
         ])){
             //dd(\Config\Services::validation());
             //dd($this->request->getVar());
-            return redirect()->to(base_url('petlist/detail/'.$id))
-            ->with('errorValidasi',$validation->listErrors())
-            ->with('amnesa',$validation->getError('amnesa'))
-            ->with('statusPresent',$validation->getError('statusPresent'))
-            ->with('clinicalFinding',$validation->getError('clinicalFinding'))
-            ->with('diagnosis',$validation->getError('diagnosis'))
-            ->with('medication',$validation->getError('medication'));
+            return redirect()->to(base_url('PetList/detail/'.$id))->withInput()->with('validation',$this->validator);
+            // ->with('errorValidasi',$validation->listErrors())
+            // ->with('amnesa',$validation->getError('amnesa'))
+            // ->with('statusPresent',$validation->getError('statusPresent'))
+            // ->with('clinicalFinding',$validation->getError('clinicalFinding'))
+            // ->with('diagnosis',$validation->getError('diagnosis'))
+            // ->with('medication',$validation->getError('medication'));
         }
         
         //dd($id);

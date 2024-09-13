@@ -10,6 +10,15 @@ body {
     color: #1e3cc4
 }
 
+.color-purple{
+    color:#924272
+}
+
+.bg-text-grey{
+    background-color: #f1f1f1
+}
+
+
 .inout-color-icon{
     color: #f0be18
 }
