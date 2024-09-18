@@ -70,7 +70,7 @@
                                 <button type="submit" class="btn btn-primary btn-sm">Edit</button>
                             </form>
                             <div style="margin-right: 6px;"></div>
-                            <form action="<?= base_url('/PetList/delete/'). $p['id']?>" method="post" class="d-inline">
+                            <form action="<?= base_url('/Ambulatoir/delete/'). $p['id']?>" method="post" class="d-inline">
                                 <?= csrf_field();?>
                                 <input type="hidden" name="_method" value="DELETE">
                                 <button type="submit" class="btn btn-danger text-white btn-sm" onclick="return confirm('Apakah anda yakin menghapus <?=$p['name']?>?');">

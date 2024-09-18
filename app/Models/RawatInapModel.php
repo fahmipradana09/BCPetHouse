@@ -44,9 +44,5 @@ class RawatInapModel extends Model
                     ->where('rawat_inap.id',$id)->first();
     }
 
-    public function getIdAmbulatoir($id){
-        
-    }
-
 }
 

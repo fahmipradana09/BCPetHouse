@@ -13,15 +13,6 @@ class Ambulatoir extends BaseController
     protected $ambulatoirModel;
     protected $rawatInapModel;
 
-
-    public function __construct()
-    {
-        $this->petModel = new PetProfileModel();
-        $this->ambulatoirModel = new AmbulatoirsModel();
-        $this->rawatInapModel = new RawatInapModel();
-
-    }
-
     public function db_ambulatoir($id){
         $db = \Config\Database::connect();
         $builder = $db->table('ambulatoir');
@@ -33,15 +24,17 @@ class Ambulatoir extends BaseController
     
     public function index()
     {
+        $ambulatoirModel = new AmbulatoirsModel();
         $data = [
             'active' => 'ambulatoir',
-            'ambulatoir' => $this->ambulatoirModel->getAmbulatoirAndPetList()
+            'ambulatoir' => $ambulatoirModel->getAmbulatoirAndPetList()
         ];
         return view('admin/ambulatoir/index',$data);
     }
 
     public function create()
     {
+        
         $data = [
             'active' => 'ambulatoir',
             'validation' => \Config\Services::validation(),
@@ -67,13 +60,14 @@ class Ambulatoir extends BaseController
 
     public function detail($id)
     {
+        $ambulatoirModel = new AmbulatoirsModel();
         //dd($this->petModel->getPetProfile($id));
         //dd($id);
         $flag = $this->request->getGet('flag');
         $data = [
             'active' => 'detailpet',
             'flag' => $flag,
-            'pet' => $this->ambulatoirModel->getAmbulatoirAndPetList($id),
+            'pet' => $ambulatoirModel->getAmbulatoirAndPetList($id),
             'validation' => \Config\Services::validation(),
             'errorValidasi' => Session()->getFlashdata("errorValidasi"), //ini alternatif nya pake flash data 
             'ownerName' => Session()->getFlashdata("ownerName"),
@@ -104,11 +98,21 @@ class Ambulatoir extends BaseController
         }
     }
 
+    public function delete($id)
+    {
+        $ambulatoirModel = new AmbulatoirsModel();
+        $ambulatoirModel->delete($id);
+        session()->setFlashdata('message','Data berhasil dihapus.');
+        return redirect()->to('RawatInap');
+    }
+
     public function save()
     {
+        $petModel = new PetProfileModel();
+        $ambulatoirModel = new AmbulatoirsModel();
+        $rawatInapModel = new RawatInapModel();
 
         $validation = \Config\Services::validation(); 
-
     
         if(!$this->validate([
             'ownerName' => [
@@ -217,7 +221,7 @@ class Ambulatoir extends BaseController
         }
 
         //dd($this->request->getVar());
-        $this-> petModel->save([
+        $petModel->save([
             'owner_name' => $this->request->getVar('ownerName'),
             'name' => $this->request->getVar('petName'),
             'age' => $this->request->getVar('age'),
@@ -229,11 +233,11 @@ class Ambulatoir extends BaseController
             'gender'=>$this->request->getVar('gender'),
         ]);
 
-        $petId = $this->petModel->getInsertID();
+        $petId = $petModel->getInsertID();
         //dd($petId);
         //dd($ambulatorId);
 
-        $this->ambulatoirModel->save([
+        $ambulatoirModel->save([
             'pet_id'=> $petId,
             'date_checkup' => $this->request->getVar('date'),
             'amnesa' => $this->request->getVar('amnesa'),
@@ -244,16 +248,16 @@ class Ambulatoir extends BaseController
             'hospitalized_status'=>$this->request->getVar('rawatInap')                                                                                 
         ]);
 
-        $ambulatoirId = $this->ambulatoirModel->getInsertID();
+        $ambulatoirId = $ambulatoirModel->getInsertID();
         $hostpitalized = $this->request->getVar('rawatInap');
 
 
-        $this->rawatInapModel->save([
+        $rawatInapModel->save([
             'id_ambulatoir' => $ambulatoirId,
             'id_petProfile' => $petId
         ]);
 
-        $rawatInapId = $this->rawatInapModel->getInsertID();
+        $rawatInapId = $rawatInapModel->getInsertID();
         // session()->set('ambulatoirId', $ambulatoirId);
         
         session()->setFlashdata('message','Data Success');

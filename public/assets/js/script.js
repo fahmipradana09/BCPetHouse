@@ -78,7 +78,12 @@ $(document).ready(function () {
         myModal.show();
     });
 
-    // Confirm save button in hospitalize modal
+    //Create Ambulatoir
+    $('#confirmSaveCreateAmbulatoir').on('click', function () {
+        $('#ambulatoirCreate').submit();  // Submit the form when confirmed
+    });
+
+    // Petlist -> Create Ambulatoir
     $('#confirmSave').on('click', function () {
         $('#ambulatoirForm').submit();  // Submit the form when confirmed
     });
@@ -89,7 +94,7 @@ $(document).ready(function () {
         myModal.show();
     });
 
-    // Confirm save action and submit form
+    // PetForm
     $('#confirmSavePet').on('click', function () {
         $('#petLisForm').submit();  // This submits the form
     });

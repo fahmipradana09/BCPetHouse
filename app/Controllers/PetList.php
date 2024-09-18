@@ -12,28 +12,12 @@ class PetList extends BaseController
     protected $ambulatoirModel;
     protected $rawatInapModel;
 
-    public function __construct()
-    {
-        $this->petModel = new PetProfileModel();
-        $this->ambulatoirModel = new AmbulatoirsModel();
-        $this->rawatInapModel = new RawatInapModel();
-    }
-
-    public function db_ambulatoir($id){
-        $db = \Config\Database::connect();
-        $builder = $db->table('ambulatoir');
-        $builder->select('*');
-        $builder->where('ambulatoir.pet_id',$id);
-        $query = $builder->get();
-        return $query->getResultArray();
-    }
-
     public function index()
     {   
- 
+        $petModel = new PetProfileModel();
         $data = [
             'active' => 'petlist',
-            'pet' => $this->petModel->getPetProfile()
+            'pet' => $petModel->getPetProfile()
         ];
 
         return view('admin/pet_list/index',$data);
@@ -44,11 +28,13 @@ class PetList extends BaseController
         //dd($this->petModel->getPetProfile($id));
         //dd($id);
         //dd(\Config\Services::validation());
+        $petModel = new PetProfileModel();
+        $ambulatoirModel = new AmbulatoirsModel();
         $flag = $this->request->getGet('flag');
         $data = [
             'active' => 'detailpet',
-            'pet' => $this->petModel->getPetProfile($id),
-            'dataAmbulatoir' => $this->db_ambulatoir($id),
+            'pet' => $petModel->getPetProfile($id),
+            'dataAmbulatoir' => $ambulatoirModel->getAmbulatoirDetailPet($id),
             'flag' => $flag,
             'errorValidasi' => Session()->getFlashdata("errorValidasi"), //ini alternatif nya pake flash data 
             'ownerName' => Session()->getFlashdata("ownerName"),
@@ -81,13 +67,16 @@ class PetList extends BaseController
 
     public function delete($id)
     {
-        $this->petModel->delete($id);
+        $petModel = new PetProfileModel();
+        $petModel->delete($id);
         session()->setFlashdata('message','Data berhasil dihapus.');
         return redirect()->to('PetList');
     }
 
     public function save($id)
     {
+        $petModel = new PetProfileModel();
+        $ambulatoirModel = new AmbulatoirsModel();
         $validation = \Config\Services::validation();
         //dd($this->request->getVar());
        
@@ -149,7 +138,7 @@ class PetList extends BaseController
             ]
 
         ])){
-            dd(\Config\Services::validation());
+            //dd(\Config\Services::validation());
             //dd($this->request->getVar());
             return redirect()->to(base_url('PetList/detail/'.$id))
             ->with('errorValidasi',$validation->listErrors())
@@ -166,7 +155,7 @@ class PetList extends BaseController
 
         
         //dd($this->request->getVar());
-        $this->petModel->save([
+        $petModel->save([
             'id' => $id,
             'owner_name' => $this->request->getVar('ownerName'),
             'name' => $this->request->getVar('petName'),
@@ -185,6 +174,8 @@ class PetList extends BaseController
     
     public function saveAmbulatoir($id)
     {
+        $ambulatoirModel = new AmbulatoirsModel();
+        $rawatInapModel = new RawatInapModel();
         $validation = \Config\Services::validation();
         //dd($this->request->getVar());
         
@@ -233,7 +224,7 @@ class PetList extends BaseController
         }
         
         //dd($id);
-        $this->ambulatoirModel->save([
+        $ambulatoirModel->save([
             'pet_id' => $id,
             'amnesa' => $this->request->getVar('amnesa'),
             'status_present' => $this->request->getVar('statusPresent'),
@@ -243,15 +234,15 @@ class PetList extends BaseController
             'medication' => $this->request->getVar('medication'),
         ]);
 
-        $ambulatoirId = $this->ambulatoirModel->getInsertID();
+        $ambulatoirId = $ambulatoirModel->getInsertID();
         $hostpitalized = $this->request->getVar('rawatInap');
 
-        $this->rawatInapModel->save([
+        $rawatInapModel->save([
             'id_ambulatoir' => $ambulatoirId,
             'id_petProfile' => $id
         ]);
 
-        $rawatInapId = $this->rawatInapModel->getInsertID();
+        $rawatInapId = $rawatInapModel->getInsertID();
 
         session()->setFlashdata('message','Data Success');
         if($hostpitalized == '1'){

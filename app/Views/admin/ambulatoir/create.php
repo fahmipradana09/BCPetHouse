@@ -8,7 +8,7 @@
           <!-- Data nya kosong -->
           <h4>Create NEW Ambulatoir</h4>
         </div>
-        <form class="row m-3 pb-3" action="<?= base_url(); ?>Ambulatoir/save" method="post">
+        <form class="row m-3 pb-3" id="ambulatoirCreate" action="<?= base_url(); ?>Ambulatoir/save" method="post">
           <?= csrf_field(); ?>
 
           <!-- Pet Profile -->
@@ -211,7 +211,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-          <button type="button" id="confirmSave" class="btn bg-primary text-white">Confirm</button>
+          <button type="button" id="confirmSaveCreateAmbulatoir" class="btn bg-primary text-white">Confirm</button>
         </div>
       </div>
     </div>
