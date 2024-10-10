@@ -7,7 +7,7 @@
       </div>
       <!--Body-->
       <div class="modal-body">
-        <form id="fisiologisForm" class="row" action="<?= base_url(); ?>RawatInap/saveFisiologis/<?= isset($dataFisiologisToday['id']) ? $dataFisiologisToday['id'] : '' ?>" method="post">
+        <form id="fisiologisForm" class="row" action="<?= base_url(); ?>RawatInap/saveFisiologis/<?= isset($dataFisiologisToday['id']) ? $dataFisiologisToday['id'] : "" ?>" method="post">
           <?= csrf_field(); ?>
 
 

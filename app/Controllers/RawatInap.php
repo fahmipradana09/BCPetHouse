@@ -47,19 +47,19 @@ class RawatInap extends BaseController
     public function detail($id)
     {
         //dd($this->petModel->getPetProfile($id));
-        //dd($id);\
+        //dd($id);
         try{
             $rawatInapModel = new RawatInapModel();
             $fisiologisModel = new FisiologisModel();
 
-            $ambulatoirId = session()->get('ambulatoirId');
+            $detailID = session()->setFlashdata('detailID',$id);
             $flag = $this->request->getGet('flag');
             $currentDate = new DateTime('now'); 
             $currentDate = $currentDate->format('Y-m-d');
 
             $rawatInapModel = $rawatInapModel->getRawatInap($id);
             $fisiologisAllModel = $fisiologisModel->getFisiologisHospilatizedPet($id);
-            $fisiologisTodayModel = $fisiologisModel->getFisiologiByDate($currentDate);
+            $fisiologisTodayModel = $fisiologisModel->getFisiologiByDate($currentDate,$id);
         }catch (Exception $e){
             return redirect()->to('RawatInap')->with('error','An error occurred:'.$e->getMessage());
         }
@@ -78,9 +78,9 @@ class RawatInap extends BaseController
         ];
         //dd($data);
         //add new ambulatoir if there's in flash data
-        if ($ambulatoirId != null){
-            $data['ambulatoirId'] = $ambulatoirId;
-            }
+            // if ($ambulatoirId != null){
+            //      $data['ambulatoirId'] = $ambulatoirId;
+            // }
         
             if(empty($data['dataInap']))
             {
@@ -167,13 +167,16 @@ class RawatInap extends BaseController
     }
 
 
-    public function saveFisiologis($id = false){
+    public function saveFisiologis ($id = false){
         try{
-
+            //dd($id,$idDetail);
             $fisiologisModel = new FisiologisModel();
+            $detailID = session()->get('detailID');
+            //dd($detailID);
             //update if data not null
             if ($id == false){
                 $fisiologisModel->save([
+                'rawat_inap_id'             => $detailID,
                 'pagi_medication'           => $this->request->getVar('medicationMorning'),
                 'siang_medication'          => $this->request->getVar('medicationAfternoon'),
                 'malam_medication'          => $this->request->getVar('medicationNight'),
@@ -209,6 +212,7 @@ class RawatInap extends BaseController
             }else{
                 $fisiologisModel->save([
                     'id'                        => $id,
+                    'rawat_inap_id'             => $detailID,
                     'pagi_medication'           => $this->request->getVar('medicationMorning'),
                     'siang_medication'          => $this->request->getVar('medicationAfternoon'),
                     'malam_medication'          => $this->request->getVar('medicationNight'),
@@ -242,7 +246,8 @@ class RawatInap extends BaseController
                     ]);
             }
             session()->setFlashdata('message','Data Success Updated');
-            return redirect()->to('RawatInap');
+
+            return redirect()->to(base_url('RawatInap/detail/'.$detailID."?flag=edit"));
 
 
         }catch(Exception $e){

@@ -584,3 +584,991 @@ INFO - 2024-10-10 04:36:15 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-10-10 04:36:15 --> Data Format2024-10-10
 INFO - 2024-10-10 04:36:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-10-10 04:36:15 --> Data Format2024-10-10
+INFO - 2024-10-10 07:08:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:08:53 --> Data Format2024-10-10
+INFO - 2024-10-10 07:09:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:14:06 --> Data Format2024-10-10
+INFO - 2024-10-10 07:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:14:06 --> Data Format2024-10-10
+INFO - 2024-10-10 07:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:14:06 --> Data Format2024-10-10
+INFO - 2024-10-10 07:14:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:14:07 --> Data Format2024-10-10
+INFO - 2024-10-10 07:14:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:14:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:14:11 --> Data Format2024-10-10
+INFO - 2024-10-10 07:14:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:14:11 --> Data Format2024-10-10
+INFO - 2024-10-10 07:14:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-10 07:14:30 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in D:\Project-(external)\BCPetHouse\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Project-(external)\BCPetHouse\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `fisiolo...', 0)
+#1 D:\Project-(external)\BCPetHouse\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `fisiolo...')
+#2 D:\Project-(external)\BCPetHouse\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `fisiolo...')
+#3 D:\Project-(external)\BCPetHouse\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `fisiolo...', Array, false)
+#4 D:\Project-(external)\BCPetHouse\system\Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\Project-(external)\BCPetHouse\system\BaseModel.php(949): CodeIgniter\Model->doUpdate(Array, Array)
+#6 D:\Project-(external)\BCPetHouse\system\Model.php(776): CodeIgniter\BaseModel->update(Array, Array)
+#7 D:\Project-(external)\BCPetHouse\system\BaseModel.php(696): CodeIgniter\Model->update('5', Array)
+#8 D:\Project-(external)\BCPetHouse\app\Controllers\RawatInap.php(210): CodeIgniter\BaseModel->save(Array)
+#9 D:\Project-(external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\RawatInap->saveFisiologis('5')
+#10 D:\Project-(external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+#11 D:\Project-(external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\Project-(external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 D:\Project-(external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project-(ext...')
+#14 {main}
+CRITICAL - 2024-10-10 07:14:30 --> Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `fisiologis` SET `pagi_medication` = :pagi_medication:, `siang_medication` = :siang_medication:, `malam_medication` = :malam_medication:, `pagi_temperature` = :pagi_temperature:, `siang_temperature` = :siang_temperature:, `malam_temperature` = :malam_temperature:, `pagi_respiratory_rate` = :pagi_respiratory_rate:, `siang_respiratory_rate` = :siang_respiratory_rate:, `malam_respiratory_rate` = :malam_respiratory_rate:, `pagi_hearthbeat_rate` = :pagi_hearthbeat_rate:, `siang_hearthbeat_rate` = :siang_hearthbeat_rate:, `malam_hearthbeat_rate` = :malam_hearthbeat_rate:, `pagi_crt` = :pagi_crt:, `siang_crt` = :siang_crt:, `malam_crt` = :malam_crt:, `pagi_turgor` = :pagi_turgor:, `siang_turgor` = :siang_turgor:, `malam_turgor` = :malam_turgor:, `pagi_dideaksi` = :pagi_dideaksi:, `siang_dideaksi` = :siang_dideaksi:, `malam_dideaksi` = :malam_dideaksi:, `pagi_eat_status` = :pagi_eat_status:, `siang_eat_status` = :siang_eat_status:, `malam_eat_status` = :malam_eat_status:, `pagi_drink_status` = :pagi_drink_status:, `siang_drink_status` = :siang_drink_status:, `malam_drink_status` = :malam_drink_status:, `pagi_note` = :pagi_note:, `siang_note` = :siang_note:, `malam_note` = :malam_note:, `updated_at` = :updated_at:
+WHERE `fisiologis`.`id` IN :fisiologis.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(949): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], [...])
+ 5 SYSTEMPATH\BaseModel.php(696): CodeIgniter\Model->update('5', [...])
+ 6 APPPATH\Controllers\RawatInap.php(210): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->saveFisiologis('5')
+ 8 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 07:16:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-10 07:16:16 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in D:\Project-(external)\BCPetHouse\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Project-(external)\BCPetHouse\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `fisiolo...', 0)
+#1 D:\Project-(external)\BCPetHouse\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `fisiolo...')
+#2 D:\Project-(external)\BCPetHouse\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `fisiolo...')
+#3 D:\Project-(external)\BCPetHouse\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `fisiolo...', Array, false)
+#4 D:\Project-(external)\BCPetHouse\system\Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\Project-(external)\BCPetHouse\system\BaseModel.php(949): CodeIgniter\Model->doUpdate(Array, Array)
+#6 D:\Project-(external)\BCPetHouse\system\Model.php(776): CodeIgniter\BaseModel->update(Array, Array)
+#7 D:\Project-(external)\BCPetHouse\system\BaseModel.php(696): CodeIgniter\Model->update('5', Array)
+#8 D:\Project-(external)\BCPetHouse\app\Controllers\RawatInap.php(210): CodeIgniter\BaseModel->save(Array)
+#9 D:\Project-(external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\RawatInap->saveFisiologis('5')
+#10 D:\Project-(external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+#11 D:\Project-(external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\Project-(external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 D:\Project-(external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project-(ext...')
+#14 {main}
+CRITICAL - 2024-10-10 07:16:16 --> Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `fisiologis` SET `pagi_medication` = :pagi_medication:, `siang_medication` = :siang_medication:, `malam_medication` = :malam_medication:, `pagi_temperature` = :pagi_temperature:, `siang_temperature` = :siang_temperature:, `malam_temperature` = :malam_temperature:, `pagi_respiratory_rate` = :pagi_respiratory_rate:, `siang_respiratory_rate` = :siang_respiratory_rate:, `malam_respiratory_rate` = :malam_respiratory_rate:, `pagi_hearthbeat_rate` = :pagi_hearthbeat_rate:, `siang_hearthbeat_rate` = :siang_hearthbeat_rate:, `malam_hearthbeat_rate` = :malam_hearthbeat_rate:, `pagi_crt` = :pagi_crt:, `siang_crt` = :siang_crt:, `malam_crt` = :malam_crt:, `pagi_turgor` = :pagi_turgor:, `siang_turgor` = :siang_turgor:, `malam_turgor` = :malam_turgor:, `pagi_dideaksi` = :pagi_dideaksi:, `siang_dideaksi` = :siang_dideaksi:, `malam_dideaksi` = :malam_dideaksi:, `pagi_eat_status` = :pagi_eat_status:, `siang_eat_status` = :siang_eat_status:, `malam_eat_status` = :malam_eat_status:, `pagi_drink_status` = :pagi_drink_status:, `siang_drink_status` = :siang_drink_status:, `malam_drink_status` = :malam_drink_status:, `pagi_note` = :pagi_note:, `siang_note` = :siang_note:, `malam_note` = :malam_note:, `updated_at` = :updated_at:
+WHERE `fisiologis`.`id` IN :fisiologis.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(949): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], [...])
+ 5 SYSTEMPATH\BaseModel.php(696): CodeIgniter\Model->update('5', [...])
+ 6 APPPATH\Controllers\RawatInap.php(210): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->saveFisiologis('5')
+ 8 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 07:16:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-10 07:16:20 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in D:\Project-(external)\BCPetHouse\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Project-(external)\BCPetHouse\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `fisiolo...', 0)
+#1 D:\Project-(external)\BCPetHouse\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `fisiolo...')
+#2 D:\Project-(external)\BCPetHouse\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `fisiolo...')
+#3 D:\Project-(external)\BCPetHouse\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `fisiolo...', Array, false)
+#4 D:\Project-(external)\BCPetHouse\system\Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\Project-(external)\BCPetHouse\system\BaseModel.php(949): CodeIgniter\Model->doUpdate(Array, Array)
+#6 D:\Project-(external)\BCPetHouse\system\Model.php(776): CodeIgniter\BaseModel->update(Array, Array)
+#7 D:\Project-(external)\BCPetHouse\system\BaseModel.php(696): CodeIgniter\Model->update('5', Array)
+#8 D:\Project-(external)\BCPetHouse\app\Controllers\RawatInap.php(210): CodeIgniter\BaseModel->save(Array)
+#9 D:\Project-(external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\RawatInap->saveFisiologis('5')
+#10 D:\Project-(external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+#11 D:\Project-(external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\Project-(external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 D:\Project-(external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project-(ext...')
+#14 {main}
+CRITICAL - 2024-10-10 07:16:20 --> Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `fisiologis` SET `pagi_medication` = :pagi_medication:, `siang_medication` = :siang_medication:, `malam_medication` = :malam_medication:, `pagi_temperature` = :pagi_temperature:, `siang_temperature` = :siang_temperature:, `malam_temperature` = :malam_temperature:, `pagi_respiratory_rate` = :pagi_respiratory_rate:, `siang_respiratory_rate` = :siang_respiratory_rate:, `malam_respiratory_rate` = :malam_respiratory_rate:, `pagi_hearthbeat_rate` = :pagi_hearthbeat_rate:, `siang_hearthbeat_rate` = :siang_hearthbeat_rate:, `malam_hearthbeat_rate` = :malam_hearthbeat_rate:, `pagi_crt` = :pagi_crt:, `siang_crt` = :siang_crt:, `malam_crt` = :malam_crt:, `pagi_turgor` = :pagi_turgor:, `siang_turgor` = :siang_turgor:, `malam_turgor` = :malam_turgor:, `pagi_dideaksi` = :pagi_dideaksi:, `siang_dideaksi` = :siang_dideaksi:, `malam_dideaksi` = :malam_dideaksi:, `pagi_eat_status` = :pagi_eat_status:, `siang_eat_status` = :siang_eat_status:, `malam_eat_status` = :malam_eat_status:, `pagi_drink_status` = :pagi_drink_status:, `siang_drink_status` = :siang_drink_status:, `malam_drink_status` = :malam_drink_status:, `pagi_note` = :pagi_note:, `siang_note` = :siang_note:, `malam_note` = :malam_note:, `updated_at` = :updated_at:
+WHERE `fisiologis`.`id` IN :fisiologis.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(949): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], [...])
+ 5 SYSTEMPATH\BaseModel.php(696): CodeIgniter\Model->update('5', [...])
+ 6 APPPATH\Controllers\RawatInap.php(210): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->saveFisiologis('5')
+ 8 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 07:16:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:16:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:16:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:16:45 --> Data Format2024-10-10
+INFO - 2024-10-10 07:16:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:16:45 --> Data Format2024-10-10
+INFO - 2024-10-10 07:16:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:16:50 --> Data Format2024-10-10
+INFO - 2024-10-10 07:17:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:17:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:17:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:17:57 --> Data Format2024-10-10
+INFO - 2024-10-10 07:17:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:17:57 --> Data Format2024-10-10
+INFO - 2024-10-10 07:18:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:18:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:18:03 --> Data Format2024-10-10
+INFO - 2024-10-10 07:18:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:18:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:18:10 --> Data Format2024-10-10
+INFO - 2024-10-10 07:18:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:18:12 --> Data Format2024-10-10
+INFO - 2024-10-10 07:18:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:18:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:18:13 --> Data Format2024-10-10
+INFO - 2024-10-10 07:18:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:18:14 --> Data Format2024-10-10
+INFO - 2024-10-10 07:18:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:18:16 --> Data Format2024-10-10
+CRITICAL - 2024-10-10 07:20:22 --> syntax error, unexpected variable "$fisiologisModel"
+in APPPATH\Controllers\RawatInap.php on line 174.
+ 1 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap', 'get')
+ 2 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap')
+ 3 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap')
+ 4 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+CRITICAL - 2024-10-10 07:20:22 --> syntax error, unexpected variable "$fisiologisModel"
+in APPPATH\Controllers\RawatInap.php on line 174.
+ 1 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap/detail/47', 'get')
+ 2 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap/detail/47')
+ 3 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap/detail/47')
+ 4 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+CRITICAL - 2024-10-10 07:20:22 --> syntax error, unexpected variable "$fisiologisModel"
+in APPPATH\Controllers\RawatInap.php on line 174.
+ 1 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap', 'get')
+ 2 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap')
+ 3 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap')
+ 4 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+WARNING - 2024-10-10 07:22:27 --> [DEPRECATED] Optional parameter $id declared before required parameter $idDetail is implicitly treated as a required parameter in APPPATH\Controllers\RawatInap.php on line 170.
+ 1 SYSTEMPATH\Router\AutoRouter.php(161): include_once('D:\\Project-(external)\\BCPetHouse\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap', 'get')
+ 3 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap')
+ 4 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap')
+ 5 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 07:22:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-10 07:22:29 --> [DEPRECATED] Optional parameter $id declared before required parameter $idDetail is implicitly treated as a required parameter in APPPATH\Controllers\RawatInap.php on line 170.
+ 1 SYSTEMPATH\Router\AutoRouter.php(161): include_once('D:\\Project-(external)\\BCPetHouse\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap/detail/1', 'get')
+ 3 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap/detail/1')
+ 4 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap/detail/1')
+ 5 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 07:22:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:22:29 --> Data Format2024-10-10
+WARNING - 2024-10-10 07:22:31 --> [DEPRECATED] Optional parameter $id declared before required parameter $idDetail is implicitly treated as a required parameter in APPPATH\Controllers\RawatInap.php on line 170.
+ 1 SYSTEMPATH\Router\AutoRouter.php(161): include_once('D:\\Project-(external)\\BCPetHouse\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap', 'get')
+ 3 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap')
+ 4 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap')
+ 5 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 07:22:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-10 07:23:38 --> [DEPRECATED] Optional parameter $id declared before required parameter $idDetail is implicitly treated as a required parameter in APPPATH\Controllers\RawatInap.php on line 170.
+ 1 SYSTEMPATH\Router\AutoRouter.php(161): include_once('D:\\Project-(external)\\BCPetHouse\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap', 'get')
+ 3 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap')
+ 4 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap')
+ 5 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 07:23:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-10 07:23:52 --> [DEPRECATED] Optional parameter $id declared before required parameter $idDetail is implicitly treated as a required parameter in APPPATH\Controllers\RawatInap.php on line 170.
+ 1 SYSTEMPATH\Router\AutoRouter.php(161): include_once('D:\\Project-(external)\\BCPetHouse\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap', 'get')
+ 3 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap')
+ 4 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap')
+ 5 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 07:23:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-10 07:23:55 --> [DEPRECATED] Optional parameter $id declared before required parameter $idDetail is implicitly treated as a required parameter in APPPATH\Controllers\RawatInap.php on line 170.
+ 1 SYSTEMPATH\Router\AutoRouter.php(161): include_once('D:\\Project-(external)\\BCPetHouse\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap/detail/47', 'get')
+ 3 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap/detail/47')
+ 4 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap/detail/47')
+ 5 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 07:23:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:23:55 --> Data Format2024-10-10
+WARNING - 2024-10-10 07:23:55 --> [DEPRECATED] Optional parameter $id declared before required parameter $idDetail is implicitly treated as a required parameter in APPPATH\Controllers\RawatInap.php on line 170.
+ 1 SYSTEMPATH\Router\AutoRouter.php(161): include_once('D:\\Project-(external)\\BCPetHouse\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap/detail/47', 'get')
+ 3 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap/detail/47')
+ 4 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap/detail/47')
+ 5 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 07:23:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:23:55 --> Data Format2024-10-10
+WARNING - 2024-10-10 07:24:06 --> [DEPRECATED] Optional parameter $id declared before required parameter $idDetail is implicitly treated as a required parameter in APPPATH\Controllers\RawatInap.php on line 170.
+ 1 SYSTEMPATH\Router\AutoRouter.php(161): include_once('D:\\Project-(external)\\BCPetHouse\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap/saveFisiologis/5/<', 'post')
+ 3 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap/saveFisiologis/5/<')
+ 4 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap/saveFisiologis/5/<')
+ 5 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 07:24:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-10 07:24:06 --> [DEPRECATED] Optional parameter $id declared before required parameter $idDetail is implicitly treated as a required parameter in APPPATH\Controllers\RawatInap.php on line 170.
+ 1 SYSTEMPATH\Router\AutoRouter.php(161): include_once('D:\\Project-(external)\\BCPetHouse\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap/detail/<', 'get')
+ 3 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap/detail/<')
+ 4 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap/detail/<')
+ 5 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 07:24:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:24:06 --> Data Format2024-10-10
+INFO - 2024-10-10 07:45:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:45:01 --> Data Format2024-10-10
+INFO - 2024-10-10 07:45:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:45:02 --> Data Format2024-10-10
+CRITICAL - 2024-10-10 07:45:02 --> Undefined variable $rawatInapModel
+in APPPATH\Views\layout\modal_pop_up\fisiologisModal.php on line 10.
+ 1 APPPATH\Views\layout\modal_pop_up\fisiologisModal.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rawatInapModel', 'D:\\Project-(external)\\BCPetHouse\\app\\Views\\layout\\modal_pop_up\\fisiologisModal.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project-(external)\\BCPetHouse\\app\\Views\\layout\\modal_pop_up\\fisiologisModal.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('layout/modal_pop_up/fisiologisModal', null, true)
+ 5 APPPATH\Views\admin\rawat_inap\detail.php(133): CodeIgniter\View\View->include('layout/modal_pop_up/fisiologisModal')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\Project-(external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/detail', [], true)
+ 9 APPPATH\Controllers\RawatInap.php(90): view('admin/rawat_inap/detail', [...])
+10 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail('47')
+11 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+12 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 07:45:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:45:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:45:13 --> Data Format2024-10-10
+CRITICAL - 2024-10-10 07:45:13 --> Undefined variable $rawatInapModel
+in APPPATH\Views\layout\modal_pop_up\fisiologisModal.php on line 10.
+ 1 APPPATH\Views\layout\modal_pop_up\fisiologisModal.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rawatInapModel', 'D:\\Project-(external)\\BCPetHouse\\app\\Views\\layout\\modal_pop_up\\fisiologisModal.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project-(external)\\BCPetHouse\\app\\Views\\layout\\modal_pop_up\\fisiologisModal.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('layout/modal_pop_up/fisiologisModal', null, true)
+ 5 APPPATH\Views\admin\rawat_inap\detail.php(133): CodeIgniter\View\View->include('layout/modal_pop_up/fisiologisModal')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\Project-(external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/detail', [], true)
+ 9 APPPATH\Controllers\RawatInap.php(90): view('admin/rawat_inap/detail', [...])
+10 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail('47')
+11 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+12 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 07:45:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:45:13 --> Data Format2024-10-10
+CRITICAL - 2024-10-10 07:45:13 --> Undefined variable $rawatInapModel
+in APPPATH\Views\layout\modal_pop_up\fisiologisModal.php on line 10.
+ 1 APPPATH\Views\layout\modal_pop_up\fisiologisModal.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rawatInapModel', 'D:\\Project-(external)\\BCPetHouse\\app\\Views\\layout\\modal_pop_up\\fisiologisModal.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Project-(external)\\BCPetHouse\\app\\Views\\layout\\modal_pop_up\\fisiologisModal.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('layout/modal_pop_up/fisiologisModal', null, true)
+ 5 APPPATH\Views\admin\rawat_inap\detail.php(133): CodeIgniter\View\View->include('layout/modal_pop_up/fisiologisModal')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\Project-(external)\\BCPetHouse\\app\\Views\\admin\\rawat_inap\\detail.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/rawat_inap/detail', [], true)
+ 9 APPPATH\Controllers\RawatInap.php(90): view('admin/rawat_inap/detail', [...])
+10 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail('47')
+11 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+12 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 07:45:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:45:47 --> Data Format2024-10-10
+INFO - 2024-10-10 07:45:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-10 07:45:58 --> Undefined variable $idDetail
+in APPPATH\Controllers\RawatInap.php on line 245.
+ 1 APPPATH\Controllers\RawatInap.php(245): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idDetail', 'D:\\Project-(external)\\BCPetHouse\\app\\Controllers\\RawatInap.php', 245)
+ 2 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->saveFisiologis('5', '1')
+ 3 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+WARNING - 2024-10-10 07:46:34 --> [DEPRECATED] Optional parameter $id declared before required parameter $idDetail is implicitly treated as a required parameter in APPPATH\Controllers\RawatInap.php on line 170.
+ 1 SYSTEMPATH\Router\AutoRouter.php(161): include_once('D:\\Project-(external)\\BCPetHouse\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap/saveFisiologis/5/1', 'post')
+ 3 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap/saveFisiologis/5/1')
+ 4 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap/saveFisiologis/5/1')
+ 5 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 07:46:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-10 07:46:34 --> [DEPRECATED] Optional parameter $id declared before required parameter $idDetail is implicitly treated as a required parameter in APPPATH\Controllers\RawatInap.php on line 170.
+ 1 SYSTEMPATH\Router\AutoRouter.php(161): include_once('D:\\Project-(external)\\BCPetHouse\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap/detail/1', 'get')
+ 3 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap/detail/1')
+ 4 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap/detail/1')
+ 5 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 07:46:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:46:34 --> Data Format2024-10-10
+WARNING - 2024-10-10 07:46:39 --> [DEPRECATED] Optional parameter $id declared before required parameter $idDetail is implicitly treated as a required parameter in APPPATH\Controllers\RawatInap.php on line 170.
+ 1 SYSTEMPATH\Router\AutoRouter.php(161): include_once('D:\\Project-(external)\\BCPetHouse\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap/save/8', 'post')
+ 3 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap/save/8')
+ 4 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap/save/8')
+ 5 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 07:46:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-10 07:46:39 --> Undefined variable $ambulatoirModel
+in APPPATH\Controllers\RawatInap.php on line 152.
+ 1 APPPATH\Controllers\RawatInap.php(152): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ambulatoirModel', 'D:\\Project-(external)\\BCPetHouse\\app\\Controllers\\RawatInap.php', 152)
+ 2 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->save('8')
+ 3 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+WARNING - 2024-10-10 07:46:41 --> [DEPRECATED] Optional parameter $id declared before required parameter $idDetail is implicitly treated as a required parameter in APPPATH\Controllers\RawatInap.php on line 170.
+ 1 SYSTEMPATH\Router\AutoRouter.php(161): include_once('D:\\Project-(external)\\BCPetHouse\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap/detail/1', 'get')
+ 3 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap/detail/1')
+ 4 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap/detail/1')
+ 5 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 07:46:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:46:41 --> Data Format2024-10-10
+CRITICAL - 2024-10-10 07:48:12 --> syntax error, unexpected token "="
+in APPPATH\Controllers\RawatInap.php on line 245.
+ 1 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap/detail/1', 'get')
+ 2 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap/detail/1')
+ 3 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap/detail/1')
+ 4 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+WARNING - 2024-10-10 07:48:46 --> [DEPRECATED] Optional parameter $id declared before required parameter $idDetail is implicitly treated as a required parameter in APPPATH\Controllers\RawatInap.php on line 170.
+ 1 SYSTEMPATH\Router\AutoRouter.php(161): include_once('D:\\Project-(external)\\BCPetHouse\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap/detail/47', 'get')
+ 3 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap/detail/47')
+ 4 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap/detail/47')
+ 5 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 07:48:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:48:46 --> Data Format2024-10-10
+WARNING - 2024-10-10 07:59:48 --> [DEPRECATED] Optional parameter $id declared before required parameter $idDetail is implicitly treated as a required parameter in APPPATH\Controllers\RawatInap.php on line 170.
+ 1 SYSTEMPATH\Router\AutoRouter.php(161): include_once('D:\\Project-(external)\\BCPetHouse\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap', 'get')
+ 3 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap')
+ 4 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap')
+ 5 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 07:59:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-10 07:59:48 --> [DEPRECATED] Optional parameter $id declared before required parameter $idDetail is implicitly treated as a required parameter in APPPATH\Controllers\RawatInap.php on line 170.
+ 1 SYSTEMPATH\Router\AutoRouter.php(161): include_once('D:\\Project-(external)\\BCPetHouse\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap/detail/47', 'get')
+ 3 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap/detail/47')
+ 4 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap/detail/47')
+ 5 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 07:59:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:59:48 --> Data Format2024-10-10
+WARNING - 2024-10-10 07:59:48 --> [DEPRECATED] Optional parameter $id declared before required parameter $idDetail is implicitly treated as a required parameter in APPPATH\Controllers\RawatInap.php on line 170.
+ 1 SYSTEMPATH\Router\AutoRouter.php(161): include_once('D:\\Project-(external)\\BCPetHouse\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap', 'get')
+ 3 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap')
+ 4 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap')
+ 5 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 07:59:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:59:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:59:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-10 07:59:49 --> [DEPRECATED] Optional parameter $id declared before required parameter $idDetail is implicitly treated as a required parameter in APPPATH\Controllers\RawatInap.php on line 170.
+ 1 SYSTEMPATH\Router\AutoRouter.php(161): include_once('D:\\Project-(external)\\BCPetHouse\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap/detail/47', 'get')
+ 3 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap/detail/47')
+ 4 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap/detail/47')
+ 5 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 07:59:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:59:49 --> Data Format2024-10-10
+WARNING - 2024-10-10 07:59:54 --> [DEPRECATED] Optional parameter $id declared before required parameter $idDetail is implicitly treated as a required parameter in APPPATH\Controllers\RawatInap.php on line 170.
+ 1 SYSTEMPATH\Router\AutoRouter.php(161): include_once('D:\\Project-(external)\\BCPetHouse\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap', 'get')
+ 3 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap')
+ 4 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap')
+ 5 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 07:59:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-10 07:59:56 --> [DEPRECATED] Optional parameter $id declared before required parameter $idDetail is implicitly treated as a required parameter in APPPATH\Controllers\RawatInap.php on line 170.
+ 1 SYSTEMPATH\Router\AutoRouter.php(161): include_once('D:\\Project-(external)\\BCPetHouse\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap/detail/1', 'get')
+ 3 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap/detail/1')
+ 4 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap/detail/1')
+ 5 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 07:59:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:59:56 --> Data Format2024-10-10
+WARNING - 2024-10-10 07:59:56 --> [DEPRECATED] Optional parameter $id declared before required parameter $idDetail is implicitly treated as a required parameter in APPPATH\Controllers\RawatInap.php on line 170.
+ 1 SYSTEMPATH\Router\AutoRouter.php(161): include_once('D:\\Project-(external)\\BCPetHouse\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap/detail/1', 'get')
+ 3 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap/detail/1')
+ 4 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap/detail/1')
+ 5 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 07:59:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 07:59:56 --> Data Format2024-10-10
+WARNING - 2024-10-10 08:03:41 --> [DEPRECATED] Optional parameter $id declared before required parameter $idDetail is implicitly treated as a required parameter in APPPATH\Controllers\RawatInap.php on line 170.
+ 1 SYSTEMPATH\Router\AutoRouter.php(161): include_once('D:\\Project-(external)\\BCPetHouse\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap/detail/1', 'get')
+ 3 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap/detail/1')
+ 4 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap/detail/1')
+ 5 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 08:03:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-10 08:03:41 --> syntax error, unexpected token "->", expecting identifier or variable or "{" or "$"
+in APPPATH\Models\FisiologisModel.php on line 91.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\Project-(external)\\BCPetHouse\\app\\Models\\FisiologisModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\FisiologisModel')
+ 3 APPPATH\Controllers\RawatInap.php(53): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\FisiologisModel')
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail('1')
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+WARNING - 2024-10-10 08:04:56 --> [DEPRECATED] Optional parameter $id declared before required parameter $idDetail is implicitly treated as a required parameter in APPPATH\Controllers\RawatInap.php on line 170.
+ 1 SYSTEMPATH\Router\AutoRouter.php(161): include_once('D:\\Project-(external)\\BCPetHouse\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap/detail/1', 'get')
+ 3 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap/detail/1')
+ 4 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap/detail/1')
+ 5 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 08:04:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:04:56 --> Data Format2024-10-10
+WARNING - 2024-10-10 08:05:04 --> [DEPRECATED] Optional parameter $id declared before required parameter $idDetail is implicitly treated as a required parameter in APPPATH\Controllers\RawatInap.php on line 170.
+ 1 SYSTEMPATH\Router\AutoRouter.php(161): include_once('D:\\Project-(external)\\BCPetHouse\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap/saveFisiologis/8', 'post')
+ 3 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap/saveFisiologis/8')
+ 4 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap/saveFisiologis/8')
+ 5 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 08:05:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-10 08:05:04 --> Too few arguments to function App\Controllers\RawatInap::saveFisiologis(), 1 passed in D:\Project-(external)\BCPetHouse\system\CodeIgniter.php on line 915 and exactly 2 expected
+in APPPATH\Controllers\RawatInap.php on line 0.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->saveFisiologis('8')
+ 2 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+WARNING - 2024-10-10 08:08:03 --> [DEPRECATED] Optional parameter $id declared before required parameter $idDetail is implicitly treated as a required parameter in APPPATH\Controllers\RawatInap.php on line 170.
+ 1 SYSTEMPATH\Router\AutoRouter.php(161): include_once('D:\\Project-(external)\\BCPetHouse\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap/detail/1', 'get')
+ 3 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap/detail/1')
+ 4 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap/detail/1')
+ 5 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 08:08:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:08:03 --> Data Format2024-10-10
+WARNING - 2024-10-10 08:08:12 --> [DEPRECATED] Optional parameter $id declared before required parameter $idDetail is implicitly treated as a required parameter in APPPATH\Controllers\RawatInap.php on line 170.
+ 1 SYSTEMPATH\Router\AutoRouter.php(161): include_once('D:\\Project-(external)\\BCPetHouse\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap/saveFisiologis/', 'post')
+ 3 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap/saveFisiologis/')
+ 4 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap/saveFisiologis/')
+ 5 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 08:08:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-10 08:08:12 --> Too few arguments to function App\Controllers\RawatInap::saveFisiologis(), 0 passed in D:\Project-(external)\BCPetHouse\system\CodeIgniter.php on line 915 and exactly 2 expected
+in APPPATH\Controllers\RawatInap.php on line 0.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->saveFisiologis()
+ 2 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 08:08:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-10 08:08:52 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in D:\Project-(external)\BCPetHouse\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Project-(external)\BCPetHouse\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `fi...', 0)
+#1 D:\Project-(external)\BCPetHouse\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fi...')
+#2 D:\Project-(external)\BCPetHouse\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `fi...')
+#3 D:\Project-(external)\BCPetHouse\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fi...', Array, false)
+#4 D:\Project-(external)\BCPetHouse\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\Project-(external)\BCPetHouse\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 D:\Project-(external)\BCPetHouse\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\Project-(external)\BCPetHouse\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 D:\Project-(external)\BCPetHouse\app\Controllers\RawatInap.php(176): CodeIgniter\BaseModel->save(Array)
+#9 D:\Project-(external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\RawatInap->saveFisiologis()
+#10 D:\Project-(external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+#11 D:\Project-(external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\Project-(external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 D:\Project-(external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project-(ext...')
+#14 {main}
+CRITICAL - 2024-10-10 08:08:52 --> Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fisiologis` (`pagi_medication`, `siang_medication`, `malam_medication`, `pagi_temperature`, `siang_temperature`, `malam_temperature`, `pagi_respiratory_rate`, `siang_respiratory_rate`, `malam_respiratory_rate`, `pagi_hearthbeat_rate`, `siang_hearthbeat_rate`, `malam_hearthbeat_rate`, `pagi_crt`, `siang_crt`, `malam_crt`, `pagi_turgor`, `siang_turgor`, `malam_turgor`, `pagi_dideaksi`, `siang_dideaksi`, `malam_dideaksi`, `pagi_eat_status`, `siang_eat_status`, `malam_eat_status`, `pagi_drink_status`, `siang_drink_status`, `malam_drink_status`, `pagi_note`, `siang_note`, `malam_note`, `created_at`, `updated_at`) VALUES (:pagi_medication:, :siang_medication:, :malam_medication:, :pagi_temperature:, :siang_temperature:, :malam_temperature:, :pagi_respiratory_rate:, :siang_respiratory_rate:, :malam_respiratory_rate:, :pagi_hearthbeat_rate:, :siang_hearthbeat_rate:, :malam_hearthbeat_rate:, :pagi_crt:, :siang_crt:, :malam_crt:, :pagi_turgor:, :siang_turgor:, :malam_turgor:, :pagi_dideaksi:, :siang_dideaksi:, :malam_dideaksi:, :pagi_eat_status:, :siang_eat_status:, :malam_eat_status:, :pagi_drink_status:, :siang_drink_status:, :malam_drink_status:, :pagi_note:, :siang_note:, :malam_note:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\RawatInap.php(176): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->saveFisiologis()
+ 8 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 08:10:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:10:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-10 08:10:03 --> Too few arguments to function App\Controllers\RawatInap::detail(), 0 passed in D:\Project-(external)\BCPetHouse\system\CodeIgniter.php on line 915 and exactly 1 expected
+in APPPATH\Controllers\RawatInap.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail()
+ 2 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 08:11:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-10 08:11:40 --> Too few arguments to function App\Controllers\RawatInap::detail(), 0 passed in D:\Project-(external)\BCPetHouse\system\CodeIgniter.php on line 915 and exactly 1 expected
+in APPPATH\Controllers\RawatInap.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail()
+ 2 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 08:11:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:11:46 --> Data Format2024-10-10
+INFO - 2024-10-10 08:12:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:12:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-10 08:12:00 --> Too few arguments to function App\Controllers\RawatInap::detail(), 0 passed in D:\Project-(external)\BCPetHouse\system\CodeIgniter.php on line 915 and exactly 1 expected
+in APPPATH\Controllers\RawatInap.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail()
+ 2 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 08:12:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:12:22 --> Data Format2024-10-10
+CRITICAL - 2024-10-10 08:13:16 --> syntax error, unexpected single-quoted string "pagi_medication", expecting "]"
+in APPPATH\Controllers\RawatInap.php on line 178.
+ 1 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap/detail/1', 'get')
+ 2 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap/detail/1')
+ 3 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap/detail/1')
+ 4 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 08:14:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:14:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:14:10 --> Data Format2024-10-10
+INFO - 2024-10-10 08:14:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:14:10 --> Data Format2024-10-10
+INFO - 2024-10-10 08:14:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:14:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-10 08:14:23 --> Too few arguments to function App\Controllers\RawatInap::detail(), 0 passed in D:\Project-(external)\BCPetHouse\system\CodeIgniter.php on line 915 and exactly 1 expected
+in APPPATH\Controllers\RawatInap.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail()
+ 2 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 08:15:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-10 08:15:28 --> Too few arguments to function App\Controllers\RawatInap::detail(), 0 passed in D:\Project-(external)\BCPetHouse\system\CodeIgniter.php on line 915 and exactly 1 expected
+in APPPATH\Controllers\RawatInap.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail()
+ 2 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 08:15:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:15:29 --> Data Format2024-10-10
+INFO - 2024-10-10 08:15:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:15:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-10 08:15:36 --> Too few arguments to function App\Controllers\RawatInap::detail(), 0 passed in D:\Project-(external)\BCPetHouse\system\CodeIgniter.php on line 915 and exactly 1 expected
+in APPPATH\Controllers\RawatInap.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail()
+ 2 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 08:16:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:16:00 --> Data Format2024-10-10
+INFO - 2024-10-10 08:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:16:50 --> Data Format2024-10-10
+INFO - 2024-10-10 08:16:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:16:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-10 08:16:59 --> Too few arguments to function App\Controllers\RawatInap::detail(), 0 passed in D:\Project-(external)\BCPetHouse\system\CodeIgniter.php on line 915 and exactly 1 expected
+in APPPATH\Controllers\RawatInap.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail()
+ 2 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 08:20:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:20:45 --> Data Format2024-10-10
+CRITICAL - 2024-10-10 08:22:22 --> syntax error, unexpected variable "$fisiologisModel"
+in APPPATH\Controllers\RawatInap.php on line 173.
+ 1 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap/detail/1', 'get')
+ 2 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap/detail/1')
+ 3 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap/detail/1')
+ 4 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 08:22:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:22:42 --> Data Format2024-10-10
+INFO - 2024-10-10 08:22:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:24:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:24:54 --> Data Format2024-10-10
+INFO - 2024-10-10 08:24:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:25:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:25:01 --> Data Format2024-10-10
+INFO - 2024-10-10 08:25:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:25:01 --> Data Format2024-10-10
+INFO - 2024-10-10 08:25:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:25:27 --> Data Format2024-10-10
+INFO - 2024-10-10 08:25:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:25:38 --> Data Format2024-10-10
+INFO - 2024-10-10 08:59:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:59:06 --> Data Format2024-10-10
+INFO - 2024-10-10 08:59:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:59:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:59:14 --> Data Format2024-10-10
+INFO - 2024-10-10 08:59:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 08:59:14 --> Data Format2024-10-10
+INFO - 2024-10-10 08:59:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:00:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:00:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:00:37 --> Data Format2024-10-10
+INFO - 2024-10-10 09:00:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:00:37 --> Data Format2024-10-10
+INFO - 2024-10-10 09:00:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:00:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-10 09:00:47 --> Too few arguments to function App\Controllers\RawatInap::detail(), 0 passed in D:\Project-(external)\BCPetHouse\system\CodeIgniter.php on line 915 and exactly 1 expected
+in APPPATH\Controllers\RawatInap.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail()
+ 2 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 09:21:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:21:20 --> Data Format2024-10-10
+INFO - 2024-10-10 09:21:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:21:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:21:26 --> Data Format2024-10-10
+INFO - 2024-10-10 09:22:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:22:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:22:53 --> Data Format2024-10-10
+INFO - 2024-10-10 09:23:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:23:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:23:23 --> Data Format2024-10-10
+INFO - 2024-10-10 09:23:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:23:24 --> Data Format2024-10-10
+INFO - 2024-10-10 09:24:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:24:33 --> Data Format2024-10-10
+INFO - 2024-10-10 09:24:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:24:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:24:33 --> Data Format2024-10-10
+INFO - 2024-10-10 09:24:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:24:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:24:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:24:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:24:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:24:33 --> Data Format2024-10-10
+INFO - 2024-10-10 09:27:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:27:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:27:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:27:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:27:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:27:33 --> Data Format2024-10-10
+INFO - 2024-10-10 09:27:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:27:50 --> Data Format2024-10-10
+INFO - 2024-10-10 09:29:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:29:38 --> Data Format2024-10-10
+ERROR - 2024-10-10 09:29:38 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= '1'
+ LIMIT 1' at line 5 in D:\Project-(external)\BCPetHouse\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Project-(external)\BCPetHouse\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `fisiolo...', 0)
+#1 D:\Project-(external)\BCPetHouse\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fisiolo...')
+#2 D:\Project-(external)\BCPetHouse\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fisiolo...')
+#3 D:\Project-(external)\BCPetHouse\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `fisiolo...', Array, false)
+#4 D:\Project-(external)\BCPetHouse\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Project-(external)\BCPetHouse\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 D:\Project-(external)\BCPetHouse\app\Models\FisiologisModel.php(93): CodeIgniter\BaseModel->first()
+#7 D:\Project-(external)\BCPetHouse\app\Controllers\RawatInap.php(62): App\Models\FisiologisModel->getFisiologiByDate('2024-10-10', '1')
+#8 D:\Project-(external)\BCPetHouse\system\CodeIgniter.php(915): App\Controllers\RawatInap->detail('1')
+#9 D:\Project-(external)\BCPetHouse\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+#10 D:\Project-(external)\BCPetHouse\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Project-(external)\BCPetHouse\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Project-(external)\BCPetHouse\system\Commands\Server\rewrite.php(47): require_once('D:\\Project-(ext...')
+#13 {main}
+CRITICAL - 2024-10-10 09:29:38 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= '1'
+ LIMIT 1' at line 5
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `fisiologis`.*
+FROM `fisiologis`
+JOIN `rawat_inap` as `r` ON `fisiologis`.`rawat_inap_id` = `r`.`id`
+WHERE `fisiologis`.`date_rawatInap` LIKE :fisiologis.date_rawatInap: ESCAPE \'!\'
+AND   = ::
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\FisiologisModel.php(93): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\RawatInap.php(62): App\Models\FisiologisModel->getFisiologiByDate('2024-10-10', '1')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 09:30:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:30:25 --> Data Format2024-10-10
+INFO - 2024-10-10 09:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:30:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:30:59 --> Data Format2024-10-10
+INFO - 2024-10-10 09:30:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:30:59 --> Data Format2024-10-10
+INFO - 2024-10-10 09:31:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:31:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:31:05 --> Data Format2024-10-10
+INFO - 2024-10-10 09:31:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:31:06 --> Data Format2024-10-10
+INFO - 2024-10-10 09:31:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:31:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:31:13 --> Data Format2024-10-10
+INFO - 2024-10-10 09:35:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:35:47 --> Data Format2024-10-10
+INFO - 2024-10-10 09:35:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:35:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:35:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:35:47 --> Data Format2024-10-10
+INFO - 2024-10-10 09:35:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:35:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:35:50 --> Data Format2024-10-10
+INFO - 2024-10-10 09:35:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:35:50 --> Data Format2024-10-10
+INFO - 2024-10-10 09:35:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:36:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:36:05 --> Data Format2024-10-10
+INFO - 2024-10-10 09:36:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:36:06 --> Data Format2024-10-10
+INFO - 2024-10-10 09:36:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:36:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:36:12 --> Data Format2024-10-10
+INFO - 2024-10-10 09:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:38:08 --> Data Format2024-10-10
+INFO - 2024-10-10 09:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:38:10 --> Data Format2024-10-10
+INFO - 2024-10-10 09:38:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:38:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:38:17 --> Data Format2024-10-10
+INFO - 2024-10-10 09:38:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:38:31 --> Data Format2024-10-10
+INFO - 2024-10-10 09:38:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:38:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:38:37 --> Data Format2024-10-10
+INFO - 2024-10-10 09:55:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:55:26 --> Data Format2024-10-10
+INFO - 2024-10-10 09:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:56:59 --> Data Format2024-10-10
+INFO - 2024-10-10 09:57:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 09:57:44 --> Data Format2024-10-10
+INFO - 2024-10-10 10:01:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:01:12 --> Data Format2024-10-10
+INFO - 2024-10-10 10:01:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-10 10:01:45 --> Too few arguments to function CodeIgniter\Session\Session::setFlashdata(), 0 passed in D:\Project-(external)\BCPetHouse\app\Controllers\RawatInap.php on line 55 and at least 1 expected
+in SYSTEMPATH\Session\Session.php on line 625.
+ 1 APPPATH\Controllers\RawatInap.php(55): CodeIgniter\Session\Session->setFlashdata()
+ 2 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail(' 8')
+ 3 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 10:02:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:02:05 --> Data Format2024-10-10
+CRITICAL - 2024-10-10 10:02:28 --> syntax error, unexpected token "if", expecting variable or "{" or "$"
+in APPPATH\Controllers\RawatInap.php on line 177.
+ 1 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap/detail/ 8', 'get')
+ 2 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap/detail/ 8')
+ 3 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap/detail/ 8')
+ 4 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 10:03:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:03:15 --> Data Format2024-10-10
+INFO - 2024-10-10 10:03:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-10 10:03:21 --> Call to undefined function App\Controllers\get()
+in APPPATH\Controllers\RawatInap.php on line 174.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->saveFisiologis('7')
+ 2 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 10:03:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:03:31 --> Data Format2024-10-10
+INFO - 2024-10-10 10:03:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-10 10:03:36 --> Undefined variable $idDetail
+in APPPATH\Controllers\RawatInap.php on line 250.
+ 1 APPPATH\Controllers\RawatInap.php(250): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idDetail', 'D:\\Project-(external)\\BCPetHouse\\app\\Controllers\\RawatInap.php', 250)
+ 2 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->saveFisiologis('7')
+ 3 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 10:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:03:49 --> Data Format2024-10-10
+INFO - 2024-10-10 10:03:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:03:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:03:54 --> Data Format2024-10-10
+INFO - 2024-10-10 10:03:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:03:58 --> Data Format2024-10-10
+INFO - 2024-10-10 10:04:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:04:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:04:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:04:06 --> Data Format2024-10-10
+INFO - 2024-10-10 10:04:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:04:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:04:16 --> Data Format2024-10-10
+CRITICAL - 2024-10-10 10:09:11 --> syntax error, unexpected token "if"
+in APPPATH\Controllers\RawatInap.php on line 177.
+ 1 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap/saveFisiologis/', 'post')
+ 2 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap/saveFisiologis/')
+ 3 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap/saveFisiologis/')
+ 4 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+CRITICAL - 2024-10-10 10:09:11 --> syntax error, unexpected token "if"
+in APPPATH\Controllers\RawatInap.php on line 177.
+ 1 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap/saveFisiologis/', 'post')
+ 2 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap/saveFisiologis/')
+ 3 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap/saveFisiologis/')
+ 4 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+CRITICAL - 2024-10-10 10:09:12 --> syntax error, unexpected token "if"
+in APPPATH\Controllers\RawatInap.php on line 177.
+ 1 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap/saveFisiologis/', 'get')
+ 2 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap/saveFisiologis/')
+ 3 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap/saveFisiologis/')
+ 4 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+CRITICAL - 2024-10-10 10:09:12 --> syntax error, unexpected token "if"
+in APPPATH\Controllers\RawatInap.php on line 177.
+ 1 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('RawatInap/detail/6', 'get')
+ 2 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('RawatInap/detail/6')
+ 3 SYSTEMPATH\CodeIgniter.php(796): CodeIgniter\Router\Router->handle('RawatInap/detail/6')
+ 4 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 10:09:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:10:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:10:18 --> Data Format2024-10-10
+INFO - 2024-10-10 10:10:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:10:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:10:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-10 10:10:33 --> Too few arguments to function App\Controllers\RawatInap::detail(), 0 passed in D:\Project-(external)\BCPetHouse\system\CodeIgniter.php on line 915 and exactly 1 expected
+in APPPATH\Controllers\RawatInap.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail()
+ 2 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 10:10:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:10:36 --> Data Format2024-10-10
+INFO - 2024-10-10 10:10:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:10:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:10:41 --> Data Format2024-10-10
+INFO - 2024-10-10 10:11:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-10 10:11:20 --> Constant expression contains invalid operations
+in APPPATH\Models\FisiologisModel.php on line 18.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-10-10 10:11:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:11:40 --> Data Format2024-10-10
+INFO - 2024-10-10 10:11:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:11:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:11:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-10 10:11:53 --> Too few arguments to function App\Controllers\RawatInap::detail(), 0 passed in D:\Project-(external)\BCPetHouse\system\CodeIgniter.php on line 915 and exactly 1 expected
+in APPPATH\Controllers\RawatInap.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\RawatInap->detail()
+ 2 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RawatInap))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project-(external)\\BCPetHouse\\public\\index.php')
+INFO - 2024-10-10 10:11:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:11:54 --> Data Format2024-10-10
+INFO - 2024-10-10 10:12:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:12:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:12:06 --> Data Format2024-10-10
+INFO - 2024-10-10 10:13:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:13:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:13:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:13:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:13:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:13:14 --> Data Format2024-10-10
+INFO - 2024-10-10 10:13:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:13:50 --> Data Format2024-10-10
+INFO - 2024-10-10 10:13:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:13:50 --> Data Format2024-10-10
+INFO - 2024-10-10 10:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-10 10:13:58 --> Data Format2024-10-10

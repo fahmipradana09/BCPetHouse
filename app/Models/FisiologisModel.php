@@ -16,6 +16,7 @@ class FisiologisModel extends Model
     // protected $useSoftDeletes = true;
 
     protected $allowedFields = [
+        'rawat_inap_id',
         "pagi_medication",
         "siang_medication",
         "malam_medication",
@@ -82,12 +83,14 @@ class FisiologisModel extends Model
     //     }
     // }
 
-    public function getFisiologiByDate($date){
+    public function getFisiologiByDate($date, $id){
         $formattedDate = (new DateTime($date))->format('Y-m-d');
 
         log_message('info','Data Format'.$formattedDate);
         return $this->select('fisiologis.*')
+            ->join('rawat_inap as r', 'fisiologis.rawat_inap_id = r.id')
             ->like('fisiologis.date_rawatInap', $formattedDate, 'after')
+            ->where('r.id',$id)
             ->first();
 
         
