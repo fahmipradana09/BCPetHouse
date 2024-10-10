@@ -33,7 +33,7 @@
               <tbody>
                 <?php $i = 1; ?>
                 <?php foreach ($pet as $p): ?>
-                  <tr class="clickable-row" data-href="<?= base_url('/PetList/detail/') . $p['id'] ?>" data-flag="edit">
+                  <tr class="clickable-row" data-href="<?= base_url('/PetList/detail/') . $p['id'] ?>" data-flag="detail">
                       <td class="align-middle justify-content-center text-center">
                         <?= $i++; ?>
                       </td>

@@ -21,6 +21,7 @@
                       <th>No</th>
                       <th>Pet Name</th>
                       <th>Owner Name</th>
+                      <th>Amnesa</th>
                       <th>Address</th>
                       <th>Time Checkup</th>
                       <th>Status</th>
@@ -31,7 +32,7 @@
               <tbody>
                 <?php $i = 1; ?>
                 <?php foreach ($dataInap as $r): ?>
-                  <tr class="clickable-row" data-href="<?= base_url('/RawatInap/detail/') . $r['id'] ?>" data-flag="edit">
+                  <tr class="clickable-row" data-href="<?= base_url('/RawatInap/detail/') . $r['id'] ?>" data-flag="detail">
                       <td class="align-middle text-center justify-content-center">
                         <?= $i++; ?>
                       </td>
@@ -42,6 +43,10 @@
 
                       <td class="align-middle justify-content-center col-2">
                         <?= $r['owner_name']?>
+                      </td>
+
+                      <td class="align-middle justify-content-center col-2">
+                        <?= $r['amnesa']?>
                       </td>
 
                       <td class="align-middle justify-content-center col-3 text-truncate">

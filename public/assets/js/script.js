@@ -99,21 +99,38 @@ $(document).ready(function () {
         $('#petLisForm').submit();  // This submits the form
     });
 
-    // Optional dynamic row addition and deletion (if needed)
-    var i = 1;
-    $("#add_row").click(function () {
-        var b = i - 1;
-        $('#addr' + i).html($('#addr' + b).html()).find('td:first-child').html(i + 1);
-        $('#tab_logic').append('<tr id="addr' + (i + 1) + '"></tr>');
-        i++;
+    $('#triggerModalFisiologis').on('click', function () {
+        var myModal = new bootstrap.Modal(document.getElementById('confirmModalPet'), {});
+        myModal.show();
     });
+    
+    // // Optional dynamic row addition and deletion (if needed)
+    // var i = 1;
+    // $("#add_row").click(function () {
+    //     var b = i - 1;
+    //     $('#addr' + i).html($('#addr' + b).html()).find('td:first-child').html(i + 1);
+    //     $('#tab_logic').append('<tr id="addr' + (i + 1) + '"></tr>');
+    //     i++;
+    // });
 
-    $("#delete_row").click(function () {
-        if (i > 1) {
-            $("#addr" + (i - 1)).html('');
-            i--;
-        }
-    });
+    // $("#delete_row").click(function () {
+    //     if (i > 1) {
+    //         $("#addr" + (i - 1)).html('');
+    //         i--;
+    //     }
+    // });
+
+
+
+    var triggerTabList = [].slice.call(document.querySelectorAll('#tabFisiologis button'))
+    triggerTabList.forEach(function (triggerEl) {
+      var tabTrigger = new bootstrap.Tab(triggerEl)
+    
+      triggerEl.addEventListener('click', function (event) {
+        event.preventDefault()
+        tabTrigger.show()
+      })
+    })
 });
 
 

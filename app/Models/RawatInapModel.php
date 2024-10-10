@@ -33,7 +33,7 @@ class RawatInapModel extends Model
     {
         if ($id == false)
         {
-            return $this->select('rawat_inap.*,pp.name, pp.owner_name, pp.address')
+            return $this->select('rawat_inap.*,pp.name, pp.owner_name, pp.address, am.amnesa')
                         ->join('ambulatoir as am', 'rawat_inap.id_ambulatoir = am.id')
                         ->join('pet_profile as pp', 'rawat_inap.id_petProfile = pp.id')
                         ->findAll();
@@ -43,6 +43,5 @@ class RawatInapModel extends Model
                     ->join('pet_profile as pp', 'rawat_inap.id_petProfile = pp.id')
                     ->where('rawat_inap.id',$id)->first();
     }
-
 }
 

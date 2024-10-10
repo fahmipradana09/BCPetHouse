@@ -8,7 +8,7 @@
           <div class="card-header pb-0">
             <h4>Ambulatoir</h4>
           </div>
-          <a class="btn bg-primary mb-0 text-white col-md-3 mx-3" href='<?= base_url('/PetList/detail/'.$pet['pet_id'].'?flag=edit');?>'>
+          <a class="btn bg-primary mb-0 text-white col-md-3 mx-3 mt-3" href='<?= base_url('/PetList/detail/'.$pet['pet_id'].'?flag=edit');?>'>
             Check the pet?
           </a>
         </div>
@@ -97,7 +97,7 @@
           </div>
 
    <div class="d-flex justify-content-center">
-      <button type="submit" id="savePet" class="btn bg-primary justify-content-center text-white btn-default col-md-6 mx-3 mt-4">Save</button>
+        <button type="submit" id="savePet" class="btn bg-primary justify-content-center text-white btn-default col-md-6 mx-3 mt-4">Save</button>
     </div>
     </form>
   </div>
