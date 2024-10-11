@@ -45,6 +45,7 @@ class AmbulatoirsModel extends Model
         {
             return $this->select('ambulatoir.*, pp.name, pp.owner_name')
                         ->join('pet_profile as pp', 'ambulatoir.pet_id = pp.id')
+                        ->orderBy('date_checkup','DESC')
                         ->findAll();
         }
         return $this->select('ambulatoir.*, pp.*')

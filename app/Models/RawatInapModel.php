@@ -36,6 +36,7 @@ class RawatInapModel extends Model
             return $this->select('rawat_inap.*,pp.name, pp.owner_name, pp.address, am.amnesa')
                         ->join('ambulatoir as am', 'rawat_inap.id_ambulatoir = am.id')
                         ->join('pet_profile as pp', 'rawat_inap.id_petProfile = pp.id')
+                        ->orderBy('rawat_inap.date_in_hospitalized','DESC')
                         ->findAll();
         }
         return $this->select('rawat_inap.*, am.*, pp.*')
