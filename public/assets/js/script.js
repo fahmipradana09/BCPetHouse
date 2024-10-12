@@ -14,6 +14,8 @@ $(document).ready(function () {
         window.location.href = href + '?flag=' + flag;
     });
 
+
+
     // Initialize DataTable for petlist
     var tablePetlist = $('#petlist').DataTable({
         "scrollX": true,
@@ -27,6 +29,7 @@ $(document).ready(function () {
         window.location.href = href + '?flag=' + flag;
     });
 
+
     // Initialize DataTable for rawatInap
     var tableRawatInap = $('#rawatInap').DataTable({
         "scrollX": true,
@@ -37,6 +40,20 @@ $(document).ready(function () {
     $('#rawatInap tbody').on('click', 'tr.clickable-row', function () {
         var href = $(this).data('href');
         var flag = $(this).data('flag'); // Get the flag value from the data attribute
+        window.location.href = href + '?flag=' + flag;
+    });
+
+
+    var tableAmbulatoir = $('#rawatInapActive').DataTable({
+        "scrollX": true,
+    });
+    tableAmbulatoir.columns.adjust().draw();
+
+    // Redirect with flag parameter for ambulatoir
+    $('#rawatInapActive tbody').on('click', 'tr.clickable-row', function () {
+        var href = $(this).data('href');
+        var flag = $(this).data('flag'); // Get the flag value from the data attribute
+        // Append the flag parameter to the URL
         window.location.href = href + '?flag=' + flag;
     });
 
