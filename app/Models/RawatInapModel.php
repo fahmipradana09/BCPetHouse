@@ -37,12 +37,22 @@ class RawatInapModel extends Model
                         ->join('ambulatoir as am', 'rawat_inap.id_ambulatoir = am.id')
                         ->join('pet_profile as pp', 'rawat_inap.id_petProfile = pp.id')
                         ->orderBy('rawat_inap.date_in_hospitalized','DESC')
+                        ->where('rawat_inap.is_done',1)
                         ->findAll();
         }
         return $this->select('rawat_inap.*, am.*, pp.*')
                     ->join('ambulatoir as am', 'rawat_inap.id_ambulatoir = am.id')
                     ->join('pet_profile as pp', 'rawat_inap.id_petProfile = pp.id')
                     ->where('rawat_inap.id',$id)->first();
+    }
+
+    public function getActiveInap(){
+        return $this->select('rawat_inap.id, rawat_inap.date_in_hospitalized, rawat_inap.status, pp.name, pp.owner_name, pp.address, am.amnesa')
+                    ->join('ambulatoir as am', 'rawat_inap.id_ambulatoir = am.id')
+                    ->join('pet_profile as pp', 'rawat_inap.id_petProfile = pp.id')
+                    ->orderBy('rawat_inap.date_in_hospitalized','DESC')
+                    ->where('rawat_inap.is_done',0)
+                    ->findAll();
     }
 }
 

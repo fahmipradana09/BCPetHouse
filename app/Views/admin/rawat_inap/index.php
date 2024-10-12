@@ -14,74 +14,154 @@
             </div>
           <?php endif;?>
         <div class="card-body px-0 pt-0 pb-2">
-          <div class="table-responsive p-0 m-5">
-            <table id="rawatInap" class="table row-border hover" style="width:100%">
-              <thead>
-                  <tr>
-                      <th>No</th>
-                      <th>Pet Name</th>
-                      <th>Owner Name</th>
-                      <th>Amnesa</th>
-                      <th>Address</th>
-                      <th>Time Checkup</th>
-                      <th>Status</th>
-                      <th class="text-center">Action</th>
-                  </tr>
-              </thead>
-              
-              <tbody>
-                <?php $i = 1; ?>
-                <?php foreach ($dataInap as $r): ?>
-                  <tr class="clickable-row" data-href="<?= base_url('/RawatInap/detail/') . $r['id'] ?>" data-flag="detail">
-                      <td class="align-middle text-center justify-content-center">
-                        <?= $i++; ?>
-                      </td>
- 
-                      <td class="align-middle justify-content-center col-2">
-                        <?= $r['name']?>
-                      </td>
+          <div class="table-responsive p-0 mx-5">
+          <div class="mb-6">
+            <figure class="text-end">
+                <h1 class="display-6 color-purple">Dalam Penanganan</h1>
+            </figure>
 
-                      <td class="align-middle justify-content-center col-2">
-                        <?= $r['owner_name']?>
-                      </td>
+              <table id="rawatInapActive" class="table row-border hover" style="width:100%">
+                  <thead>
+                      <tr>
+                          <th>No</th>
+                          <th>Pet Name</th>
+                          <th>Owner Name</th>
+                          <th>Amnesa</th>
+                          <th>Address</th>
+                          <th>Time Checkup</th>
+                          <th>Status</th>
+                          <th class="text-center">Action</th>
+                      </tr>
+                  </thead>
+                  
+                  <tbody>
+                    <?php $i = 1; ?>
+                    <?php foreach ($activeInap as $r): ?>
+                      <tr class="clickable-row" data-href="<?= base_url('/RawatInap/detail/') . $r['id'] ?>" data-flag="detail">
+                          <td class="align-middle text-center justify-content-center">
+                            <?= $i++; ?>
+                          </td>
+    
+                          <td class="align-middle justify-content-center col-2">
+                            <?= $r['name']?>
+                          </td>
 
-                      <td class="align-middle justify-content-center col-2">
-                        <?= $r['amnesa']?>
-                      </td>
+                          <td class="align-middle justify-content-center col-2">
+                            <?= $r['owner_name']?>
+                          </td>
 
-                      <td class="align-middle justify-content-center col-3 text-truncate">
-                        <?= $r['address']?>
-                      </td>
+                          <td class="align-middle justify-content-center col-2">
+                            <?= $r['amnesa']?>
+                          </td>
 
-                      <td class="align-middle justify-content-center col-3">
-                        <?= $r['date_in_hospitalized']?>
-                      </td>
+                          <td class="align-middle justify-content-center col-3 text-truncate">
+                            <?= $r['address']?>
+                          </td>
 
-                      <td class="align-middle justify-content-center col-2">
-                        <?= $r['status']?>
-                      </td>
-                      
-                      <td class="align-middle justify-content-center">
-                        <div class="d-flex">
-                            <form action="<?= base_url('/RawatInap/detail/'). $r['id']?>" method="get" class="d-inline mr-2">
-                                <?= csrf_field();?>
-                                <button type="submit" class="btn btn-primary btn-sm">Edit</button>
-                            </form>
-                            <div style="margin-right: 6px;"></div>
-                            <form action="<?= base_url('/RawatInap/delete/'). $r['id']?>" method="post" class="d-inline">
-                                <?= csrf_field();?>
-                                <input type="hidden" name="_method" value="DELETE">
-                                <button type="submit" class="btn btn-danger text-white btn-sm" onclick="return confirm('Apakah anda yakin menghapus <?=$r['name']?>?');">
-                                    Delete
-                                </button>
-                            </form>
-                        </div>
-                      </td>
-                  </tr>
-                  <?php endforeach ;?>
+                          <td class="align-middle justify-content-center col-3">
+                            <?= $r['date_in_hospitalized']?>
+                          </td>
 
-              </tbody>
-          </table>
+                          <td class="align-middle justify-content-center col-2">
+                            <?= $r['status']?>
+                          </td>
+                          
+                          <td class="align-middle justify-content-center">
+                            <div class="d-flex">
+                                <form action="<?= base_url('/RawatInap/detail/'). $r['id']?>" method="get" class="d-inline mr-2">
+                                    <?= csrf_field();?>
+                                    <button type="submit" class="btn btn-primary btn-sm">Edit</button>
+                                </form>
+                                <div style="margin-right: 6px;"></div>
+                                <form action="<?= base_url('/RawatInap/delete/'). $r['id']?>" method="post" class="d-inline">
+                                    <?= csrf_field();?>
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" class="btn btn-danger text-white btn-sm" onclick="return confirm('Apakah anda yakin menghapus <?=$r['name']?>?');">
+                                        Delete
+                                    </button>
+                                </form>
+                            </div>
+                          </td>
+                      </tr>
+                      <?php endforeach ;?>
+
+                  </tbody>
+              </table>
+            </div>
+
+            <div class="mb-3">
+              <figure class="text-end">
+                <h1 class="display-6 color-purple">List Riwayat Rawat Inap</h1>
+              </figure>
+
+              <table id="rawatInap" class="table row-border hover" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Pet Name</th>
+                        <th>Owner Name</th>
+                        <th>Amnesa</th>
+                        <th>Address</th>
+                        <th>Time Checkup</th>
+                        <th>Status</th>
+                        <th class="text-center">Action</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                  <?php $i = 1; ?>
+                  <?php foreach ($dataInap as $r): ?>
+                    <tr class="clickable-row" data-href="<?= base_url('/RawatInap/detail/') . $r['id'] ?>" data-flag="detail">
+                        <td class="align-middle text-center justify-content-center">
+                          <?= $i++; ?>
+                        </td>
+  
+                        <td class="align-middle justify-content-center col-2">
+                          <?= $r['name']?>
+                        </td>
+
+                        <td class="align-middle justify-content-center col-2">
+                          <?= $r['owner_name']?>
+                        </td>
+
+                        <td class="align-middle justify-content-center col-2">
+                          <?= $r['amnesa']?>
+                        </td>
+
+                        <td class="align-middle justify-content-center col-3 text-truncate">
+                          <?= $r['address']?>
+                        </td>
+
+                        <td class="align-middle justify-content-center col-3">
+                          <?= $r['date_in_hospitalized']?>
+                        </td>
+
+                        <td class="align-middle justify-content-center col-2">
+                          <?= $r['status']?>
+                        </td>
+                        
+                        <td class="align-middle justify-content-center">
+                          <div class="d-flex">
+                              <form action="<?= base_url('/RawatInap/detail/'). $r['id']?>" method="get" class="d-inline mr-2">
+                                  <?= csrf_field();?>
+                                  <button type="submit" class="btn btn-primary btn-sm">Edit</button>
+                              </form>
+                              <div style="margin-right: 6px;"></div>
+                              <form action="<?= base_url('/RawatInap/delete/'). $r['id']?>" method="post" class="d-inline">
+                                  <?= csrf_field();?>
+                                  <input type="hidden" name="_method" value="DELETE">
+                                  <button type="submit" class="btn btn-danger text-white btn-sm" onclick="return confirm('Apakah anda yakin menghapus <?=$r['name']?>?');">
+                                      Delete
+                                  </button>
+                              </form>
+                          </div>
+                        </td>
+                    </tr>
+                    <?php endforeach ;?>
+
+                </tbody>
+            </table>
+                </div>
           </div>
         </div>
       </div>

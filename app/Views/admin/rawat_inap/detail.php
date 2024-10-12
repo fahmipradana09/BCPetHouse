@@ -4,8 +4,14 @@
   <div class="row">
     <div class="col-12">
       <div class="card mb-4">
-        <div class="card-header pb-0">
-          <h4>Rawat Inap</h4>
+      <div class="d-flex justify-content-between align-items-center">
+          <div class="card-header pb-0">
+            <h4>Rawat Inap</h4>
+          </div>
+          
+          <a class="btn bg-primary mb-0 text-white col-md-3 mx-3 mt-3" href='<?= base_url('/Ambulatoir/detail/'.$dataInap['id_ambulatoir'].'?flag=edit');?>'>
+              Check Ambulatoir
+            </a>
         </div>
         <form class="container-fluid mt-5 mx-3" action="<?= base_url(); ?>RawatInap/save/<?= $dataInap['id'] ?>" method="post">
           <?= csrf_field(); ?>

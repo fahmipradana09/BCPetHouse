@@ -36,7 +36,8 @@ class RawatInap extends BaseController
 
         $data = [ 
             'active' => 'rawatinap',
-            'dataInap' =>  $rawatInapModel->getRawatInap()
+            'dataInap' =>  $rawatInapModel->getRawatInap(),
+            'activeInap' => $rawatInapModel->getActiveInap()
         ];
         //dd($data);
         return view('admin/rawat_inap/index',$data);

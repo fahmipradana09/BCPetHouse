@@ -13,7 +13,7 @@
 
           <!-- Pet Profile -->
           <figure class="text-end">
-              <h1 class="bg-text-grey display-6 color-purple">Pet Profile</h1>
+              <h1 class="bg-text-grey-purple display-6 color-purple">Pet Profile</h1>
           </figure>
 
           <div class="col-md-5 mt-3">
@@ -124,7 +124,7 @@
 
             <!-- Ambulatoir -->
             <figure class="mt-6 text-end">
-              <h1 class="bg-text-grey display-6 color-purple">Ambulatoir</h1>
+              <h1 class="bg-text-grey-purple display-6 color-purple">Ambulatoir</h1>
             </figure>
 
           <div class="col-md-6 mt-3">
