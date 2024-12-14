@@ -13,7 +13,7 @@
           </a>
         </div>
 
-        <form class="row m-3" action="<?= base_url(); ?>PetList/save/<?= $pet['id']?>" method="post">
+        <form class="row m-3" action="<?= base_url('Ambulatoir/update/'.$idAmbulatoir ); ?>" method="post">
           <?= csrf_field(); ?>
 
           <div class="col-md-5 mt-3">

@@ -67,6 +67,7 @@ class Ambulatoir extends BaseController
         $data = [
             'active' => 'detailpet',
             'flag' => $flag,
+            'idAmbulatoir' => $id,
             'pet' => $ambulatoirModel->getAmbulatoirAndPetList($id),
             'validation' => \Config\Services::validation(),
             'errorValidasi' => Session()->getFlashdata("errorValidasi"), //ini alternatif nya pake flash data 
@@ -232,7 +233,6 @@ class Ambulatoir extends BaseController
             'color' => $this->request->getVar('color'),
             'gender'=>$this->request->getVar('gender'),
         ]);
-
         $petId = $petModel->getInsertID();
         //dd($petId);
         //dd($ambulatorId);
@@ -269,6 +269,70 @@ class Ambulatoir extends BaseController
         
     }
 
+    public function update($id)
+    {
+        //dd($id);
+        $ambulatoirModel = new AmbulatoirsModel();
+
+        $validation = \Config\Services::validation(); 
+    
+        if(!$this->validate([
+            'amnesa' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Amnesa Wajib diisi'
+                ],
+            ],
+            'statusPresent' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Status Present Wajib diisi'
+                ],
+            ],
+            'temuanKlinis' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Temuan Klinis Wajib diisi'
+                ],
+            ],
+            'diagnosa' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Diagnosa Wajib diisi'
+                ],
+            ],
+            'treatment' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Diagnosa Wajib diisi'
+                ],
+            ],
+
+        ])){
+            return redirect()->to(base_url('ambulatoir/detail'))->withInput()
+            ->with('errorValidasi',$validation->listErrors())
+            ->with('amnesa',$validation->getError('amnesa'))
+            ->with('statusPresent',$validation->getError('statusPresent'))
+            ->with('temuanKlinis',$validation->getError('temuanKlinis'))
+            ->with('diagnosa',$validation->getError('diagnosa'))
+            ->with('treatment',$validation->getError('treatment'));
+        }
+
+        $ambulatoirModel->save([
+            'id'=> $id,
+            'date_checkup' => $this->request->getVar('date'),
+            'amnesa' => $this->request->getVar('amnesa'),
+            'status_present' => $this->request->getVar('statusPresent'),
+            'clinical_finding' => $this->request->getVar('temuanKlinis'),
+            'diagnosis' => $this->request->getVar('diagnosa'),
+            'medication' => $this->request->getVar('treatment'),
+            'hospitalized_status'=>$this->request->getVar('rawatInap')                                                                                 
+        ]);
+
+        
+        session()->setFlashdata('message','Data Success');
+            return redirect()->to('Ambulatoir');
+    }
     
     
 }
